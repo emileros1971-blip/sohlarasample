@@ -47,7 +47,7 @@
   
   
   
-<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="preview.css?v=2"></head>
+<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="preview.css?v=3"></head>
 <body class="font-montserrat antialiased">
   
 
@@ -618,11 +618,9 @@
   <video muted loop playsinline preload="metadata" poster="media/breathing.jpg" src="media/breathing.mp4" aria-hidden="true"></video>
   <button type="button" class="background-video-play" hidden>Play background video</button>
   <div class="mx-auto grid max-w-[1100px] items-center gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
-    <div class="relative overflow-hidden rounded-lg border border-white/[0.08]" data-reveal>
-      <div class="relative aspect-[4/5] w-full sm:aspect-[16/11] lg:aspect-[4/5] original-retreat-photo">
-        <img alt="A woman meditating cross-legged on a mat outdoors" src="media/retreat-meditation.webp" width="1200" height="1800" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-[center_35%]">
-      </div>
-      <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"></div>
+    <div class="retreat-clip relative overflow-hidden rounded-lg border border-white/[0.08]">
+      <video muted loop playsinline preload="metadata" poster="media/breathing.jpg" src="media/breathing.mp4" aria-label="A woman practising breathwork outdoors"></video>
+      <button type="button" class="background-video-play" hidden>Play yoga clip</button>
     </div>
     <div data-reveal>
       <div class="mb-4 flex items-center gap-2.5 font-montserrat text-[10px] font-bold uppercase tracking-normal text-gold-300">
@@ -1880,7 +1878,7 @@
   const observer = new IntersectionObserver(entries => {
     for (const { target, isIntersecting } of entries) {
       const player = players.get(target);
-      player.visible = isIntersecting;
+      player.visible = isIntersecting && target.getClientRects().length > 0;
       sync(player);
     }
   }, { rootMargin: '48px 0px' });
@@ -1902,7 +1900,7 @@
     player.button.hidden = !player.visible || Boolean(player.video.error);
   }
 
-  document.querySelectorAll('.video-section > video').forEach(video => {
+  document.querySelectorAll('.video-section > video, .retreat-clip > video').forEach(video => {
     const button = video.nextElementSibling;
     const player = { video, button, visible: false, requested: false };
     players.set(video, player);

@@ -44,7 +44,6 @@ body,.radix-themes.dark{background:#eff8fb;color:#143e5c}
  #hero.coast>video{aspect-ratio:16/9}
  #hero.coast>div:last-child>div{grid-template-columns:minmax(0,1fr)}
  #hero.coast h1{grid-row:auto}
- #retreat>video{object-position:68% 50%}
 }
 [data-bf-panel].bf-panel{background:#cde6f2;color:#183e60;border-color:#a4cbd9}
 [data-bf-panel] .bf-clock{color:#183e60}
@@ -52,13 +51,13 @@ body,.radix-themes.dark{background:#eff8fb;color:#143e5c}
 
 /* Keep the moving backgrounds visible through the content panels. */
 #nervous-system .group,
-#retreat .rounded-lg:not(:has(.original-retreat-photo)),
+#retreat .rounded-lg:not(.retreat-clip),
 #book [data-checkout] > div {
   background: rgb(7 32 46 / 26%);
   border-color: rgb(224 250 249 / 35%);
 }
 #nervous-system .group:hover,
-#retreat .rounded-lg:not(:has(.original-retreat-photo)):hover {
+#retreat .rounded-lg:not(.retreat-clip):hover {
   background: rgb(7 32 46 / 35%);
 }
 #book :is(select, input:not([type="checkbox"])) {
@@ -79,7 +78,7 @@ body,.radix-themes.dark{background:#eff8fb;color:#143e5c}
   #main-content :is([class~="md:text-base"], [class~="md:text-[16px]"]) { font-size: 1.25rem; }
 }
 
-.video-section > .background-video-play {
+.background-video-play {
   position: absolute;
   z-index: 3;
   right: 1rem;
@@ -91,4 +90,32 @@ body,.radix-themes.dark{background:#eff8fb;color:#143e5c}
   color: white;
   font: inherit;
   cursor: pointer;
+}
+
+.retreat-clip > video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #102d36;
+}
+
+@media (max-width: 767px) {
+  /* Frame landscape footage independently of the height of the text. */
+  #problem, #nervous-system, #book { --mobile-video-height: clamp(175px, 56.25vw, 432px); }
+  #problem, #book { padding-top: calc(var(--mobile-video-height) + 1.5rem); }
+  #nervous-system > div:first-of-type { margin-top: var(--mobile-video-height); }
+  :is(#problem, #nervous-system, #book) > video {
+    height: var(--mobile-video-height);
+    object-position: center;
+  }
+  :is(#problem, #nervous-system, #book)::before {
+    background: linear-gradient(to bottom, transparent, #102d36 var(--mobile-video-height));
+  }
+  :is(#problem, #nervous-system, #book) > .background-video-play {
+    top: calc(var(--mobile-video-height) - 3.5rem);
+    bottom: auto;
+  }
+  #retreat { padding-top: 1.5rem; }
+  #retreat > video, #retreat > .background-video-play { display: none; }
+  #retreat::before { background: #102d36; }
 }
