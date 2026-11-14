@@ -620,8 +620,7 @@
   <div class="mx-auto grid max-w-[1100px] items-center gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
     <div class="retreat-clip relative overflow-hidden rounded-lg border border-white/[0.08]">
       <video muted loop playsinline preload="metadata" poster="media/breathing.jpg" src="media/breathing.mp4" aria-label="A woman practising breathwork outdoors"></video>
-      <button type="button" class="background-video-play" hidden>Play yoga clip</button>
-    </div>
+      </div>
     <div data-reveal>
       <div class="mb-4 flex items-center gap-2.5 font-montserrat text-[10px] font-bold uppercase tracking-normal text-gold-300">
         <span class="block h-px w-7 bg-gold-300"></span>
@@ -1872,53 +1871,51 @@
 </script>
 <script>
 (() => {
-  const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const players = new Map();
 
+  function play({ video, button }) {
+    video.muted = true;
+    video.play().then(() => {
+      if (button) button.hidden = true;
+    }).catch(error => {
+      if (button && players.get(video).visible && error.name === 'NotAllowedError') {
+        button.hidden = false;
+      }
+    });
+  }
+
   const observer = new IntersectionObserver(entries => {
-    for (const { target, isIntersecting } of entries) {
-      const player = players.get(target);
-      player.visible = isIntersecting && target.getClientRects().length > 0;
-      sync(player);
+    for (const { target: video, isIntersecting } of entries) {
+      const player = players.get(video);
+      player.visible = isIntersecting && video.getClientRects().length > 0;
+      if (player.visible) {
+        play(player);
+      } else {
+        video.pause();
+        if (player.button) player.button.hidden = true;
+      }
     }
   }, { rootMargin: '48px 0px' });
 
-  function play(player) {
-    player.video.play().then(() => {
-      player.button.hidden = true;
-    }).catch(error => {
-      if (player.visible && error.name === 'NotAllowedError') player.button.hidden = false;
-    });
-  }
-
-  function sync(player) {
-    if (player.visible && (!motion.matches || player.requested)) {
-      play(player);
-      return;
-    }
-    player.video.pause();
-    player.button.hidden = !player.visible || Boolean(player.video.error);
-  }
-
   document.querySelectorAll('.video-section > video, .retreat-clip > video').forEach(video => {
-    const button = video.nextElementSibling;
-    const player = { video, button, visible: false, requested: false };
+    const button = video.parentElement.querySelector(':scope > .background-video-play');
+    const player = { video, button, visible: false };
     players.set(video, player);
-    video.muted = true;
-    video.addEventListener('error', () => { button.hidden = true; });
-    button.addEventListener('click', () => {
-      player.requested = true;
-      play(player);
-    });
+    button?.addEventListener('click', () => play(player));
+    video.addEventListener('error', () => { if (button) button.hidden = true; });
     observer.observe(video);
   });
 
-  motion.addEventListener('change', () => {
+  function resumeVisibleVideos() {
+    if (document.hidden) return;
     for (const player of players.values()) {
-      player.requested = false;
-      sync(player);
+      if (player.visible && player.video.paused) play(player);
     }
-  });
+  }
+
+  document.addEventListener('visibilitychange', resumeVisibleVideos);
+  document.addEventListener('click', resumeVisibleVideos);
+  document.addEventListener('keydown', resumeVisibleVideos);
 })();
 </script></body>
 </html>
