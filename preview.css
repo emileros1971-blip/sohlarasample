@@ -98,7 +98,7 @@ body,.radix-themes.dark{background:#eff8fb;color:#143e5c}
   /* Frame landscape footage independently of the height of the text. */
   #problem, #nervous-system, #book { --mobile-video-height: clamp(175px, 56.25vw, 432px); }
   #problem, #book { padding-top: calc(var(--mobile-video-height) + 1.5rem); }
-  #nervous-system > div:first-of-type { margin-top: var(--mobile-video-height); }
+  #nervous-system > div:first-of-type { padding-top: calc(var(--mobile-video-height) + 5rem); }
   :is(#problem, #nervous-system, #book) > video {
     height: var(--mobile-video-height);
     object-position: center;
@@ -169,7 +169,7 @@ html {
   line-height: 1.06;
 }
 .hero-film-copy h1 { font-size: clamp(1.65rem, 4.4vw, 4.75rem); }
-.hero-film-copy a, .retreat-film-cta {
+.retreat-film-cta {
   display: inline-block;
   margin-top: 0.75rem;
   padding: 0.55rem 0.75rem;
@@ -179,7 +179,7 @@ html {
   font-weight: 700;
   line-height: 1.25;
 }
-.hero-film-copy a:hover, .retreat-film-cta:hover { background: #174d76; }
+.retreat-film-cta:hover { background: #174d76; }
 .hero-intro-title { grid-row: 1 / span 3; font-size: clamp(1.8rem, 3.4vw, 3.6rem); color: #153e60; }
 .retreat-film-cta {
   position: absolute;
@@ -192,7 +192,32 @@ html {
 .community-panel p { margin-top: 0.75rem; font-size: 1.125rem; line-height: 1.65; }
 @media (max-width: 767px) {
   .hero-film > video { aspect-ratio: 16 / 9; }
-  .hero-film-copy a, .retreat-film-cta { font-size: 0.875rem; }
+  .retreat-film-cta { font-size: 0.875rem; }
   .hero-intro-title { grid-row: auto; }
   .retreat-film-cta { bottom: 18%; }
+}
+
+#nervous-system .waves-video-caption {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 2rem);
+  margin: 0;
+  padding: 0.5rem 0.85rem;
+  border-radius: 0.4rem;
+  background: rgb(9 35 45 / 80%);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  #nervous-system .waves-video-caption {
+    top: calc(var(--mobile-video-height) / 2);
+    transform: translate(-50%, -50%);
+  }
 }
