@@ -49,3 +49,6 @@ body,.radix-themes.dark{background:#eff8fb;color:#143e5c}
  #retreat .original-retreat-photo{display:none}
  #retreat>video{object-position:68% 50%}
 }
+[data-bf-panel].bf-panel{background:#cde6f2;color:#183e60;border-color:#a4cbd9}
+[data-bf-panel] .bf-clock{color:#183e60}
+[data-bf-panel] a{background:#174d76;color:#fff}
