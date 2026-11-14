@@ -32,23 +32,63 @@ body,.radix-themes.dark{background:#eff8fb;color:#143e5c}
 .breath-card{display:flex;gap:16px;align-items:flex-start;border-bottom:1px solid #cfece553;padding:16px 6px;color:white}
 .breath-card:last-child{border:0}
 .breath-card>div:last-child>div:first-child{font-weight:700;margin-bottom:4px}
-.breath-card>div:last-child>div:last-child{color:#f0f8fa;font-size:14px}
+.breath-card>div:last-child>div:last-child{color:#f0f8fa;font-size:18px}
 .breath-icon{color:#a8e4dc;flex:none;margin-top:3px}
 .breath-icon svg{stroke-width:1.35}
 #nervous-system::before{background:#102d46c4}
 #retreat::before{background:linear-gradient(90deg,#132e359e,#122d34d9 68%,#132d34ec)}
-#retreat .original-retreat-photo{visibility:hidden}
 #book::before{background:#10263ba3}
-#book [data-checkout]>div{background:#153751e8}
 [data-section="home-highlights"],[data-section="home-marquee"]{background:#d8efe8}
 [data-section="home-highlights"] li span,[data-section="home-highlights"] p{color:#174d62}
 @media(max-width:767px){
  #hero.coast>video{aspect-ratio:16/9}
  #hero.coast>div:last-child>div{grid-template-columns:minmax(0,1fr)}
  #hero.coast h1{grid-row:auto}
- #retreat .original-retreat-photo{display:none}
  #retreat>video{object-position:68% 50%}
 }
 [data-bf-panel].bf-panel{background:#cde6f2;color:#183e60;border-color:#a4cbd9}
 [data-bf-panel] .bf-clock{color:#183e60}
 [data-bf-panel] a{background:#174d76;color:#fff}
+
+/* Keep the moving backgrounds visible through the content panels. */
+#nervous-system .group,
+#retreat .rounded-lg:not(:has(.original-retreat-photo)),
+#book [data-checkout] > div {
+  background: rgb(7 32 46 / 26%);
+  border-color: rgb(224 250 249 / 35%);
+}
+#nervous-system .group:hover,
+#retreat .rounded-lg:not(:has(.original-retreat-photo)):hover {
+  background: rgb(7 32 46 / 35%);
+}
+#book :is(select, input:not([type="checkbox"])) {
+  background: rgb(7 28 40 / 40%);
+  border-color: rgb(224 250 249 / 45%);
+}
+#book option, #book optgroup { background: #143751; color: white; }
+:is(#nervous-system, #retreat, #book) p { color: #f3fbfc; }
+
+#main-content :is([class~="text-[10px]"], [class~="text-[11px]"]) { font-size: 0.875rem; }
+#main-content :is([class~="text-xs"], [class~="text-[12px]"]) { font-size: 0.9375rem; }
+#main-content [class~="text-[13px]"] { font-size: 1.0625rem; }
+#main-content :is([class~="text-sm"], [class~="text-[14px]"]) { font-size: 1.125rem; }
+#main-content [class~="text-[15px]"] { font-size: 1.1875rem; }
+@media (min-width: 768px) {
+  #main-content [class~="md:text-sm"] { font-size: 1.125rem; }
+  #main-content [class~="md:text-[15px]"] { font-size: 1.1875rem; }
+  #main-content :is([class~="md:text-base"], [class~="md:text-[16px]"]) { font-size: 1.25rem; }
+}
+
+.video-section > .background-video-play {
+  position: absolute;
+  z-index: 3;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid #ffffff80;
+  border-radius: 0.5rem;
+  background: #143751;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
