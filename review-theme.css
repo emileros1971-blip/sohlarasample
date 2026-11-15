@@ -399,3 +399,43 @@
 .sohlara-redesign :is(#cc-banner, #cc-prefs, #cc-reopen) {
   background-color: #102d46;
 }
+/* Keep text contrast paired with the shared dark retreat surfaces. */
+.sohlara-redesign #main-content .fr-page {
+  --ink: #f3fbfc;
+  --body-c: #e5f1f5;
+  --gold-soft: #cde6f2;
+  --magenta-soft: #d8efe8;
+  --on-dark-muted: #e5f1f5;
+}
+.sohlara-redesign #main-content .fr-page :is(.story p, .sec p, .sec li, .hero-lead) {
+  color: #e5f1f5;
+}
+.sohlara-redesign #main-content .fr-page :is(.pull, .sec p strong, .sec li strong, .sec blockquote) {
+  color: #fff !important;
+}
+.sohlara-redesign #main-content .fr-page .story p:first-child::first-letter {
+  color: #cde6f2;
+}
+.sohlara-redesign #main-content .fr-page .day .row-body strong {
+  color: #fff;
+}
+.sohlara-redesign #main-content .bts-page {
+  --ink: #f3fbfc;
+  --earth: #cde6f2;
+  --muted: #d4e7ec;
+}
+.sohlara-redesign #main-content .bts-page :is(.btn:not(.outline):not(.is-disabled), .lightbtn, .strip, .band),
+.sohlara-redesign #main-content .bts-page :is(.strip, .band) :is(h1, h2, h3, p, strong, em) {
+  color: #143e5c;
+}
+.sohlara-redesign #main-content :is(.fr-page, .back-to-stone, .bts-page) :is(input, textarea, select) {
+  color: #f3fbfc;
+}
+.sohlara-redesign #main-content :is(.fr-page, .back-to-stone, .bts-page) select option {
+  background: #143751;
+  color: #f3fbfc;
+}
+.sohlara-redesign #main-content .bts-page .btn.outline:hover {
+  background-color: #d8efe8;
+  color: #143e5c;
+}
