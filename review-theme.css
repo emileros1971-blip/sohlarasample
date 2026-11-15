@@ -291,3 +291,111 @@
   background: #174d76;
   color: #fff;
 }
+/* Retreat sections with legacy page-level backgrounds. */
+.sohlara-redesign #main-content {
+  --review-navy: #10263b;
+  --review-deep-blue: #102d46;
+  --review-section-blue: #173e50;
+  --review-card-blue: #143751;
+  --review-mint: #d8efe8;
+  --review-sky: #cde6f2;
+  --review-ink: #143e5c;
+}
+.sohlara-redesign #main-content .back-to-stone {
+  --stone-gold: var(--review-mint);
+  --stone-muted: #d4e7ec;
+  --stone-card: var(--review-card-blue);
+  --stone-border: #315a68;
+  background-color: var(--review-navy);
+}
+.sohlara-redesign #main-content .back-to-stone .pale {
+  background-color: var(--review-section-blue);
+}
+.sohlara-redesign #main-content .back-to-stone .hero::after {
+  background-image: linear-gradient(8deg, #10263b 1%, rgb(16 38 59 / 80%) 25%, rgb(16 38 59 / 30%) 57%, transparent 90%);
+}
+.sohlara-redesign #main-content .back-to-stone .evening-scene,
+.sohlara-redesign #main-content .back-to-stone .payment-options select {
+  background-color: var(--review-deep-blue);
+}
+.sohlara-redesign #main-content .back-to-stone .evening-scene::after {
+  background-image: linear-gradient(90deg, rgb(16 38 59 / 94%), rgb(16 38 59 / 77%) 38%, rgb(16 38 59 / 14%) 82%);
+}
+@media (max-width: 759px) {
+  .sohlara-redesign #main-content .back-to-stone .evening-scene::after {
+    background-image: linear-gradient(0deg, rgb(16 38 59 / 98%), rgb(16 38 59 / 83%) 44%, rgb(16 38 59 / 15%) 85%);
+  }
+}
+.sohlara-redesign #main-content .back-to-stone a.btn:hover {
+  background-color: var(--review-sky);
+}
+.sohlara-redesign #main-content .fr-page,
+.sohlara-redesign #main-content .fr-page .sec {
+  background-color: var(--review-navy) !important;
+}
+.sohlara-redesign #main-content .fr-page .hero {
+  background: radial-gradient(ellipse at 80% 8%, #173e50 0%, #10263b 62%) !important;
+}
+.sohlara-redesign #main-content .fr-page :is(.sec-alt, #program .day-body, #program .day-content) {
+  background-color: var(--review-section-blue) !important;
+}
+.sohlara-redesign #main-content .fr-page .dark-sec {
+  background-color: var(--review-deep-blue) !important;
+}
+.sohlara-redesign #main-content .fr-page :is(.day, .price-card, .feature-card, .day-card, .timeline-card, .program-card, .experience-card, .gallery-card, .info-card, .faq-item) {
+  background-color: var(--review-card-blue) !important;
+  border-color: #315a68 !important;
+}
+.sohlara-redesign #main-content .fr-page :is(.hero-badge, .eyebrow, .blk-n) {
+  color: var(--review-mint);
+}
+.sohlara-redesign #main-content .fr-page :is(.btn, .btn-gold, .btn-magenta, .price-tag, button[type="submit"]) {
+  background-color: var(--review-mint) !important;
+  border-color: #a7d6cb !important;
+  color: var(--review-ink) !important;
+}
+.sohlara-redesign #main-content .fr-page :is(.btn, .btn-gold, .btn-magenta):hover {
+  background-color: var(--review-sky) !important;
+}
+.sohlara-redesign #main-content .fr-page .lightbox {
+  background-color: rgb(16 38 59 / 97%);
+}
+.sohlara-redesign #main-content .bts-page,
+.sohlara-redesign #main-content .bts-page section,
+.sohlara-redesign #main-content .bts-page .bts-sticky {
+  background-color: var(--review-navy);
+}
+.sohlara-redesign #main-content .bts-page section.soft {
+  background-color: var(--review-section-blue);
+}
+.sohlara-redesign #main-content .bts-page section.dark {
+  background-color: var(--review-deep-blue);
+}
+.sohlara-redesign #main-content .bts-page .hero {
+  background-image: linear-gradient(90deg, rgb(16 38 59 / 94%), rgb(16 38 59 / 55%)), var(--bts-hero-img);
+}
+.sohlara-redesign #main-content .bts-page :is(.photo, .price, .note) {
+  background-color: var(--review-card-blue);
+  border-color: #315a68;
+}
+.sohlara-redesign #main-content .bts-page :is(.strip, .band, .btn:not(.outline):not(.is-disabled), .lightbtn) {
+  background-color: var(--review-mint);
+  color: var(--review-ink);
+  border-color: #a7d6cb;
+}
+.sohlara-redesign #main-content .bts-page .btn.outline {
+  color: var(--review-mint);
+  border-color: #a7d6cb;
+}
+.sohlara-redesign #main-content :is(.back-to-stone, .fr-page, .bts-page) :is(h1, h2, h3) {
+  font-family: Urbanist, Montserrat, ui-sans-serif, system-ui, sans-serif;
+}
+.sohlara-redesign #main-content [class~="bg-[#17534a]"] {
+  background-color: var(--review-section-blue);
+}
+.sohlara-redesign #main-content [class~="bg-[#061b18]/25"] {
+  background-color: rgb(16 38 59 / 25%);
+}
+.sohlara-redesign :is(#cc-banner, #cc-prefs, #cc-reopen) {
+  background-color: #102d46;
+}
