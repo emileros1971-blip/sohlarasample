@@ -439,3 +439,12 @@
   background-color: #d8efe8;
   color: #143e5c;
 }
+
+/* Use the homepage mint on light content surfaces throughout the preview. */
+.sohlara-redesign #main-content :is(.bg-white, [class~="md:bg-white"], [class~="bg-[#f7fbfa]"]) {
+  background-color: #d8efe8;
+}
+.sohlara-redesign #main-content [data-section="reset-symptoms"] a {
+  background-color: #153e60;
+  color: #fff;
+}
