@@ -277,3 +277,17 @@
 .sohlara-redesign #main-content [class~="to-[#f6db9f]"] { --tw-gradient-to: #e1f0f8; }
 .sohlara-redesign #main-content [class~="via-[#0d3a37]/50"] { --tw-gradient-via: rgb(23 62 80 / 0.5); }
 .sohlara-redesign #main-content [class~="via-[#e9b74f]"] { --tw-gradient-via: #d8efe8; }
+
+/* Match the homepage's active sitewide promotion. */
+[data-bf-panel].bf-panel {
+  background: #cde6f2;
+  color: #183e60;
+  border-color: #a4cbd9;
+}
+[data-bf-panel].bf-panel :is(.bf-clock, .bf-stock) {
+  color: #183e60;
+}
+[data-bf-panel].bf-panel a {
+  background: #174d76;
+  color: #fff;
+}
