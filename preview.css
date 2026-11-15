@@ -98,7 +98,7 @@ body,.radix-themes.dark{background:#eff8fb;color:#143e5c}
   /* Frame landscape footage independently of the height of the text. */
   #problem, #nervous-system, #book { --mobile-video-height: clamp(175px, 56.25vw, 432px); }
   #problem, #book { padding-top: calc(var(--mobile-video-height) + 1.5rem); }
-  #nervous-system > div:first-of-type { padding-top: calc(var(--mobile-video-height) + 5rem); }
+  #nervous-system > div:first-of-type { padding-top: calc(var(--mobile-video-height) + 2rem); }
   :is(#problem, #nervous-system, #book) > video {
     height: var(--mobile-video-height);
     object-position: center;
@@ -197,31 +197,6 @@ html {
   .retreat-film-cta { bottom: 18%; }
 }
 
-#nervous-system .waves-video-caption {
-  position: absolute;
-  z-index: 1;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
-  max-width: calc(100% - 2rem);
-  margin: 0;
-  padding: 0.5rem 0.85rem;
-  border-radius: 0.4rem;
-  background: rgb(9 35 45 / 80%);
-  color: #fff;
-  font-size: 0.9375rem;
-  font-weight: 700;
-  line-height: 1.35;
-  text-align: center;
-}
-@media (max-width: 767px) {
-  #nervous-system .waves-video-caption {
-    top: calc(var(--mobile-video-height) / 2);
-    transform: translate(-50%, -50%);
-  }
-}
-
 /* Carry the preview palette through the sections after booking. */
 [data-section="home-marquee"] { border-color: #bedbe7; }
 [data-section="home-marquee"] p,
@@ -240,4 +215,23 @@ html {
 :is(#experiences, #testimonials, #faq) .text-gold-300 { color: #d8efe8; }
 :is(#experiences, #testimonials, #faq) :is([class~="text-white/50"], [class~="text-white/60"], [class~="text-white/65"]) {
   color: #d4e7ec;
+}
+
+.video-transition {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.25rem 0.85rem;
+  padding: 0.55rem 1rem;
+  background: var(--breath-mint, #d8efe8);
+  color: #111;
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  text-align: center;
+}
+.video-transition > a { color: inherit; font-weight: 700; text-decoration: underline; text-underline-offset: 0.2em; }
+.video-transition-detail { font-size: 0.875rem; }
+@media (max-width: 767px) {
+  .video-transition-detail { display: none; }
 }
