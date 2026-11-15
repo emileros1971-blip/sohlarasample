@@ -47,7 +47,17 @@
   
   
   
-<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="preview.css?v=8"></head>
+<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="preview.css?v=8"><style>
+  #book :is(#hb-referral-source, #hb-dietary) {
+    background: rgb(7 28 40 / 40%);
+    border: 1px solid rgb(224 250 249 / 45%);
+    color: #f3fbfc;
+  }
+  #book :is(#hb-referral-source, #hb-dietary):focus-visible {
+    outline: 2px solid #a7d6cb;
+    outline-offset: 2px;
+  }
+</style></head>
 <body class="font-montserrat antialiased">
   
 
@@ -735,7 +745,9 @@
               <input class="w-full rounded-xl border border-neutral-700 bg-neutral-900 px-4 py-3 font-montserrat text-[15px] text-white placeholder-white/55 transition-colors focus:border-gold-300 focus:outline-none focus:ring-2 focus:ring-gold-300/20" id="hb-phone" name="phone" type="tel" autocomplete="tel" placeholder="+34 600 000 000" required data-wallet-fills disabled>
             </div>
                     <div class="sm:col-span-2">
-            <label class="mb-2 block text-sm font-medium text-white" for="hb-dietary">Food allergies or dietary requirements</label>
+            <label class="mb-2 block text-sm font-medium text-white" for="hb-referral-source">Where did you first hear about us? *</label>
+            <input class="w-full rounded-xl px-4 py-3 text-white" id="hb-referral-source" name="referral_source" type="text" maxlength="255" required>
+            <label class="mt-4 mb-2 block text-sm font-medium text-white" for="hb-dietary">Food allergies or dietary requirements</label>
             <textarea class="w-full rounded-xl border border-neutral-700 bg-neutral-900 px-4 py-3 text-white" id="hb-dietary" rows="2" maxlength="1000"></textarea>
           </div>
           <div class="sm:col-span-2">
@@ -1150,7 +1162,7 @@
           <a aria-label="Phone" title="Phone" class="flex h-11 w-11 items-center justify-center rounded-md border border-white/10 text-white/65 transition-colors hover:border-[#e9b74f] hover:bg-[#e9b74f]/5 hover:text-[#e9b74f]" href="tel:+34690227210"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-5 w-5" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg></a>
         </div>
         <div class="sohlara-footer-links">
-          <a class="sohlara-footer-reviews" href="https://www.google.com/maps/place/Sohlara+Retreats/@35.67445,-6.8143,5z/data=!4m8!3m7!1s0xc6a9dba4c073ccf:0xe0e1f95a5cdd47e1!8m2!3d35.67445!4d-6.8143!9m1!1b1!16s%2Fg%2F11p2dpkxcw" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">G</span> Read our Google reviews <span class="sohlara-footer-stars" aria-hidden="true">★★★★★</span></a>
+          <a class="sohlara-footer-reviews" href="https://www.google.com/maps/place/Sohlara+Retreats/@35.67445,-6.8143,5z/data=!4m8!3m7!1s0xc6a9dba4c073ccf:0xe0e1f95a5cdd47e1!8m2!3d35.67445!4d-6.8143!9m1!1b1!16s%2Fg%2F11p2dpkxcw" target="_blank" rel="noopener noreferrer">Read our Google reviews <span class="sohlara-footer-stars" aria-hidden="true">★★★★★</span></a>
           <details>
             <summary>Social Media</summary>
             <ul aria-label="Social Media links">
