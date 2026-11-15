@@ -221,3 +221,23 @@ html {
     transform: translate(-50%, -50%);
   }
 }
+
+/* Carry the preview palette through the sections after booking. */
+[data-section="home-marquee"] { border-color: #bedbe7; }
+[data-section="home-marquee"] p,
+[data-section="home-marquee"] span { color: #153e60; }
+#experiences, #faq, footer { background: #102d36; }
+#testimonials { background: #173e50; }
+#experiences, #testimonials, #faq, footer { border-color: #315a68; }
+#experiences .grid > div, #testimonials [class~="bg-[#1f3f3b]"] {
+  background: #183f4b;
+  border-color: #578578;
+}
+#experiences .grid > div:nth-child(2) {
+  background: #204b57;
+  border-color: #a7d6cb;
+}
+:is(#experiences, #testimonials, #faq) .text-gold-300 { color: #d8efe8; }
+:is(#experiences, #testimonials, #faq) :is([class~="text-white/50"], [class~="text-white/60"], [class~="text-white/65"]) {
+  color: #d4e7ec;
+}
