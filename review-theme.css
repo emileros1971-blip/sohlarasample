@@ -154,3 +154,126 @@
 .sohlara-redesign :is(#preview-referral-source,textarea[name="dietary"]) {
   background:rgb(7 28 40 / 40%); border-color:rgb(224 250 249 / 45%); color:#f3fbfc;
 }
+/* The homepage palette and type scale, applied to the existing inner-page layouts. */
+.sohlara-redesign #main-content {
+  --color-neutral-200: #e5f1f5;
+  --color-neutral-300: #d4e7ec;
+  --color-neutral-400: #afc5ce;
+  --color-neutral-500: #879fae;
+  --color-neutral-600: #52707d;
+  --color-neutral-700: #315a68;
+  --color-neutral-800: #204b57;
+  --color-neutral-900: #183f4b;
+  --color-neutral-950: #102d36;
+  --color-gold-200: #eff8fb;
+  --color-gold-300: #d8efe8;
+  --color-gold-400: #b6e1d6;
+  --color-gold-500: #8bcabf;
+  --color-gold-700: #174d76;
+  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+}
+.sohlara-redesign #main-content :is(h1, h2, h3, h4, .hg-heading, .dfont) {
+  font-family: Urbanist, Montserrat, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: normal;
+}
+.sohlara-redesign #main-content :is(h1, h2, .hg-heading) {
+  font-weight: 800;
+  text-wrap: balance;
+}
+.sohlara-redesign #main-content h1 {
+  line-height: 1.06;
+}
+.sohlara-redesign #main-content :is(input, textarea, select, button) {
+  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+}
+.sohlara-redesign #main-content .fr-page {
+  --paper: #eff8fb;
+  --paper-2: #e1f0f8;
+  --card: #fff;
+  --ink: #143e5c;
+  --body-c: #254d63;
+  --line: #bedbe7;
+  --plum: #173e50;
+  --plum-2: #102d36;
+  --plum-card: #183f4b;
+  --plum-line: #315a68;
+  --gold: #d8efe8;
+  --gold-soft: #174d76;
+  --gold-bright: #cde6f2;
+  --magenta: #174d76;
+  --magenta-hover: #143e5c;
+  --magenta-soft: #1f678d;
+  --pink-on-dark: #d8efe8;
+  --on-dark: #f3fbfc;
+  --on-dark-muted: #d4e7ec;
+  --shadow: 0 18px 45px rgb(20 62 92 / 10%);
+}
+.sohlara-redesign #main-content .bts-page {
+  --ink: #143e5c;
+  --earth: #254d63;
+  --muted: #3c6376;
+  --cream: #eff8fb;
+  --sand: #e1f0f8;
+  --stone: #cde6f2;
+  --accent: #d8efe8;
+  --white: #f3fbfc;
+}
+.sohlara-redesign #main-content :is(.fr-page, .bts-page) {
+  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+}
+.sohlara-redesign #main-content [style*="#17534a"][style*="#0a221f"] {
+  background-image: linear-gradient(180deg, #173e50 0%, #102d36 18.82%, #102d36 100%) !important;
+}
+.sohlara-redesign #main-content [style*="#57b390"][style*="#29795d"] {
+  background-image: linear-gradient(135deg, #2f7082 0%, #174d76 100%) !important;
+}
+.sohlara-redesign #main-content [style*="#f3cb77"][style*="#e9b74f"] {
+  background-image: linear-gradient(256.66deg, #e1f0f8 0%, #d8efe8 100%) !important;
+}
+.sohlara-redesign #main-content [style*="background:#102c29"] {
+  background-color: #102d36 !important;
+}
+.sohlara-redesign #main-content [style*="border:1px solid #e9b74f"] {
+  border-color: #a7d6cb !important;
+}
+.sohlara-redesign #main-content [class~="bg-[#0b3029]"] { background-color: #143751; }
+.sohlara-redesign #main-content [class~="bg-[#0d3a37]"] { background-color: #173e50; }
+.sohlara-redesign #main-content [class~="bg-[#133430]"] { background-color: #102d36; }
+.sohlara-redesign #main-content [class~="bg-[#163733]"] { background-color: #183f4b; }
+.sohlara-redesign #main-content [class~="bg-[#193935]"] { background-color: #183f4b; }
+.sohlara-redesign #main-content [class~="bg-[#1a3b36]"] { background-color: #183f4b; }
+.sohlara-redesign #main-content [class~="bg-[#1c3c38]"] { background-color: #183f4b; }
+.sohlara-redesign #main-content [class~="bg-[#1f3f3b]"] { background-color: #183f4b; }
+.sohlara-redesign #main-content [class~="bg-[#254440]"] { background-color: #204b57; }
+.sohlara-redesign #main-content [class~="bg-[#274642]"] { background-color: #204b57; }
+.sohlara-redesign #main-content [class~="bg-[#e9b74f]"] { background-color: #d8efe8; }
+.sohlara-redesign #main-content [class~="bg-[#e9b74f]/15"] { background-color: rgb(216 239 232 / 0.15); }
+.sohlara-redesign #main-content [class~="bg-[#f7fbfa]"] { background-color: #f5fbfd; }
+.sohlara-redesign #main-content [class~="border-[#1c3c38]"] { border-color: #183f4b; }
+.sohlara-redesign #main-content [class~="border-[#2c5148]"] { border-color: #315a68; }
+.sohlara-redesign #main-content [class~="border-[#3d5b57]"] { border-color: #315a68; }
+.sohlara-redesign #main-content [class~="border-[#45635f]"] { border-color: #52707d; }
+.sohlara-redesign #main-content [class~="border-[#e9b74f]/80"] { border-color: rgb(216 239 232 / 0.8); }
+.sohlara-redesign #main-content [class~="from-[#163733]"] { --tw-gradient-from: #183f4b; }
+.sohlara-redesign #main-content [class~="from-[#1a3b36]"] { --tw-gradient-from: #183f4b; }
+.sohlara-redesign #main-content [class~="from-[#fef6e5]"] { --tw-gradient-from: #eff8fb; }
+.sohlara-redesign #main-content [class~="hover:bg-[#1f3f3b]"]:hover { background-color: #183f4b; }
+.sohlara-redesign #main-content [class~="hover:bg-[#f3cb77]"]:hover { background-color: #e1f0f8; }
+.sohlara-redesign #main-content [class~="hover:border-[#e9b74f]"]:hover { border-color: #d8efe8; }
+.sohlara-redesign #main-content [class~="text-[#124D49]"] { color: #174d76; }
+.sohlara-redesign #main-content [class~="text-[#133430]"] { color: #102d36; }
+.sohlara-redesign #main-content [class~="text-[#1b3b37]"] { color: #183f4b; }
+.sohlara-redesign #main-content [class~="text-[#274642]"] { color: #204b57; }
+.sohlara-redesign #main-content [class~="text-[#3a5854]"] { color: #315a68; }
+.sohlara-redesign #main-content [class~="text-[#4b6965]"] { color: #52707d; }
+.sohlara-redesign #main-content [class~="text-[#adb6b4]"] { color: #afc5ce; }
+.sohlara-redesign #main-content [class~="text-[#dadedd]"] { color: #d4e7ec; }
+.sohlara-redesign #main-content [class~="text-[#e7ebea]"] { color: #e5f1f5; }
+.sohlara-redesign #main-content [class~="text-[#e9b74f]"] { color: #d8efe8; }
+.sohlara-redesign #main-content [class~="text-[#f3cb77]"] { color: #e1f0f8; }
+.sohlara-redesign #main-content [class~="to-[#143531]"] { --tw-gradient-to: #173e50; }
+.sohlara-redesign #main-content [class~="to-[#163733]"] { --tw-gradient-to: #183f4b; }
+.sohlara-redesign #main-content [class~="to-[#22413d]"] { --tw-gradient-to: #204b57; }
+.sohlara-redesign #main-content [class~="to-[#f6db9f]"] { --tw-gradient-to: #e1f0f8; }
+.sohlara-redesign #main-content [class~="via-[#0d3a37]/50"] { --tw-gradient-via: rgb(23 62 80 / 0.5); }
+.sohlara-redesign #main-content [class~="via-[#e9b74f]"] { --tw-gradient-via: #d8efe8; }
