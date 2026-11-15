@@ -1381,6 +1381,9 @@
         positionMenu();
       }
     });
+    trigger.addEventListener('click', (event) => {
+      if (event.pointerType === 'mouse' && social.open) event.preventDefault();
+    });
     social.addEventListener('pointerleave', (event) => {
       if (event.pointerType === 'mouse' && !social.contains(document.activeElement)) social.open = false;
     });
