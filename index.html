@@ -411,12 +411,6 @@
       
         <li>
           <span class="font-urbanist text-[15px] font-bold tracking-normal text-white/75 transition-colors duration-200 hover:text-white sm:text-base md:text-[17px] md:tracking-normal lg:text-lg">
-            Yin Yoga
-          </span>
-        </li>
-      
-        <li>
-          <span class="font-urbanist text-[15px] font-bold tracking-normal text-white/75 transition-colors duration-200 hover:text-white sm:text-base md:text-[17px] md:tracking-normal lg:text-lg">
             Qigong
           </span>
         </li>
@@ -742,13 +736,16 @@
             </div>
                     <div class="sm:col-span-2">
             <label class="mb-2 block text-sm font-medium text-white" for="hb-dietary">Food allergies or dietary requirements</label>
-            <textarea class="w-full rounded-xl border border-neutral-700 bg-neutral-900 px-4 py-3 text-white" id="hb-dietary" rows="2" disabled></textarea>
+            <textarea class="w-full rounded-xl border border-neutral-700 bg-neutral-900 px-4 py-3 text-white" id="hb-dietary" rows="2" maxlength="1000"></textarea>
           </div>
           <div class="sm:col-span-2">
-            <label class="mb-2 block text-sm font-medium text-white" for="hb-airport-transfer">Would you like us to contact you about an airport transfer?</label>
-            <select class="w-full rounded-xl border border-neutral-700 bg-neutral-900 px-4 py-3 text-white" id="hb-airport-transfer" disabled>
-              <option>Select an option</option><option>Yes</option><option>No</option>
-            </select>
+            <fieldset>
+              <legend class="mb-2 block text-sm font-medium text-white">Would you like us to arrange an airport transfer for you?</legend>
+              <div class="flex flex-wrap gap-4">
+                <label class="inline-flex min-h-11 items-center gap-2 text-white"><input type="radio" name="airportTransfer" value="yes"> Yes</label>
+                <label class="inline-flex min-h-11 items-center gap-2 text-white"><input type="radio" name="airportTransfer" value="no"> No</label>
+              </div>
+            </fieldset>
           </div>
         </div>
         </fieldset>
