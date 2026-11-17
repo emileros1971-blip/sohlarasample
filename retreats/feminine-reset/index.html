@@ -156,13 +156,6 @@ html.js .fr-page{scroll-behavior:smooth}
 .fr-page .pi-no{background:rgba(255,255,255,.08);color:rgba(255,255,255,.45)}
 .fr-page .price-card .btn{margin-top:30px;width:100%}
 .fr-page .pay-note{text-align:center;font-size:.9rem;margin-top:30px;opacity:.75}
-.fr-page .ghid-wrap{max-width:680px;text-align:center}
-.fr-page .ghid-title{font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:.12em;text-transform:uppercase; color:var(--ink);margin-bottom:40px;}
-.fr-page .ghid-photo{width:min(320px,72vw);height:auto;aspect-ratio:1;object-fit:contain; margin:0 auto 26px;}
-.fr-page .ghid-name{font-family:'Montserrat',Arial,sans-serif;font-size:1.6rem;font-weight:600; color:var(--magenta-soft);margin-bottom:16px;}
-.fr-page .ghid-bio{font-size:1.02rem;line-height:1.78}
-.fr-page .ghid-bio p{margin-bottom:16px}
-.fr-page .ghid-bio p:last-child{margin-bottom:0}
 .fr-page .lightbox{position:fixed;inset:0;z-index:200;background:rgba(22,8,20,.94); display:none;align-items:center;justify-content:center;padding:40px;}
 .fr-page .lightbox.open{display:flex}
 .fr-page .lightbox img{max-width:90vw;max-height:86vh;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
@@ -196,7 +189,7 @@ html.js .fr-page{scroll-behavior:auto}
 .fr-page{--paper:#f5f3ec; --paper-2:#e9eee7; --card:#fffefa; --ink:#183b34; --body-c:#53645d; --line:#d9e0d7; --plum:#123a32; --plum-2:#0d2e28; --plum-card:#1b4940; --plum-line:rgba(255,255,255,.12); --gold:#d6b56d; --gold-soft:#b8944d; --gold-bright:#e6cb8c; --magenta:#b18b4d; --magenta-hover:#96723c; --magenta-soft:#b18b4d; --pink-on-dark:#e7d5a9; --on-dark:#f7f5ed; --on-dark-muted:#d0d9d1; --radius:18px; --shadow:0 18px 50px rgba(18,58,50,.10); --header-h:78px;}
 .fr-page{scroll-behavior:smooth}
 .fr-page{font-family:'Montserrat',Arial,sans-serif; background:var(--paper); color:var(--body-c); line-height:1.75; font-size:16px;}
-.fr-page h1,.fr-page h2,.fr-page h3,.fr-page h4,.fr-page .dfont,.fr-page .btn,.fr-page .eyebrow,.fr-page .day-when,.fr-page .day-title,.fr-page .row-time,.fr-page .price-tag,.fr-page .price-val,.fr-page .price-list-label,.fr-page .ghid-name{font-family:'Montserrat',Arial,sans-serif; letter-spacing:-.025em;}
+.fr-page h1,.fr-page h2,.fr-page h3,.fr-page h4,.fr-page .dfont,.fr-page .btn,.fr-page .eyebrow,.fr-page .day-when,.fr-page .day-title,.fr-page .row-time,.fr-page .price-tag,.fr-page .price-val,.fr-page .price-list-label{font-family:'Montserrat',Arial,sans-serif; letter-spacing:-.025em;}
 .fr-page h1{font-size:clamp(3.2rem,8vw,7.2rem);line-height:.98;font-weight:500}
 .fr-page h2{font-size:clamp(2.1rem,4vw,3.45rem);font-weight:500;line-height:1.12;color:var(--ink)}
 .fr-page h3{font-size:clamp(1.25rem,2vw,1.75rem);font-weight:500;line-height:1.25;color:var(--ink)}
@@ -261,10 +254,6 @@ html.js .fr-page{scroll-behavior:auto}
 .fr-page .price-card li{font-size:.91rem}
 .fr-page .price-card .btn{margin-top:28px}
 .fr-page .pay-note{color:var(--body-c)}
-.fr-page .ghid-title{font-size:clamp(1.9rem,3.5vw,2.7rem);letter-spacing:.04em;color:var(--ink)}
-.fr-page .ghid-photo{border-radius:50%;object-fit:cover;box-shadow:0 14px 40px rgba(18,58,50,.13)}
-.fr-page .ghid-name{color:var(--gold-soft);font-size:1.8rem}
-.fr-page .ghid-bio{color:var(--body-c)}
 .fr-page .lightbox{background:rgba(7,28,24,.97)}
 .fr-page .lb-btn{background:rgba(230,203,140,.18);border:1px solid rgba(230,203,140,.4);color:#fff}
 .fr-page .lb-btn:hover{background:rgba(230,203,140,.35)}
@@ -286,7 +275,6 @@ html.js .fr-page{scroll-behavior:auto}
 .fr-page .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:145px;gap:8px}
 .fr-page .day{padding:25px 20px}
 .fr-page .price-card{padding:30px 24px}
-.fr-page .ghid-photo{width:min(260px,72vw)}
 }
 @media(prefers-reduced-motion:reduce){
 .fr-page *,.fr-page *:before,.fr-page *:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
@@ -338,7 +326,6 @@ html.js .fr-page{scroll-behavior:auto}
 /* Inside the site: the site header (fixed) replaces the page's own; the site fonts and photos are used. */
 .fr-page{--header-h:var(--header-height,70px);--fr-hero-img:url("https://sohlararetreats.com/static/site/img/retreats/feminine/exp-3-1024.webp")}
 .fr-page .video-card video{width:100%}
-.fr-page .ghid-photo{display:block}
 /* Room for the language switch above the hero badge on phones. */
 @media (max-width:640px){.fr-page .hero{padding-top:calc(var(--header-h) + 64px)!important}}
 </style>
@@ -357,7 +344,7 @@ html.js .fr-page{scroll-behavior:auto}
   }
   .fr-page #rezerva :is(.retreat-inclusions, .retreat-payment) { padding: clamp(1.25rem, 4vw, 2.75rem); }
   .fr-page #rezerva .retreat-payment { border-inline-start: 1px solid #b5d6d1; }
-  .fr-page #rezerva .retreat-offer :is(h3, p, li) { color: #143e5c; }
+  #main-content #rezerva .retreat-offer :is(h3, p, li) { color: #143e5c !important; }
   .fr-page #rezerva .retreat-offer h3 { margin: 0 0 1rem; }
   .fr-page #rezerva .retreat-inclusions ul { list-style: disc; padding-inline-start: 1.25rem; }
   .fr-page #rezerva .retreat-inclusions li + li { margin-top: .4rem; }
@@ -370,16 +357,54 @@ html.js .fr-page{scroll-behavior:auto}
   .fr-page #rezerva .retreat-payment-name { font-size: .95rem; }
   .fr-page #rezerva .retreat-amount { font-size: clamp(1.6rem, 4vw, 2.3rem); font-weight: 800; }
   .fr-page #rezerva .retreat-amount span { font-size: .9rem; }
-  .fr-page #rezerva .retreat-offer .btn {
+  #main-content #rezerva .retreat-offer .btn {
     margin-top: .8rem;
     background-color: #174d76 !important;
     border-color: #174d76 !important;
     color: #fff !important;
   }
-  .fr-page #rezerva .retreat-offer .btn:hover { background-color: #102d46 !important; }
+  #main-content #rezerva .retreat-offer .btn:hover { background-color: #102d46 !important; }
   @media (max-width: 700px) {
     .fr-page #rezerva .retreat-offer { grid-template-columns: 1fr; }
     .fr-page #rezerva .retreat-payment { border-inline-start: 0; border-top: 1px solid #b5d6d1; }
+  }
+
+  .fr-page .guide-profile {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+    align-items: center;
+    gap: clamp(1.75rem, 5vw, 4rem);
+    max-width: 62rem;
+  }
+  .fr-page .guide-profile .guide-portrait {
+    width: min(100%, 17rem);
+    aspect-ratio: 1;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #a7d6cb;
+    justify-self: center;
+  }
+  .fr-page .guide-copy h2 {
+    margin: .35rem 0 .65rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+  }
+  #main-content .fr-page .guide-copy .guide-role {
+    color: var(--review-mint, #d8efe8);
+    font-weight: 650;
+  }
+  .fr-page .guide-copy p {
+    max-width: 60ch;
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    line-height: 1.65;
+    font-weight: 500;
+  }
+  .fr-page .guide-copy p:last-child { margin-bottom: 0; }
+  @media (max-width: 700px) {
+    .fr-page .guide-profile { grid-template-columns: 1fr; }
+    .fr-page .guide-profile .guide-portrait { width: min(55vw, 13rem); }
   }
 </style>
 </head>
@@ -939,18 +964,17 @@ html.js .fr-page{scroll-behavior:auto}
   </div>
 </section>
 <!-- ================= CINE TE GHIDEAZA ================= -->
-<section class="sec" id="ghid">
-<div class="wrap ghid-wrap reveal">
-<h2 class="ghid-title">Your guide</h2>
-<img alt="Dr. Cristina Obreja" src="https://sohlararetreats.com/static/site/img/retreats/feminine/dr-cristina-obreja-500.webp" srcset="https://sohlararetreats.com/static/site/img/retreats/feminine/dr-cristina-obreja-480.webp 480w, https://sohlararetreats.com/static/site/img/retreats/feminine/dr-cristina-obreja-500.webp 500w" sizes="(max-width: 640px) 72vw, 320px" width="500" height="500" loading="lazy" decoding="async" class="ghid-photo">
-<div class="ghid-name">Dr. Cristina Obreja</div>
-<div class="ghid-bio">
-<p>A medical doctor, trainer, educator and personal development counsellor, Dr. Cristina Obreja combines the rigour of science with the wisdom of Eastern traditions and her experience of deep work with women.</p>
-<p>Her training includes accredited qualifications in traditional Eastern medicine, phytotherapy, apitherapy and aromatherapy, which she brings together in a holistic approach to women's health, vitality and balance.</p>
-<p>At Feminine Reset, Cristina invites women to look beyond their symptoms and the roles they carry every day — towards the body, the emotions, their energy and their true needs.</p>
-<p>A space to slow down, reconnect and transform. To put down what no longer serves you and return, with more clarity and presence, to the woman you truly are.</p>
-</div>
-</div>
+<section class="sec" id="ghid" aria-labelledby="guide-name">
+  <div class="wrap guide-profile reveal">
+    <img alt="Dr. Cristina Obreja" src="https://sohlararetreats.com/static/site/img/retreats/feminine/dr-cristina-obreja-500.webp" srcset="https://sohlararetreats.com/static/site/img/retreats/feminine/dr-cristina-obreja-480.webp 480w, https://sohlararetreats.com/static/site/img/retreats/feminine/dr-cristina-obreja-500.webp 500w" sizes="(max-width: 700px) min(55vw, 208px), 272px" width="500" height="500" loading="lazy" decoding="async" class="guide-portrait">
+    <div class="guide-copy">
+      <span class="eyebrow">Your retreat guide</span>
+      <h2 id="guide-name">Dr. Cristina Obreja</h2>
+      <p class="guide-role">Medical doctor, trainer, educator and personal development counsellor</p>
+      <p>Cristina combines her medical background with accredited training in traditional Eastern medicine, phytotherapy, apitherapy and aromatherapy.</p>
+      <p>At Feminine Reset, she’ll guide you in paying closer attention to how stress shows up in your body and emotions, and recognising what you need in everyday life.</p>
+    </div>
+  </div>
 </section>
 
 <!-- ================= LIGHTBOX ================= -->
