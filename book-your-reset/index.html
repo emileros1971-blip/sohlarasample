@@ -524,6 +524,11 @@
             </div>
           </div>
 
+          <div class="rounded-2xl bg-neutral-800 p-6" role="note">
+            <p class="text-white font-semibold">Complete your booking on our secure live site</p>
+            <p class="text-neutral-400 text-sm mt-2">This is the design preview. Choose your room, arrival date and stay length here, then continue to secure booking. You can leave the personal details below empty and enter them on the live site.</p>
+            <button type="button" data-live-booking class="hg-btn hg-btn--primary mt-4">Continue to secure booking</button>
+          </div>
           <!-- Step 3 -->
           <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8">
             <div class="flex items-center gap-3 mb-6">
@@ -552,19 +557,7 @@
                 </div>
               </div>
               <div class="grid sm:grid-cols-2 gap-4">
-                <fieldset>
-                  <legend class="block text-sm font-medium text-white mb-2">Are you on WhatsApp?</legend>
-                  <div class="grid grid-cols-2 gap-3">
-                        <label class="group rounded-xl border text-left transition-all cursor-pointer border-neutral-700 hover:border-neutral-600 bg-neutral-900 has-checked:border-gold-300 has-checked:bg-neutral-800 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300 flex min-h-[50px] items-center px-4 py-3">
-                          <input class="sr-only" type="radio" name="whatsapp" value="Yes">
-                          <span class="block text-sm font-medium text-white group-has-checked:text-gold-300">Yes</span>
-                        </label>
-                        <label class="group rounded-xl border text-left transition-all cursor-pointer border-neutral-700 hover:border-neutral-600 bg-neutral-900 has-checked:border-gold-300 has-checked:bg-neutral-800 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300 flex min-h-[50px] items-center px-4 py-3">
-                          <input class="sr-only" type="radio" name="whatsapp" value="No">
-                          <span class="block text-sm font-medium text-white group-has-checked:text-gold-300">No</span>
-                        </label>
-                  </div>
-                </fieldset>
+                
                 <div>
                   <label class="block text-sm font-medium text-white mb-2" for="dob">Date of Birth *</label>
                   <input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors min-h-[50px] appearance-none [color-scheme:dark] [&amp;::-webkit-date-and-time-value]:text-left" id="dob" name="dob" type="date" autocomplete="bday" required data-dob>
@@ -709,9 +702,9 @@
               </div>
             </dl>
             
-            <button class="hg-btn hg-btn--primary hg-btn--lg hg-btn--glow w-full" type="submit" data-pay-button disabled>Request My Booking</button>
+            <button class="hg-btn hg-btn--primary hg-btn--lg hg-btn--glow w-full" type="button" data-pay-button data-live-booking>Continue to secure booking</button>
             <p class="text-neutral-400 text-xs text-center mt-4" data-request-only>
-              No payment is taken now. We'll confirm availability and send you the payment details.
+              Continue to the live site with your room, arrival date and stay length. Enter your personal details and pay securely there.
             </p>
             
             <p class="text-neutral-400 text-xs text-center mt-4" data-pay-only hidden>
@@ -1305,5 +1298,6 @@
 
 
   
+<script src="/sohlarasample/book-your-reset/secure-booking.js?v=1" defer></script>
 </body>
 </html>
