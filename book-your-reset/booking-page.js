@@ -192,9 +192,20 @@
       const empty = form.querySelector('[data-summary-empty]');
       const details = form.querySelector('[data-summary-details]');
       if (empty) empty.hidden = Boolean(room);
-      if (details) details.hidden = !room;
+      if (details) details.hidden = false;
       if (!room) {
         unitsWrap.hidden = true;
+        ['room', 'experience', 'days', 'units', 'arrival', 'subtotal', 'discount', 'total'].forEach(key => {
+          summary(key).textContent = '—';
+        });
+        summary('units-label').textContent = 'Guests';
+        summary('discount-label').textContent = 'Discount';
+        summary('discount-row').hidden = false;
+        summary('surcharge-row').hidden = true;
+        summary('per-person').textContent = '';
+        summary('price-before-discount').hidden = true;
+        form.querySelector('[data-summary-date-note]').hidden = true;
+        form.querySelector('[data-summary-total-label]').textContent = 'Total for your stay';
         return;
       }
       const dateNote = form.querySelector('[data-summary-date-note]');
