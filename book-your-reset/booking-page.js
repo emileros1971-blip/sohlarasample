@@ -203,9 +203,12 @@
         summary('discount-row').hidden = false;
         summary('surcharge-row').hidden = true;
         summary('per-person').textContent = '';
-        summary('price-before-discount').hidden = true;
-        form.querySelector('[data-summary-date-note]').hidden = true;
-        form.querySelector('[data-summary-total-label]').textContent = 'Total for your stay';
+        const reference = summary('price-before-discount');
+        if (reference) reference.hidden = true;
+        const note = form.querySelector('[data-summary-date-note]');
+        const label = form.querySelector('[data-summary-total-label]');
+        if (note) note.hidden = true;
+        if (label) label.textContent = 'Total for your stay';
         return;
       }
       const dateNote = form.querySelector('[data-summary-date-note]');

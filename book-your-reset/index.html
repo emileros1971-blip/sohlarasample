@@ -329,7 +329,7 @@
 
   <section class="pb-16 md:pb-20 px-4 md:px-6 lg:px-8" data-section="book-form">
     <div class="max-w-6xl mx-auto">
-      <form class="grid lg:grid-cols-[minmax(0,2fr)_minmax(20rem,1fr)] gap-8 md:gap-12 items-start" method="post" novalidate>
+      <form class="grid lg:grid-cols-[minmax(0,2fr)_minmax(20rem,1fr)] gap-8 md:gap-12 items-start" data-form="booking" method="post" novalidate>
         
         <input type="text" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
         <div class="min-w-0 space-y-6">
@@ -524,11 +524,6 @@
             </div>
           </div>
 
-          <div class="rounded-2xl bg-neutral-800 p-6" role="note">
-            <p class="text-white font-semibold">Complete your booking on our secure live site</p>
-            <p class="text-neutral-400 text-sm mt-2">This is the design preview. Choose your room, arrival date and stay length here, then continue to secure booking. You can leave the personal details below empty and enter them on the live site.</p>
-            <button type="button" data-live-booking class="hg-btn hg-btn--primary mt-4">Continue to secure booking</button>
-          </div>
           <!-- Step 3 -->
           <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8">
             <div class="flex items-center gap-3 mb-6">
@@ -606,13 +601,13 @@
                   <label class="group rounded-xl border text-left transition-all cursor-pointer border-neutral-700 hover:border-neutral-600 bg-neutral-900 has-checked:border-gold-300 has-checked:bg-neutral-800 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300 flex flex-col gap-1 p-4">
                     <input class="sr-only" type="radio" name="payment" value="deposit" checked>
                     <span class="text-sm font-medium text-white group-has-checked:text-gold-300">20% deposit</span>
-                    <span class="text-lg font-semibold text-white" data-co="deposit">€109.40</span>
+                    <span class="text-lg font-semibold text-white" data-co="deposit">—</span>
                     <span class="text-xs text-neutral-400">The rest is paid on arrival.</span>
                   </label>
                   <label class="group rounded-xl border text-left transition-all cursor-pointer border-neutral-700 hover:border-neutral-600 bg-neutral-900 has-checked:border-gold-300 has-checked:bg-neutral-800 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300 flex flex-col gap-1 p-4">
                     <input class="sr-only" type="radio" name="payment" value="full">
                     <span class="text-sm font-medium text-white group-has-checked:text-gold-300">Pay in full</span>
-                    <span class="text-lg font-semibold text-white" data-co="full">€547.00</span>
+                    <span class="text-lg font-semibold text-white" data-co="full">—</span>
                     <span class="text-xs text-neutral-400">Nothing left to pay on arrival.</span>
                   </label>
                 </div>
@@ -694,17 +689,17 @@
             <dl class="space-y-2 text-sm border-t border-neutral-700 pt-4 mb-6" data-pay-only hidden>
               <div class="flex items-start justify-between gap-4">
                 <dt class="text-neutral-400">Due today</dt>
-                <dd class="text-right font-semibold text-gold-300" data-co="due">€109.40</dd>
+                <dd class="text-right font-semibold text-gold-300" data-co="due">—</dd>
               </div>
               <div class="flex items-start justify-between gap-4" data-co-balance-row>
                 <dt class="text-neutral-400">Remaining balance (on arrival)</dt>
-                <dd class="text-right text-white" data-co="balance">€437.60</dd>
+                <dd class="text-right text-white" data-co="balance">—</dd>
               </div>
             </dl>
             
-            <button class="hg-btn hg-btn--primary hg-btn--lg hg-btn--glow w-full" type="button" data-pay-button data-live-booking>Continue to secure booking</button>
+            <button class="hg-btn hg-btn--primary hg-btn--lg hg-btn--glow w-full" type="submit" data-pay-button disabled>Choose a room to see payment total</button>
             <p class="text-neutral-400 text-xs text-center mt-4" data-request-only>
-              Continue to the live site with your room, arrival date and stay length. Enter your personal details and pay securely there.
+              Booking details and payment stay on this page. This preview does not process payments; the live server must be updated to activate checkout.
             </p>
             
             <p class="text-neutral-400 text-xs text-center mt-4" data-pay-only hidden>
@@ -1291,13 +1286,14 @@
   <script src="https://sohlararetreats.com/static/site/js/reset.js?v=1793881198" defer></script>
   <script src="https://sohlararetreats.com/static/site/js/locations.js?v=1793881198" defer></script>
   <script src="https://sohlararetreats.com/static/site/js/pricing.js?v=1793881198-nightly-v1" defer></script>
-  <script src="/sohlarasample/book-your-reset/booking-page.js?v=visible-card-2" defer></script>
+  <script src="/sohlarasample/book-your-reset/booking-page.js?v=inline-summary-3" defer></script>
   <script type="application/json" id="booking-pricing">{"baseDays": 5, "defaultRoom": "cave-8", "defaultDays": "5", "depositPercent": 20, "rooms": [{"id": "cave-8", "experience": "cave", "name": "Shared Cave Room for 8", "detail": "Single bed", "price": 781.43, "guests": 1, "perPerson": true, "capacity": 8}, {"id": "cave-4", "experience": "cave", "name": "Shared Cave Room for 4", "detail": "Single bed", "price": 924.29, "guests": 1, "perPerson": true, "capacity": 4}, {"id": "cave-2", "experience": "cave", "name": "Shared Cave Room for 2", "detail": "Single bed", "price": 1281.43, "guests": 1, "perPerson": true, "capacity": 2}, {"id": "stone-single", "experience": "stone", "name": "Single Private Room", "detail": "For 1 person", "price": 1424.29, "guests": 1, "perPerson": false, "capacity": 1}, {"id": "stone-double", "experience": "stone", "name": "Double Private Room", "detail": "For 2 people", "price": 1991.43, "guests": 2, "perPerson": false, "capacity": 1}, {"id": "stone-triple", "experience": "stone", "name": "Triple Private Room", "detail": "For 3 people", "price": 2781.43, "guests": 3, "perPerson": false, "capacity": 1}], "durations": [{"days": 5, "discount": 0.3}, {"days": 10, "discount": 0.32}, {"days": 15, "discount": 0.35}, {"days": 20, "discount": 0.37}, {"days": 30, "discount": 0.4}], "surcharges": [{"start": "2026-12-20", "end": "2027-01-05", "rate": 0.5, "label": "Festive season", "text": "Festive season (nights 20\u00a0Dec \u2013 5\u00a0Jan)\u00a0+50%"}], "experiences": {"cave": "Cave Experience", "stone": "Stone House Experience"}}</script>
 <script type="application/json" id="checkout-config">{"publishableKey": "pk_live_51TnhHwLeQrnFj0z2DVtoTXiC78IW1Z1FAuXf8iWc8u8ncX7bviyEy70pVEo4gs0Uy4WDizOn1ShgiytkZCNbsC3B007yRYPFLi"}</script>
 
 
 
   
-<script src="/sohlarasample/book-your-reset/secure-booking.js?v=1" defer></script>
+<script src="https://js.stripe.com/v3/" defer></script>
+<script src="/sohlarasample/book-your-reset/inline-payment-preview.js?v=1" defer></script>
 </body>
 </html>
