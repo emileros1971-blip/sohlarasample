@@ -460,46 +460,52 @@
           <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8">
             <div class="flex items-center gap-3 mb-6">
               <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] font-display text-[13px] font-bold text-gold-300" aria-hidden="true">2</span>
-              <h2 class="text-xl font-semibold text-white">Your stay</h2>
+              <h2 class="text-xl font-semibold text-white">Choose your dates and stay length</h2>
             </div>
             <div class="space-y-6">
-              <fieldset>
-                <legend class="block text-sm font-medium text-white mb-3">Length of stay</legend>
+                <div>
+                  <label class="block text-sm font-medium text-white mb-2" for="startDate">Arrival date *</label>
+                  <input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors min-h-[50px] appearance-none [color-scheme:dark] [&amp;::-webkit-date-and-time-value]:text-left" id="startDate" name="startDate" type="date" required aria-describedby="startDate-hint" data-start-date>
+                  <p class="mt-2 text-xs text-neutral-400" id="startDate-hint">A festive rate applies only to nights from 20 December 2026 to 5 January 2027.</p>
+                </div>
+              <fieldset aria-describedby="stay-length-hint">
+                <legend class="block text-sm font-medium text-white mb-3">How long would you like to stay?</legend>
+                <p id="stay-length-hint" class="mb-3 text-sm text-neutral-400">Longer stays get a larger discount on the stay price. Your total and the discount applied are shown in Your Booking.</p>
                 <div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
                   
                       <label class="group/day relative flex min-h-12 flex-col items-center justify-center py-3 px-2 whitespace-nowrap rounded-lg font-normal transition-colors cursor-pointer bg-neutral-700 text-white hover:bg-neutral-600 has-checked:bg-gold-300 has-checked:text-black has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300">
                         <input class="sr-only" type="radio" name="days" value="5" checked>
                         <span>5 days</span>
-                        <span class="text-xs opacity-70 group-has-checked/day:opacity-100 group-has-checked/day:text-black">−30%</span>
+
                       </label>
                   
                       <label class="group/day relative flex min-h-12 flex-col items-center justify-center py-3 px-2 whitespace-nowrap rounded-lg font-normal transition-colors cursor-pointer bg-neutral-700 text-white hover:bg-neutral-600 has-checked:bg-gold-300 has-checked:text-black has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300">
                         <input class="sr-only" type="radio" name="days" value="10">
                         <span>10 days</span>
-                        <span class="text-xs opacity-70 group-has-checked/day:opacity-100 group-has-checked/day:text-black">−32%</span>
+
                       </label>
                   
                       <label class="group/day relative flex min-h-12 flex-col items-center justify-center py-3 px-2 whitespace-nowrap rounded-lg font-normal transition-colors cursor-pointer bg-neutral-700 text-white hover:bg-neutral-600 has-checked:bg-gold-300 has-checked:text-black has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300">
                         <input class="sr-only" type="radio" name="days" value="15">
                         <span>15 days</span>
-                        <span class="text-xs opacity-70 group-has-checked/day:opacity-100 group-has-checked/day:text-black">−35%</span>
+
                       </label>
                   
                       <label class="group/day relative flex min-h-12 flex-col items-center justify-center py-3 px-2 whitespace-nowrap rounded-lg font-normal transition-colors cursor-pointer bg-neutral-700 text-white hover:bg-neutral-600 has-checked:bg-gold-300 has-checked:text-black has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300">
                         <input class="sr-only" type="radio" name="days" value="20">
                         <span>20 days</span>
-                        <span class="text-xs opacity-70 group-has-checked/day:opacity-100 group-has-checked/day:text-black">−37%</span>
+
                       </label>
                   
                       <label class="group/day relative flex min-h-12 flex-col items-center justify-center py-3 px-2 whitespace-nowrap rounded-lg font-normal transition-colors cursor-pointer bg-neutral-700 text-white hover:bg-neutral-600 has-checked:bg-gold-300 has-checked:text-black has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300">
                         <input class="sr-only" type="radio" name="days" value="30">
                         <span>30 days</span>
-                        <span class="text-xs opacity-70 group-has-checked/day:opacity-100 group-has-checked/day:text-black">−40%</span>
+
                       </label>
                   
                 </div>
               </fieldset>
-              <div class="grid sm:grid-cols-2 gap-4">
+              <div>
                 <div data-units-wrap>
                   <span class="block text-sm font-medium text-white mb-2" id="units-label">Beds</span>
                   <div class="flex items-center gap-3" role="group" aria-labelledby="units-label">
@@ -512,11 +518,6 @@
                     </button>
                   </div>
                   <p class="mt-2 text-xs text-neutral-400">One bed per guest.</p>
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-white mb-2" for="startDate">Arrival date *</label>
-                  <input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors min-h-[50px] appearance-none [color-scheme:dark] [&amp;::-webkit-date-and-time-value]:text-left" id="startDate" name="startDate" type="date" required aria-describedby="startDate-hint" data-start-date>
-                  <p class="mt-2 text-xs text-neutral-400" id="startDate-hint">Choose the arrival date that suits you.</p>
                 </div>
               </div>
               <input type="hidden" name="units" value="1" data-units-input>
@@ -668,7 +669,7 @@
             </dl>
             <dl class="space-y-2 text-sm border-t border-neutral-700 pt-4">
               <div class="flex items-start justify-between gap-4">
-                <dt class="text-neutral-400">Subtotal</dt>
+                <dt class="text-neutral-400">Room price before adjustments</dt>
                 <dd class="text-right text-white" data-summary="subtotal">€781.43</dd>
               </div>
               
