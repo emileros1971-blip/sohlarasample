@@ -103,6 +103,12 @@
 
 
       
+<aside class="bf-panel" data-bf-panel aria-label="Black Friday sale" hidden>
+  <strong><span style="color: #a61b29">Black Friday</span> · 30% Off the 5-Day Reset · Ends 27 November</strong>
+  <time class="bf-clock" datetime="2026-11-28T00:00:00Z" role="timer" aria-live="off"></time>
+  <p class="bf-stock">3 packages left</p>
+  <a href="/sohlarasample/retreats/">Book Your Retreat</a>
+</aside>
 <header id="site-header" class="fixed left-0 right-0 z-[80] transition-[background-color,box-shadow,backdrop-filter] duration-300 bg-black/80 backdrop-blur-sm" style="top:var(--sitewide-banner-height)">
   <nav aria-label="Primary navigation" class="mx-auto flex h-[var(--header-nav-height)] max-w-7xl items-center justify-between px-4 md:px-8">
     <a class="relative z-10 flex items-center gap-2 group" href="/sohlarasample/">
@@ -2526,5 +2532,67 @@
   
 
   
+<script>
+  (() => {
+    const panel = document.querySelector('[data-bf-panel]');
+    if (!panel) return;
+    const clock = panel.querySelector('time');
+    const syncHeader = () => {
+      const visibleHeight = panel.offsetHeight;
+      document.documentElement.style.setProperty('--bf-visible-height', visibleHeight + 'px');
+    };
+    // Tenerife is on UTC in November.
+    const end = Date.parse(clock.dateTime);
+    const badges = document.querySelectorAll('.bf-badge, [data-bf-original]');
+    const syncPackageReference = () => {
+      const selected = document.querySelector('input[name="package"]:checked');
+      document.querySelectorAll('[data-bf-package-reference]').forEach((item) => {
+        item.hidden = item.dataset.bfPackageReference !== selected?.value;
+      });
+    };
+    document.addEventListener('change', (event) => {
+      if (event.target.matches('input[name="package"]')) syncPackageReference();
+    });
+    syncPackageReference();
+    const packagesLeft = panel.querySelector('.bf-stock')?.textContent.trim();
+    if (packagesLeft) {
+      document.querySelectorAll('.bf-badge').forEach((badge) => {
+        badge.append(document.createTextNode(' · ' + packagesLeft));
+      });
+    }
+    const pad = (value) => String(value).padStart(2, '0');
+    let timer;
+    let bannerObserver;
+    function update() {
+      const remaining = Math.ceil((end - Date.now()) / 1000);
+      if (remaining <= 0) {
+        panel.hidden = true;
+        syncHeader();
+        window.removeEventListener('resize', syncHeader);
+        bannerObserver?.disconnect();
+        document.documentElement.classList.remove('bf-active');
+        badges.forEach((badge) => { badge.hidden = true; });
+        clearInterval(timer);
+        return;
+      }
+      const days = Math.floor(remaining / 86400);
+      const hours = Math.floor(remaining / 3600) % 24;
+      const minutes = Math.floor(remaining / 60) % 60;
+      clock.textContent = `${days}d ${pad(hours)}h ${pad(minutes)}m ${pad(remaining % 60)}s`;
+    }
+    if (Date.now() >= end) return;
+    document.documentElement.classList.add('bf-active');
+    badges.forEach((badge) => { badge.hidden = false; });
+    panel.hidden = false;
+    syncHeader();
+    window.addEventListener('resize', syncHeader);
+    if (typeof ResizeObserver === 'function') {
+      bannerObserver = new ResizeObserver(syncHeader);
+      bannerObserver.observe(panel);
+    }
+    update();
+    timer = setInterval(update, 1000);
+  })();
+</script>
 </body>
 </html>

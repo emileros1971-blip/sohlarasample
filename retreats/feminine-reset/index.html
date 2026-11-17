@@ -342,7 +342,47 @@ html.js .fr-page{scroll-behavior:auto}
 /* Room for the language switch above the hero badge on phones. */
 @media (max-width:640px){.fr-page .hero{padding-top:calc(var(--header-h) + 64px)!important}}
 </style>
-<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="/sohlarasample/review-theme.css?v=mint-surfaces"></head>
+<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="/sohlarasample/review-theme.css?v=mint-surfaces">
+<style>
+  .fr-page .story h2 { margin-bottom: 1rem; }
+  .fr-page #rezerva .retreat-offer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 62rem;
+    margin: 2rem auto 0;
+    border: 1px solid #a7d6cb;
+    border-radius: 1.25rem;
+    background: #e8f5f1;
+    color: #143e5c;
+  }
+  .fr-page #rezerva :is(.retreat-inclusions, .retreat-payment) { padding: clamp(1.25rem, 4vw, 2.75rem); }
+  .fr-page #rezerva .retreat-payment { border-inline-start: 1px solid #b5d6d1; }
+  .fr-page #rezerva .retreat-offer :is(h3, p, li) { color: #143e5c; }
+  .fr-page #rezerva .retreat-offer h3 { margin: 0 0 1rem; }
+  .fr-page #rezerva .retreat-inclusions ul { list-style: disc; padding-inline-start: 1.25rem; }
+  .fr-page #rezerva .retreat-inclusions li + li { margin-top: .4rem; }
+  .fr-page #rezerva .retreat-offer p { margin: .75rem 0 0; font-size: .95rem; font-weight: 500; }
+  .fr-page #rezerva .retreat-payment-option + .retreat-payment-option {
+    border-top: 1px solid #b5d6d1;
+    margin-top: 1.1rem;
+    padding-top: 1.1rem;
+  }
+  .fr-page #rezerva .retreat-payment-name { font-size: .95rem; }
+  .fr-page #rezerva .retreat-amount { font-size: clamp(1.6rem, 4vw, 2.3rem); font-weight: 800; }
+  .fr-page #rezerva .retreat-amount span { font-size: .9rem; }
+  .fr-page #rezerva .retreat-offer .btn {
+    margin-top: .8rem;
+    background-color: #174d76 !important;
+    border-color: #174d76 !important;
+    color: #fff !important;
+  }
+  .fr-page #rezerva .retreat-offer .btn:hover { background-color: #102d46 !important; }
+  @media (max-width: 700px) {
+    .fr-page #rezerva .retreat-offer { grid-template-columns: 1fr; }
+    .fr-page #rezerva .retreat-payment { border-inline-start: 0; border-top: 1px solid #b5d6d1; }
+  }
+</style>
+</head>
 <body class="font-montserrat antialiased sohlara-redesign">
   
 
@@ -615,7 +655,6 @@ html.js .fr-page{scroll-behavior:auto}
       <main id="main-content" class="min-h-screen overflow-x-hidden bg-[#0b3029]">
         <div class="relative">
   <div class="fr-page" lang="en">
-<div class="text-center"><span class="bf-badge" hidden>Black Friday Special</span></div>
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
@@ -643,49 +682,40 @@ html.js .fr-page{scroll-behavior:auto}
 <!-- ================= INTRO ================= -->
 <section class="sec" id="despre">
 <div class="wrap narrow story">
-<p class="reveal">There are times in life when everything seems to be working. Your career is moving forward, your family is well, the projects keep coming and, from the outside, you have every reason to feel content. And yet, behind this picture there is often a state many women know but rarely talk about: a tiredness that a free weekend doesn't fix, the feeling that you always have to be available, and how hard it is to reconnect with yourself.</p>
-<p class="reveal">Over time, the body adapts to this rhythm and forgets what real relaxation feels like. You sleep, but you don't rest. You succeed, but you no longer enjoy it. You make time for everyone around you, but very rarely for yourself.</p>
-<p class="pull reveal">Feminine Reset was born from the belief that femininity is not something you have to build, but something that returns when your body, mind and emotions come back into balance.</p>
-<p class="reveal">This retreat is an invitation to step out, for a few days, of the rhythm you have learned to live by, and to rediscover a state you may have forgotten you ever had: feeling present, calm, connected and full of energy.</p>
-<p class="reveal">Tenerife is the setting for this experience. The ocean, the nature, the light and the island's slow rhythm create the right space to slow down, and the programme brings together lifestyle medicine, nervous system regulation, women's health, mindfulness practices and wellbeing experiences in a way that is deep but accessible.</p>
-<p class="reveal">We don't promise a miraculous transformation in a few days. We promise something far more valuable: a space to reconnect with your own body and your own needs, so that you go home with more clarity, more energy and tools you can bring into your everyday life.</p>
+  <h2 class="reveal">Make space for yourself</h2>
+  <p class="reveal">Your career is moving forward. The people you love know they can count on you. And even on a rare morning with nothing in the diary, part of you is already thinking about what comes next. It can be hard to admit how tired you are when so much of your life is going well.</p>
+  <p class="reveal">Feminine Reset gives you six days in Tenerife to step out of that rhythm. Guided breathwork, gentle movement and mindfulness help you notice what your body has been asking for. Sessions on women’s health, lifestyle medicine and nervous system regulation offer practical ways to carry what you discover into everyday life.</p>
+  <a class="btn btn-magenta reveal" href="#rezerva">Reserve your place</a>
 </div>
 </section>
 <!-- ================= CE TE ASTEAPTA ================= -->
 <section class="sec sec-alt" id="experienta">
 <div class="wrap">
 <div class="sec-head center reveal">
-<span class="eyebrow">What awaits you</span>
-<h2>What awaits you in <em class="ac">this experience</em></h2>
+<h2>What to expect <em class="ac">at the retreat</em></h2>
 </div>
 <article class="blk reveal">
 <div class="blk-media"><img alt="Villa Sohlara seen from the garden, behind bougainvillea" src="https://sohlararetreats.com/static/site/img/retreats/feminine/exp-1-1024.webp" srcset="https://sohlararetreats.com/static/site/img/retreats/feminine/exp-1-480.webp 480w, https://sohlararetreats.com/static/site/img/retreats/feminine/exp-1-800.webp 800w, https://sohlararetreats.com/static/site/img/retreats/feminine/exp-1-1024.webp 1024w" sizes="(max-width: 960px) 100vw, 560px" width="1024" height="768" loading="lazy" decoding="async"></div>
 <div class="blk-txt">
-<span class="blk-n">01</span>
-<h3>Coming back to yourself starts with your relationship with your own body</h3>
-<p>We often talk about femininity as a quality we have to develop when, in fact, it has always been there. What gets lost is not femininity, but our connection with it.</p>
-<p>In the first part of the retreat we create the space for this reconnection to begin. Through breathing exercises, body-awareness practices, gentle movement and nervous system regulation techniques, you will learn to recognise your body's signals and respond to them more gently.</p>
-<p>It is not about performance, nor about doing things perfectly. It is about rediscovering what it feels like to feel good in your own body, and returning to a rhythm that supports your health and wellbeing.</p>
+<h3>Feel more at ease in your body</h3>
+<p>Guided breathwork, gentle movement and body-awareness exercises give you time to notice where you hold tension and what helps you ease it.</p>
+<p>You’ll practise simple ways to respond to those signals and find a pace that feels good to you.</p>
 </div>
 </article>
 <article class="blk rev reveal">
 <div class="blk-media"><img alt="Playa de las Teresitas and the bay in the north of Tenerife, with Teide in the background" src="https://sohlararetreats.com/static/site/img/retreats/feminine/exp-2-1280.webp" srcset="https://sohlararetreats.com/static/site/img/retreats/feminine/exp-2-480.webp 480w, https://sohlararetreats.com/static/site/img/retreats/feminine/exp-2-800.webp 800w, https://sohlararetreats.com/static/site/img/retreats/feminine/exp-2-1200.webp 1200w, https://sohlararetreats.com/static/site/img/retreats/feminine/exp-2-1280.webp 1280w" sizes="(max-width: 960px) 100vw, 560px" width="1280" height="960" loading="lazy" decoding="async"></div>
 <div class="blk-txt">
-<span class="blk-n">02</span>
-<h3>Relaxation is not a luxury. It is the foundation of femininity.</h3>
-<p>Many women have forgotten what true rest looks like. Even when they take a few days off, the mind keeps planning, organising and anticipating the next thing to be done.</p>
-<p>On this day we slow down on purpose. Floating Therapy, the sauna, time in nature, guided meditations and moments of silence are not separate activities: they are part of the same process through which the body lets go of accumulated tension and regains its natural ability to relax.</p>
-<p>When the body feels safe, another quality appears: presence. And from that state, the way we relate to ourselves, to others and to life begins to change.</p>
+<h3>Give yourself time to rest</h3>
+<p>It can take time for your mind to quieten, even when you finally have a day to yourself. Floating therapy, sauna time, guided meditation and quiet moments outdoors give you several ways to slow down.</p>
+<p>Notice what helps you unwind so you can make more room for it at home.</p>
 </div>
 </article>
 <article class="blk reveal">
 <div class="blk-media"><img alt="Villa Sohlara seen through lemon trees, with the ocean in the distance" src="https://sohlararetreats.com/static/site/img/retreats/feminine/exp-3-1024.webp" srcset="https://sohlararetreats.com/static/site/img/retreats/feminine/exp-3-480.webp 480w, https://sohlararetreats.com/static/site/img/retreats/feminine/exp-3-800.webp 800w, https://sohlararetreats.com/static/site/img/retreats/feminine/exp-3-1024.webp 1024w" sizes="(max-width: 960px) 100vw, 560px" width="1024" height="768" loading="lazy" decoding="async"></div>
 <div class="blk-txt">
-<span class="blk-n">03</span>
-<h3>Relationships change when your relationship with yourself changes</h3>
-<p>Every woman wants relationships in which she feels seen, appreciated and accepted. Yet the quality of these relationships always starts with the way we relate to ourselves.</p>
-<p>We will explore how stress affects communication, closeness and the ability to be vulnerable, and how we can build relationships based on authenticity, healthy boundaries and mutual respect.</p>
-<p>Feminine magnetism doesn't appear when you try to be someone else. It appears when you feel good being yourself.</p>
+<h3>Feel more like yourself in your relationships</h3>
+<p>When you’re stretched thin, it’s easy to say yes before you’ve had time to consider what you need.</p>
+<p>We’ll explore how stress affects the way you communicate and practise expressing your needs and setting boundaries with warmth and clarity.</p>
 </div>
 </article>
 </div>
@@ -696,10 +726,10 @@ html.js .fr-page{scroll-behavior:auto}
 <div class="loc-grid">
 <div class="loc-txt reveal">
 <span class="eyebrow">The location</span>
-<h2>A paradise in <em class="ac">the north of Tenerife</em></h2>
-<p>You will stay in a <strong>dream private villa</strong> in La Orotava – a green, authentic area with spectacular views over the ocean and the Teide volcano.</p>
-<p>The villa has a <strong>jacuzzi, a sauna and a floating tank</strong>, perfect for relaxation and integration.</p>
-<p>Optional excursions include visits to <strong>the Teide volcano and Puerto de la Cruz</strong>, and swims in the natural volcanic pools of the north of the island.</p>
+<h2>A private villa in <em class="ac">northern Tenerife</em></h2>
+<p>Stay in La Orotava, where green hills look out over the Atlantic and Mount Teide rises inland.</p>
+<p>Between sessions, take time for yourself in the villa’s jacuzzi, sauna or flotation tank.</p>
+<p>Optional outings take you to Mount Teide, Puerto de la Cruz and the natural volcanic pools of Tenerife’s north coast.</p>
 </div>
 <div class="loc-media reveal">
 <img alt="A panorama over the La Orotava valley and the Atlantic Ocean" src="https://sohlararetreats.com/static/site/img/retreats/feminine/location-2400.webp" srcset="https://sohlararetreats.com/static/site/img/retreats/feminine/location-480.webp 480w, https://sohlararetreats.com/static/site/img/retreats/feminine/location-800.webp 800w, https://sohlararetreats.com/static/site/img/retreats/feminine/location-1200.webp 1200w, https://sohlararetreats.com/static/site/img/retreats/feminine/location-1600.webp 1600w, https://sohlararetreats.com/static/site/img/retreats/feminine/location-2400.webp 2400w" sizes="(max-width: 640px) 100vw, 560px" width="2560" height="1920" loading="lazy" decoding="async">
@@ -872,67 +902,41 @@ html.js .fr-page{scroll-behavior:auto}
 </div>
 </section>
 <!-- ================= REZERVA ================= -->
-<section class="sec sec-alt" id="rezerva">
-<div class="wrap">
-<div class="sec-head center reveal">
-<span class="eyebrow">Book now</span>
-<h2>Book your <em class="ac">place.</em></h2>
-</div>
-<div class="price-grid">
-<div class="price-card reveal">
-  <span class="bf-badge" hidden>Black Friday · 30% off</span>
-<div class="price-tag">Full payment</div>
-<p class="price-sub">Pay the full amount</p>
-<div class="price-row">
-</div>
-<s class="bf-reference" data-bf-original hidden>8,567.14 RON</s><div class="price-val bf-payable">5,997 RON</div>
-<div class="price-list-label">What's included</div>
-<ul>
-<li><span class="pi pi-yes">✓</span>5 nights' accommodation</li>
-<li><span class="pi pi-yes">✓</span>Detox breakfast with tropical fruit</li>
-<li><span class="pi pi-yes">✓</span>Welcome dinner</li>
-<li><span class="pi pi-yes">✓</span>The courses and activities in the programme</li>
-<li><span class="pi pi-yes">✓</span>Floating Therapy</li>
-<li><span class="pi pi-yes">✓</span>Sauna</li>
-<li><span class="pi pi-yes">✓</span>Aromatherapy</li>
-<li><span class="pi pi-yes">✓</span>Pool</li>
-</ul>
-<div class="price-list-label">Not included</div>
-<ul>
-<li><span class="pi pi-no">✕</span>Flights</li>
-<li><span class="pi pi-no">✕</span>Meals not listed in the programme</li>
-<li><span class="pi pi-no">✕</span>The optional excursions</li>
-</ul>
-<a class="btn btn-gold" href="/sohlarasample/retreats/feminine-reset/book/?payment=full">Book your place!</a>
-</div>
-<div class="price-card reveal">
-  <span class="bf-badge" hidden>Black Friday Special</span>
-<div class="price-tag">Pay a deposit only*</div>
-<p class="price-sub">Secure your place now</p>
-<div class="price-val bf-payable">2,497 <span>RON</span></div>
-<p class="price-note">*Secure your place NOW and pay the balance by 01.02.2027. The deposit is non-refundable.</p>
-<div class="price-list-label">What's included</div>
-<ul>
-<li><span class="pi pi-yes">✓</span>5 nights' accommodation</li>
-<li><span class="pi pi-yes">✓</span>Detox breakfast with tropical fruit</li>
-<li><span class="pi pi-yes">✓</span>Welcome dinner</li>
-<li><span class="pi pi-yes">✓</span>The courses and activities in the programme</li>
-<li><span class="pi pi-yes">✓</span>Floating Therapy</li>
-<li><span class="pi pi-yes">✓</span>Sauna</li>
-<li><span class="pi pi-yes">✓</span>Aromatherapy</li>
-<li><span class="pi pi-yes">✓</span>Pool</li>
-</ul>
-<div class="price-list-label">Not included</div>
-<ul>
-<li><span class="pi pi-no">✕</span>Flights</li>
-<li><span class="pi pi-no">✕</span>Meals not listed in the programme</li>
-<li><span class="pi pi-no">✕</span>The optional excursions</li>
-</ul>
-<a class="btn btn-gold" href="/sohlarasample/retreats/feminine-reset/book/?payment=deposit">Book your place!</a>
-</div>
-</div>
-<p class="pay-note">Payments are processed securely by Stripe.</p>
-</div>
+<section class="sec sec-alt" id="rezerva" aria-labelledby="retreat-booking-title">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 id="retreat-booking-title">Reserve your <em class="ac">Feminine Reset</em></h2>
+      <p>26 February – 3 March 2027 · La Orotava, Tenerife</p>
+    </div>
+    <div class="retreat-offer reveal">
+      <div class="retreat-inclusions">
+        <h3>What’s included</h3>
+        <ul>
+          <li>Five nights’ accommodation</li>
+          <li>Detox breakfast with tropical fruit</li>
+          <li>Welcome dinner</li>
+          <li>All scheduled courses and activities</li>
+          <li>Floating therapy, sauna, aromatherapy and pool access</li>
+        </ul>
+        <p>Flights, meals outside the programme and optional excursions are separate.</p>
+      </div>
+      <div class="retreat-payment">
+        <h3>Choose how to pay</h3>
+        <div class="retreat-payment-option">
+          <div class="retreat-payment-name">Full payment</div>
+          <div class="retreat-amount">5,997 <span>RON</span></div>
+          <a class="btn btn-magenta" href="/sohlarasample/retreats/feminine-reset/book/?payment=full">Pay in full</a>
+        </div>
+        <div class="retreat-payment-option">
+          <div class="retreat-payment-name">Deposit</div>
+          <div class="retreat-amount">2,497 <span>RON</span></div>
+          <p>The remaining 3,500 RON is due by 1 February 2027. The deposit is non-refundable.</p>
+          <a class="btn btn-gold" href="/sohlarasample/retreats/feminine-reset/book/?payment=deposit">Reserve with a deposit</a>
+        </div>
+      </div>
+    </div>
+    <p class="pay-note">Payments are processed securely by Stripe.</p>
+  </div>
 </section>
 <!-- ================= CINE TE GHIDEAZA ================= -->
 <section class="sec" id="ghid">

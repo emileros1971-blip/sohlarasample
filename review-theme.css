@@ -448,3 +448,32 @@
   background-color: #153e60;
   color: #fff;
 }
+
+/* Keep the homepage promotion above the fixed navigation on interior pages. */
+[data-bf-panel].bf-panel:not([hidden]) {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 81;
+  display: flex;
+}
+.sohlara-redesign main {
+  margin-top: var(--bf-visible-height, 0px);
+}
+html {
+  scroll-padding-top: calc(var(--header-nav-height, 72px) + var(--bf-visible-height, 0px) + 0.5rem);
+}
+#mobile-menu {
+  max-height: calc(100dvh - var(--header-nav-height, 72px) - var(--bf-visible-height, 0px));
+}
+@media (max-width: 767px) {
+  [data-bf-panel].bf-panel:not([hidden]) {
+    column-gap: 0.65rem;
+    row-gap: 0.1rem;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.25;
+  }
+  [data-bf-panel] strong { flex-basis: 100%; }
+  [data-bf-panel] .bf-clock, [data-bf-panel] .bf-stock { font-size: 0.75rem; }
+  [data-bf-panel] a { display: none; }
+}
