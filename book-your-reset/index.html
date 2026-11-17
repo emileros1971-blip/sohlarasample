@@ -347,7 +347,7 @@
                     <div class="grid sm:grid-cols-3 gap-3">
                       
                         <label class="group rounded-xl border text-left transition-all cursor-pointer border-neutral-700 hover:border-neutral-600 bg-neutral-900 has-checked:border-gold-300 has-checked:bg-neutral-800 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300 flex sm:flex-col gap-4 sm:gap-3 p-3 sm:p-4">
-                          <input class="sr-only" type="radio" name="room" value="cave-8" checked>
+                          <input class="sr-only" type="radio" name="room" value="cave-8" required>
                           <img alt="" src="/sohlarasample/retreats/5-day-reset/photos/cave-dining.webp" width="960" height="674" loading="lazy" decoding="async" class="w-20 h-20 shrink-0 rounded-lg object-cover sm:w-full sm:h-auto sm:aspect-[4/3]">
                           <span class="block min-w-0 flex-1">
                             <span class="block text-sm font-medium text-white group-has-checked:text-gold-300">Shared Cave Room for 8</span>
@@ -645,6 +645,9 @@
           <div class="bg-neutral-800 rounded-2xl p-6">
             <h2 class="text-xl font-semibold text-white mb-2" id="summary-title">Your Booking</h2>
             <p class="text-neutral-400 text-sm mb-6">The 5-Day Reset at Sohlara Retreats, Tenerife.</p>
+            <p class="text-neutral-400 text-sm" data-summary-empty role="status">Choose a room to see your booking details and price here.</p>
+            <div data-summary-details hidden>
+            <p class="text-neutral-400 text-sm mb-4" data-summary-date-note>Choose your arrival date to calculate the total for your dates.</p>
             <dl class="space-y-3 text-sm mb-6">
               <div class="flex items-start justify-between gap-4">
                 <dt class="text-neutral-400">Room</dt>
@@ -685,7 +688,7 @@
             <div data-booking-offer-card style="position:relative;margin:1.65rem 0 1.25rem;padding:1.25rem .9rem .85rem;border:1px solid #e9b74f;border-radius:.9rem;background:#102c29;">
               <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem .75rem;">
                 <div>
-                  <p class="font-semibold text-white">Total for your stay</p>
+                  <p class="font-semibold text-white"><span data-summary-total-label>Estimated total</span></p>
                   <p class="text-xs text-neutral-400" data-summary="per-person">€547.00 per person</p>
                 </div>
                 <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:.45rem;">
@@ -715,6 +718,7 @@
               Secure payment by Stripe. Your 5-Day Reset is confirmed as soon as the payment goes through.
             </p>
             
+            </div>
             <p data-form-status role="status" aria-live="polite" class="mt-4 text-sm text-center data-[tone=info]:text-neutral-400 empty:hidden"></p>
           </div>
           <p class="text-sm text-neutral-400 mt-6 text-center">
@@ -1294,7 +1298,7 @@
   <script src="https://sohlararetreats.com/static/site/js/reset.js?v=1793881198" defer></script>
   <script src="https://sohlararetreats.com/static/site/js/locations.js?v=1793881198" defer></script>
   <script src="https://sohlararetreats.com/static/site/js/pricing.js?v=1793881198-nightly-v1" defer></script>
-  <script src="https://sohlararetreats.com/static/site/js/pages.js?v=1793881198-booking-display-pr12-v1" defer></script>
+  <script src="/sohlarasample/book-your-reset/booking-page.js?v=selection-1" defer></script>
   <script type="application/json" id="booking-pricing">{"baseDays": 5, "defaultRoom": "cave-8", "defaultDays": "5", "depositPercent": 20, "rooms": [{"id": "cave-8", "experience": "cave", "name": "Shared Cave Room for 8", "detail": "Single bed", "price": 781.43, "guests": 1, "perPerson": true, "capacity": 8}, {"id": "cave-4", "experience": "cave", "name": "Shared Cave Room for 4", "detail": "Single bed", "price": 924.29, "guests": 1, "perPerson": true, "capacity": 4}, {"id": "cave-2", "experience": "cave", "name": "Shared Cave Room for 2", "detail": "Single bed", "price": 1281.43, "guests": 1, "perPerson": true, "capacity": 2}, {"id": "stone-single", "experience": "stone", "name": "Single Private Room", "detail": "For 1 person", "price": 1424.29, "guests": 1, "perPerson": false, "capacity": 1}, {"id": "stone-double", "experience": "stone", "name": "Double Private Room", "detail": "For 2 people", "price": 1991.43, "guests": 2, "perPerson": false, "capacity": 1}, {"id": "stone-triple", "experience": "stone", "name": "Triple Private Room", "detail": "For 3 people", "price": 2781.43, "guests": 3, "perPerson": false, "capacity": 1}], "durations": [{"days": 5, "discount": 0.3}, {"days": 10, "discount": 0.32}, {"days": 15, "discount": 0.35}, {"days": 20, "discount": 0.37}, {"days": 30, "discount": 0.4}], "surcharges": [{"start": "2026-12-20", "end": "2027-01-05", "rate": 0.5, "label": "Festive season", "text": "Festive season (nights 20\u00a0Dec \u2013 5\u00a0Jan)\u00a0+50%"}], "experiences": {"cave": "Cave Experience", "stone": "Stone House Experience"}}</script>
 <script type="application/json" id="checkout-config">{"publishableKey": "pk_live_51TnhHwLeQrnFj0z2DVtoTXiC78IW1Z1FAuXf8iWc8u8ncX7bviyEy70pVEo4gs0Uy4WDizOn1ShgiytkZCNbsC3B007yRYPFLi"}</script>
 
