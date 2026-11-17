@@ -47,7 +47,29 @@
   
   
   
-<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="/sohlarasample/review-theme.css?v=mint-surfaces"></head>
+<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="/sohlarasample/review-theme.css?v=mint-surfaces"><style>
+  .sohlara-redesign #main-content .reset-preview-button {
+    display:inline-flex; align-items:center; justify-content:center; min-height:44px;
+    padding:0.65rem 1.2rem; border-radius:0.4rem; background:#153e60; color:#fff;
+    font-weight:650; text-decoration:none;
+  }
+  .sohlara-redesign #main-content .reset-preview-button:hover { background:#0d2d47; color:#fff; }
+  .reset-preview-button:focus-visible { outline:2px solid #153e60; outline-offset:3px; }
+  .reset-hero-shade { background:linear-gradient(180deg, rgba(8,23,30,.25), rgba(8,23,30,.68) 52%, rgba(8,23,30,.35)); }
+  .reset-photo-pair { display:grid; grid-template-columns:1fr 1fr; gap:0.9rem; margin-top:1.5rem; }
+  .reset-photo-pair img { display:block; width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; border-radius:0.55rem; }
+  .reset-photo-pair .reset-chef-photo { object-position:center 64%; }
+  .reset-review-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr)); gap:1rem; }
+  .reset-review { margin:0; display:flex; flex-direction:column; padding:clamp(1.2rem,2.5vw,2rem); border:1px solid #a9c8c0; border-radius:0.75rem; background:#f5faf8; color:#173832; }
+  .reset-review h3 { margin:0 0 0.7rem; font-size:1.125rem; font-weight:700; }
+  .reset-review blockquote { margin:0 0 1.1rem; font-size:1rem; line-height:1.6; }
+  .reset-review figcaption { margin-top:auto; padding-top:0.9rem; border-top:1px solid #c9ded7; }
+  .reset-review figcaption span { display:block; font-size:.85rem; color:#3a5854; }
+  @media (min-width: 1024px) {
+    .reset-symptoms-copy { align-self:start; }
+    .reset-review-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  }
+</style></head>
 <body class="font-montserrat antialiased sohlara-redesign">
   
 
@@ -328,13 +350,13 @@
   <h1 data-reveal class="text-white text-[20px] font-semibold leading-[1.14] text-center max-w-[350px] mx-auto mb-6">The 5-Day Reset Retreat in Tenerife</h1>
   
   <div data-reveal data-inline-video class="relative w-full max-w-[350px] mx-auto aspect-[350/204] rounded-lg overflow-hidden bg-[#274642] mb-[25px]">
-    <img data-inline-video-cover src="https://sohlararetreats.com/static/site/video/sohlara-5-day-reset-poster.jpg" alt="Video introduction to the 5-Day Nervous System Reset retreat in Tenerife" width="1280" height="720" decoding="async" class="absolute inset-0 h-full w-full object-cover">
+    <img data-inline-video-cover src="/sohlarasample/retreats/5-day-reset/photos/retreat-hero.webp" alt="Yoga at sunset in Tenerife" width="1920" height="1077" decoding="async" class="absolute inset-0 h-full w-full object-cover">
     <div data-inline-video-cover data-inline-video-play class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40"></div>
     <button data-inline-video-cover data-inline-video-play aria-label="Play the 5-Day Nervous System Reset video (with sound)" class="absolute top-[68%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-[10px] backdrop-blur-[10px] bg-black/20 rounded-full h-[42px] w-[141px] shadow-[0px_5px_9px_0px_rgba(255,255,255,0.1)] justify-center" type="button">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play w-[18px] h-[20px] text-white fill-white" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
       <span class="text-white font-semibold text-[20px] leading-none">Watch</span>
     </button>
-    <video class="absolute inset-0 h-full w-full object-cover" src="https://sohlararetreats.com/static/site/video/sohlara-5-day-reset.mp4" poster="https://sohlararetreats.com/static/site/video/sohlara-5-day-reset-poster.jpg" preload="none" playsinline hidden aria-label="5-Day Nervous System Reset retreat in Tenerife"></video>
+    <video class="absolute inset-0 h-full w-full object-cover" src="https://sohlararetreats.com/static/site/video/sohlara-5-day-reset.mp4" poster="/sohlarasample/retreats/5-day-reset/photos/retreat-hero.webp" preload="none" playsinline hidden aria-label="5-Day Nervous System Reset retreat in Tenerife"></video>
   </div>
   <a data-reveal href="/sohlarasample/book-your-reset/" class="flex items-center justify-center w-full max-w-[350px] mx-auto h-[42px] rounded-full bg-[#e9b74f] text-black text-[16px] font-normal">
     Book Your 5 Day Reset Now
@@ -349,8 +371,8 @@
 
 <section data-section="reset-hero" class="hidden md:block bg-black px-5 py-6">
   <div class="relative max-w-[1390px] mx-auto rounded-lg overflow-hidden min-h-[947px]">
-    <img alt="Guests dancing in the Sohlara cave hall while a DJ plays" src="https://sohlararetreats.com/static/site/img/v2/sales-hero-2400.webp" srcset="https://sohlararetreats.com/static/site/img/v2/sales-hero-1200.webp 1200w, https://sohlararetreats.com/static/site/img/v2/sales-hero-1600.webp 1600w, https://sohlararetreats.com/static/site/img/v2/sales-hero-2400.webp 2400w" sizes="(min-width: 1430px) 1390px, calc(100vw - 40px)" width="6000" height="4000" loading="eager" decoding="async" fetchpriority="high" class="absolute inset-0 h-full w-full object-cover brightness-[0.6]">
-    <div class="absolute inset-0 bg-black/40"></div>
+    <img src="/sohlarasample/retreats/5-day-reset/photos/retreat-hero.webp" alt="" width="1920" height="1077" loading="eager" decoding="async" fetchpriority="high" class="absolute inset-0 h-full w-full object-cover">
+    <div class="absolute inset-0 reset-hero-shade" aria-hidden="true"></div>
     <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 md:px-12 min-h-[947px]">
       <h1 data-reveal class="text-[36px] md:text-[48px] lg:text-[64px] font-semibold text-white leading-[1.14] mb-8 drop-shadow-[0_4px_24px_rgba(13,47,43,0.34)] max-w-[1146px] text-pretty">The 5-Day Reset Retreat in Tenerife</h1>
       <p data-reveal class="text-[18px] lg:text-[24px] text-white font-semibold max-w-[976px] capitalize leading-[1.2] mb-4">
@@ -420,10 +442,14 @@
           </div>
         
       </div>
-      <div data-reveal class="text-black self-center">
+      <div data-reveal class="reset-symptoms-copy text-black">
         <h3 class="text-[18px] md:text-[32px] font-bold leading-tight mb-6">Space to unwind. Time for yourself. Wellness to take home.</h3>
         <p class="text-[14px] md:text-xl leading-relaxed mb-6">If you’re exhausted but still find it hard to switch off, give yourself five days in Tenerife with room to rest. Start each morning with restorative Yin yoga, breathwork, and meditation, then take the rest of the day at a pace that feels right for you.</p>
-        <a href="#pricing" class="inline-flex rounded-full bg-[#e9b74f] px-6 py-3 font-semibold text-black">Explore retreat packages</a>
+        <a href="#pricing" class="reset-preview-button">Explore retreat packages</a>
+        <div class="reset-photo-pair">
+          <img src="/sohlarasample/retreats/5-day-reset/photos/retreat-chef.webp" alt="A cook beside the set dining table at Sohlara" width="650" height="1050" loading="lazy" decoding="async" class="reset-chef-photo">
+          <img src="/sohlarasample/retreats/5-day-reset/photos/retreat-dining.webp" alt="The retreat dining table set with papaya bowls and other dishes" width="1050" height="585" loading="lazy" decoding="async" class="">
+        </div>
       </div>
     </div>
   </div>
@@ -448,7 +474,7 @@
         </h3>
         <p class="text-[#3a5854] text-[14px] md:text-xl leading-relaxed mb-4 md:mb-6">When you wake up tired and carry the day’s tension into the evening, knowing where to start can feel like one more thing to figure out. At Sohlara, your mornings are guided, and there’s time between sessions to rest.</p>
         <p class="text-[#3a5854] text-[14px] md:text-lg leading-relaxed mb-4 md:mb-6">Start by noticing how stress shows up for you, whether that’s tight shoulders or a mind that keeps replaying the day. Use your stay to try a gentler routine and see what helps you unwind.</p>
-        <a href="#pricing" class="inline-flex rounded-full bg-[#153e60] px-6 py-3 font-semibold text-white">Explore the 5-Day Reset</a>
+        <a href="#pricing" class="reset-preview-button">Explore the 5-Day Reset</a>
       </div>
       <div class="relative w-full max-w-[350px] md:max-w-none aspect-[350/284] md:aspect-square rounded-lg overflow-hidden shadow-[0px_8px_40px_-6px_rgba(13,47,43,0.14)]">
         <img alt="A guest resting in a hammock overlooking the sea" src="/sohlarasample/retreats/5-day-reset/photos/hammock.webp" width="1180" height="786" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover">
@@ -457,7 +483,7 @@
     
     <div class="grid lg:grid-cols-2 lg:items-center gap-6 md:gap-12 mb-8 md:mb-24">
       <div class="relative w-full max-w-[350px] md:max-w-none aspect-[350/284] md:aspect-[519/600] rounded-lg overflow-hidden shadow-[0px_8px_40px_-6px_rgba(13,47,43,0.14)] order-2 lg:order-1">
-        <img alt="A man meditating cross-legged on a mat on the grass" src="https://sohlararetreats.com/static/site/img/v2/sales-why-it-matters-1600.webp" srcset="https://sohlararetreats.com/static/site/img/v2/sales-why-it-matters-480.webp 480w, https://sohlararetreats.com/static/site/img/v2/sales-why-it-matters-800.webp 800w, https://sohlararetreats.com/static/site/img/v2/sales-why-it-matters-1200.webp 1200w, https://sohlararetreats.com/static/site/img/v2/sales-why-it-matters-1600.webp 1600w" sizes="(min-width: 1024px) 590px, (min-width: 768px) calc(100vw - 212px), 350px" width="3589" height="5384" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover">
+        <img src="/sohlarasample/retreats/5-day-reset/photos/stress-practice.webp" alt="Guests following a guided movement class in the Sohlara cave hall" width="749" height="1050" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover">
       </div>
       <div class="order-1 lg:order-2">
         <h3 class="text-[#133430] text-[20px] md:text-[48px] font-semibold leading-[1] mb-3 md:mb-6">
@@ -466,7 +492,7 @@
         <p class="text-[#3a5854] text-[14px] md:text-xl leading-relaxed mb-4 md:mb-6">You close your laptop and keep thinking about work. You finally have a quiet evening and still feel on edge. During the retreat, you’ll try simple ways to pause in those moments.</p>
         <p class="text-[#3a5854] text-[14px] md:text-lg leading-relaxed mb-4 md:mb-6">Practise a short breathing exercise for when thoughts race, gentle movement for when your body feels tense, and guided meditation for when you need a few minutes to yourself.</p>
         <p class="text-[#274642] text-[14px] md:text-lg leading-relaxed mb-4 md:mb-6">Start with five days in Tenerife. You can extend your stay if you’d like more time.</p>
-        <a href="#pricing" class="inline-flex rounded-full bg-[#153e60] px-6 py-3 font-semibold text-white">See retreat packages</a>
+        <a href="#pricing" class="reset-preview-button">See retreat packages</a>
       </div>
     </div>
     <div class="grid lg:grid-cols-2 gap-6 md:gap-12">
@@ -1391,233 +1417,41 @@
 
 
 
-<section data-section="reset-testimonials" class="bg-[#f7fbfa] md:bg-white py-10 md:py-20 lg:py-24">
+<section data-section="reset-testimonials" class="bg-[#f7fbfa] py-10 md:py-20 lg:py-24">
   <div class="max-w-[1280px] mx-auto px-5 md:px-6 lg:px-8">
-    <div class="text-center mb-8 md:mb-16" data-reveal>
-      <h2 class="text-[#133430] text-[20px] md:text-4xl lg:text-5xl font-bold mb-2 md:mb-3">Real People. Real Results.</h2>
-      <p class="text-[#3a5854] text-[14px] md:text-lg">Hear from Our Community.</p>
+    <h2 class="text-center text-[#133430] text-[28px] md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12">What our guests say</h2>
+    <div class="reset-review-grid">
+      <figure class="reset-review">
+        <h3>Exactly What I Needed</h3>
+        <blockquote><p>The atmosphere was so peaceful from the moment I arrived. I felt like I could finally take a deep breath and switch off from everyday life. The yoga, the jacuzzi, the beautiful views, and the lovely people made it such a special experience. I left feeling lighter, calmer, and genuinely recharged.</p></blockquote>
+        <figcaption><strong>Sara</strong><span>Retreat Participant · UK</span></figcaption>
+      </figure>
+      <figure class="reset-review">
+        <h3>The Massages Were Incredible</h3>
+        <blockquote><p>The whole experience felt so nurturing. The yoga and relaxation sessions helped me slow down, and the massage was exactly what I needed after months of feeling tense and constantly busy. I especially loved having the time and space to focus on myself without feeling guilty about it.</p></blockquote>
+        <figcaption><strong>Carola</strong><span>Retreat Participant · France</span></figcaption>
+      </figure>
+      <figure class="reset-review">
+        <h3>I Came Alone and Left With Friends</h3>
+        <blockquote><p>I was a little nervous about coming on my own, but everyone was so welcoming. The group was a beautiful mix of people, and there was no pressure to be anything other than yourself. Between the conversations, yoga sessions, shared meals, and excursions, I felt connected in a way I hadn't expected.</p></blockquote>
+        <figcaption><strong>Alina</strong><span>Retreat Participant · Romania</span></figcaption>
+      </figure>
+      <figure class="reset-review">
+        <h3>The Perfect Balance of Relaxation and Adventure</h3>
+        <blockquote><p>I loved that the retreat wasn't just about staying indoors and doing yoga. The excursions were a highlight.</p></blockquote>
+        <figcaption><strong>Dominic</strong><span>Retreat Participant · Germany</span></figcaption>
+      </figure>
+      <figure class="reset-review">
+        <blockquote><p>The space felt very cozy and beautifully arranged — you could really feel the care that went into creating such a warm and welcoming atmosphere.</p></blockquote>
+        <figcaption><strong>Monica M.</strong><span>Retreat Participant · Lithuania</span></figcaption>
+      </figure>
+      <figure class="reset-review">
+        <blockquote><p>Hosting my yoga retreat here was effortless — everything was perfectly organised. Our group absolutely loved it!</p></blockquote>
+        <figcaption><strong>Sarah K.</strong><span>Yoga Retreat Leader · UK</span></figcaption>
+      </figure>
     </div>
-
-    <div class="hidden md:flex gap-5 justify-center mb-12">
-      
-        <div class="flex flex-col gap-5 flex-1 max-w-[415px] mt-[100px] lg:mt-[157px]">
-          
-            
-              <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-                <div class="w-[56px] h-[56px] md:w-[82px] md:h-[82px] rounded-full overflow-hidden relative mb-3 md:mb-4 flex items-center justify-center bg-gradient-to-br from-[#fef6e5] to-[#f6db9f]" aria-hidden="true">
-                  <span class="font-urbanist text-[#133430] text-[20px] md:text-[28px] font-semibold">S</span>
-                </div>
-                <p class="text-[#133430] font-urbanist font-bold text-[14px] md:text-lg leading-snug mb-2">Exactly What I Needed</p>
-                <p class="text-[#3a5854] text-[11px] md:text-sm leading-[18px] md:leading-[20px] mb-3 md:mb-4">The atmosphere was so peaceful from the moment I arrived. I felt like I could finally take a deep breath and switch off from everyday life. The yoga, the jacuzzi, the beautiful views, and the lovely people made it such a special experience. I left feeling lighter, calmer, and genuinely recharged.</p>
-                <div class="border-t border-black/10 pt-3 md:pt-4">
-                  <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Sara</p>
-                  <p class="text-[#4b6965] text-[10px] md:text-xs">Retreat Participant · UK</p>
-                </div>
-              </div>
-            
-          
-            
-              <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-                <div class="w-[56px] h-[56px] md:w-[82px] md:h-[82px] rounded-full overflow-hidden relative mb-3 md:mb-4 flex items-center justify-center bg-gradient-to-br from-[#fef6e5] to-[#f6db9f]" aria-hidden="true">
-                  <span class="font-urbanist text-[#133430] text-[20px] md:text-[28px] font-semibold">C</span>
-                </div>
-                <p class="text-[#133430] font-urbanist font-bold text-[14px] md:text-lg leading-snug mb-2">The Massages Were Incredible</p>
-                <p class="text-[#3a5854] text-[11px] md:text-sm leading-[18px] md:leading-[20px] mb-3 md:mb-4">The whole experience felt so nurturing. The yoga and relaxation sessions helped me slow down, and the massage was exactly what I needed after months of feeling tense and constantly busy. I especially loved having the time and space to focus on myself without feeling guilty about it.</p>
-                <div class="border-t border-black/10 pt-3 md:pt-4">
-                  <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Carola</p>
-                  <p class="text-[#4b6965] text-[10px] md:text-xs">Retreat Participant · France</p>
-                </div>
-              </div>
-            
-          
-        </div>
-      
-        <div class="flex flex-col gap-5 flex-1 max-w-[415px]">
-          
-            
-              <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-                <div class="w-[56px] h-[56px] md:w-[82px] md:h-[82px] rounded-full overflow-hidden relative mb-3 md:mb-4 flex items-center justify-center bg-gradient-to-br from-[#fef6e5] to-[#f6db9f]" aria-hidden="true">
-                  <span class="font-urbanist text-[#133430] text-[20px] md:text-[28px] font-semibold">A</span>
-                </div>
-                <p class="text-[#133430] font-urbanist font-bold text-[14px] md:text-lg leading-snug mb-2">I Came Alone and Left With Friends</p>
-                <p class="text-[#3a5854] text-[11px] md:text-sm leading-[18px] md:leading-[20px] mb-3 md:mb-4">I was a little nervous about coming on my own, but everyone was so welcoming. The group was a beautiful mix of people, and there was no pressure to be anything other than yourself. Between the conversations, yoga sessions, shared meals, and excursions, I felt connected in a way I hadn't expected.</p>
-                <div class="border-t border-black/10 pt-3 md:pt-4">
-                  <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Alina</p>
-                  <p class="text-[#4b6965] text-[10px] md:text-xs">Retreat Participant · Romania</p>
-                </div>
-              </div>
-            
-          
-            
-              <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-                <div class="relative aspect-video rounded-lg overflow-hidden bg-black mb-3 md:mb-4">
-                  <video class="absolute inset-0 h-full w-full object-cover" poster="https://sohlararetreats.com/static/site/video/testimonial-gabriela-poster.jpg" controls playsinline preload="none" aria-label="Video testimonial from Gabriela Cristea">
-                    <source src="https://sohlararetreats.com/static/site/video/testimonial-gabriela.mp4" type="video/mp4"></source>
-                  </video>
-                </div>
-                <div class="border-t border-black/10 pt-3 md:pt-4">
-                  <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Gabriela Cristea</p>
-                  <p class="text-[#4b6965] text-[10px] md:text-xs">Sohlara Guest</p>
-                </div>
-              </div>
-            
-          
-            
-              <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-                <div class="w-[56px] h-[56px] md:w-[82px] md:h-[82px] rounded-full overflow-hidden relative mb-3 md:mb-4 flex items-center justify-center bg-gradient-to-br from-[#fef6e5] to-[#f6db9f]" aria-hidden="true">
-                  <span class="font-urbanist text-[#133430] text-[20px] md:text-[28px] font-semibold">D</span>
-                </div>
-                <p class="text-[#133430] font-urbanist font-bold text-[14px] md:text-lg leading-snug mb-2">The Perfect Balance of Relaxation and Adventure</p>
-                <p class="text-[#3a5854] text-[11px] md:text-sm leading-[18px] md:leading-[20px] mb-3 md:mb-4">I loved that the retreat wasn't just about staying indoors and doing yoga. The excursions were a highlight.</p>
-                <div class="border-t border-black/10 pt-3 md:pt-4">
-                  <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Dominic</p>
-                  <p class="text-[#4b6965] text-[10px] md:text-xs">Retreat Participant · Germany</p>
-                </div>
-              </div>
-            
-          
-        </div>
-      
-        <div class="flex flex-col gap-5 flex-1 max-w-[415px] mt-[100px] lg:mt-[157px]">
-          
-            
-              <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-                <div class="w-[56px] h-[56px] md:w-[82px] md:h-[82px] rounded-full overflow-hidden relative mb-3 md:mb-4 flex items-center justify-center bg-gradient-to-br from-[#fef6e5] to-[#f6db9f]" aria-hidden="true">
-                  <span class="font-urbanist text-[#133430] text-[20px] md:text-[28px] font-semibold">MM</span>
-                </div>
-                
-                <p class="text-[#3a5854] text-[11px] md:text-sm leading-[18px] md:leading-[20px] mb-3 md:mb-4">The space felt very cozy and beautifully arranged — you could really feel the care that went into creating such a warm and welcoming atmosphere.</p>
-                <div class="border-t border-black/10 pt-3 md:pt-4">
-                  <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Monica M.</p>
-                  <p class="text-[#4b6965] text-[10px] md:text-xs">Retreat Participant · Lithuania</p>
-                </div>
-              </div>
-            
-          
-            
-              <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-                <div class="w-[56px] h-[56px] md:w-[82px] md:h-[82px] rounded-full overflow-hidden relative mb-3 md:mb-4 flex items-center justify-center bg-gradient-to-br from-[#fef6e5] to-[#f6db9f]" aria-hidden="true">
-                  <span class="font-urbanist text-[#133430] text-[20px] md:text-[28px] font-semibold">SK</span>
-                </div>
-                
-                <p class="text-[#3a5854] text-[11px] md:text-sm leading-[18px] md:leading-[20px] mb-3 md:mb-4">Hosting my yoga retreat here was effortless — everything was perfectly organised. Our group absolutely loved it!</p>
-                <div class="border-t border-black/10 pt-3 md:pt-4">
-                  <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Sarah K.</p>
-                  <p class="text-[#4b6965] text-[10px] md:text-xs">Yoga Retreat Leader · UK</p>
-                </div>
-              </div>
-            
-          
-        </div>
-      
-    </div>
-
-    <div class="flex flex-col items-center gap-4 md:hidden mb-12">
-      
-        
-          <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-            <div class="w-[56px] h-[56px] md:w-[82px] md:h-[82px] rounded-full overflow-hidden relative mb-3 md:mb-4 flex items-center justify-center bg-gradient-to-br from-[#fef6e5] to-[#f6db9f]" aria-hidden="true">
-              <span class="font-urbanist text-[#133430] text-[20px] md:text-[28px] font-semibold">A</span>
-            </div>
-            <p class="text-[#133430] font-urbanist font-bold text-[14px] md:text-lg leading-snug mb-2">I Came Alone and Left With Friends</p>
-                <p class="text-[#3a5854] text-[11px] md:text-sm leading-[18px] md:leading-[20px] mb-3 md:mb-4">I was a little nervous about coming on my own, but everyone was so welcoming. The group was a beautiful mix of people, and there was no pressure to be anything other than yourself. Between the conversations, yoga sessions, shared meals, and excursions, I felt connected in a way I hadn't expected.</p>
-            <div class="border-t border-black/10 pt-3 md:pt-4">
-              <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Alina</p>
-              <p class="text-[#4b6965] text-[10px] md:text-xs">Retreat Participant · Romania</p>
-            </div>
-          </div>
-        
-      
-        
-          <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-            <div class="w-[56px] h-[56px] md:w-[82px] md:h-[82px] rounded-full overflow-hidden relative mb-3 md:mb-4 flex items-center justify-center bg-gradient-to-br from-[#fef6e5] to-[#f6db9f]" aria-hidden="true">
-              <span class="font-urbanist text-[#133430] text-[20px] md:text-[28px] font-semibold">S</span>
-            </div>
-            <p class="text-[#133430] font-urbanist font-bold text-[14px] md:text-lg leading-snug mb-2">Exactly What I Needed</p>
-                <p class="text-[#3a5854] text-[11px] md:text-sm leading-[18px] md:leading-[20px] mb-3 md:mb-4">The atmosphere was so peaceful from the moment I arrived. I felt like I could finally take a deep breath and switch off from everyday life. The yoga, the jacuzzi, the beautiful views, and the lovely people made it such a special experience. I left feeling lighter, calmer, and genuinely recharged.</p>
-            <div class="border-t border-black/10 pt-3 md:pt-4">
-              <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Sara</p>
-              <p class="text-[#4b6965] text-[10px] md:text-xs">Retreat Participant · UK</p>
-            </div>
-          </div>
-        
-      
-        
-          <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-            <div class="w-[56px] h-[56px] md:w-[82px] md:h-[82px] rounded-full overflow-hidden relative mb-3 md:mb-4 flex items-center justify-center bg-gradient-to-br from-[#fef6e5] to-[#f6db9f]" aria-hidden="true">
-              <span class="font-urbanist text-[#133430] text-[20px] md:text-[28px] font-semibold">MM</span>
-            </div>
-            
-                <p class="text-[#3a5854] text-[11px] md:text-sm leading-[18px] md:leading-[20px] mb-3 md:mb-4">The space felt very cozy and beautifully arranged — you could really feel the care that went into creating such a warm and welcoming atmosphere.</p>
-            <div class="border-t border-black/10 pt-3 md:pt-4">
-              <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Monica M.</p>
-              <p class="text-[#4b6965] text-[10px] md:text-xs">Retreat Participant · Lithuania</p>
-            </div>
-          </div>
-        
-      
-        
-          <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-            <div class="relative aspect-video rounded-lg overflow-hidden bg-black mb-3 md:mb-4">
-              <video class="absolute inset-0 h-full w-full object-cover" poster="https://sohlararetreats.com/static/site/video/testimonial-gabriela-poster.jpg" controls playsinline preload="none" aria-label="Video testimonial from Gabriela Cristea">
-                <source src="https://sohlararetreats.com/static/site/video/testimonial-gabriela.mp4" type="video/mp4"></source>
-              </video>
-            </div>
-            <div class="border-t border-black/10 pt-3 md:pt-4">
-              <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Gabriela Cristea</p>
-              <p class="text-[#4b6965] text-[10px] md:text-xs">Sohlara Guest</p>
-            </div>
-          </div>
-        
-      
-        
-          <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-            <div class="w-[56px] h-[56px] md:w-[82px] md:h-[82px] rounded-full overflow-hidden relative mb-3 md:mb-4 flex items-center justify-center bg-gradient-to-br from-[#fef6e5] to-[#f6db9f]" aria-hidden="true">
-              <span class="font-urbanist text-[#133430] text-[20px] md:text-[28px] font-semibold">C</span>
-            </div>
-            <p class="text-[#133430] font-urbanist font-bold text-[14px] md:text-lg leading-snug mb-2">The Massages Were Incredible</p>
-                <p class="text-[#3a5854] text-[11px] md:text-sm leading-[18px] md:leading-[20px] mb-3 md:mb-4">The whole experience felt so nurturing. The yoga and relaxation sessions helped me slow down, and the massage was exactly what I needed after months of feeling tense and constantly busy. I especially loved having the time and space to focus on myself without feeling guilty about it.</p>
-            <div class="border-t border-black/10 pt-3 md:pt-4">
-              <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Carola</p>
-              <p class="text-[#4b6965] text-[10px] md:text-xs">Retreat Participant · France</p>
-            </div>
-          </div>
-        
-      
-        
-          <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-            <div class="w-[56px] h-[56px] md:w-[82px] md:h-[82px] rounded-full overflow-hidden relative mb-3 md:mb-4 flex items-center justify-center bg-gradient-to-br from-[#fef6e5] to-[#f6db9f]" aria-hidden="true">
-              <span class="font-urbanist text-[#133430] text-[20px] md:text-[28px] font-semibold">D</span>
-            </div>
-            <p class="text-[#133430] font-urbanist font-bold text-[14px] md:text-lg leading-snug mb-2">The Perfect Balance of Relaxation and Adventure</p>
-                <p class="text-[#3a5854] text-[11px] md:text-sm leading-[18px] md:leading-[20px] mb-3 md:mb-4">I loved that the retreat wasn't just about staying indoors and doing yoga. The excursions were a highlight.</p>
-            <div class="border-t border-black/10 pt-3 md:pt-4">
-              <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Dominic</p>
-              <p class="text-[#4b6965] text-[10px] md:text-xs">Retreat Participant · Germany</p>
-            </div>
-          </div>
-        
-      
-        
-          <div class="bg-white rounded-lg p-4 md:p-6 shadow-[0px_1px_20px_0px_rgba(13,47,43,0.12)] w-full max-w-[350px] md:max-w-none" data-reveal>
-            <div class="w-[56px] h-[56px] md:w-[82px] md:h-[82px] rounded-full overflow-hidden relative mb-3 md:mb-4 flex items-center justify-center bg-gradient-to-br from-[#fef6e5] to-[#f6db9f]" aria-hidden="true">
-              <span class="font-urbanist text-[#133430] text-[20px] md:text-[28px] font-semibold">SK</span>
-            </div>
-            
-                <p class="text-[#3a5854] text-[11px] md:text-sm leading-[18px] md:leading-[20px] mb-3 md:mb-4">Hosting my yoga retreat here was effortless — everything was perfectly organised. Our group absolutely loved it!</p>
-            <div class="border-t border-black/10 pt-3 md:pt-4">
-              <p class="text-[#1b3b37] font-semibold text-[13px] md:text-base">Sarah K.</p>
-              <p class="text-[#4b6965] text-[10px] md:text-xs">Yoga Retreat Leader · UK</p>
-            </div>
-          </div>
-        
-      
-    </div>
-
-    <div class="text-center">
-      <a href="/sohlarasample/book-your-reset/" class="inline-flex items-center justify-center bg-[#e9b74f] hover:bg-[#f3cb77] rounded-full h-[42px] md:h-auto md:py-5 px-8 md:px-16 w-full max-w-[350px] md:w-auto md:max-w-none transition-colors shadow-[0px_25px_50px_0px_rgba(13,47,43,0.25)]">
-        <span class="text-black text-[16px] md:text-xl font-semibold capitalize md:font-bold md:uppercase">Join the Movement</span>
-      </a>
+    <div class="text-center mt-8 md:mt-12">
+      <a class="reset-preview-button" href="/sohlarasample/book-your-reset/">Book your 5-Day Reset</a>
     </div>
   </div>
 </section>
@@ -1632,7 +1466,7 @@
       
         <div class="bg-[#193935] border border-neutral-700 rounded-lg overflow-hidden shadow-[0px_1px_3px_0px_rgba(13,47,43,0.1)] sm:last:odd:col-span-2 sm:last:odd:w-[calc(50%-8px)] md:last:odd:w-[calc(50%-12px)] sm:last:odd:justify-self-center lg:last:odd:col-span-1 lg:last:odd:w-auto" data-reveal>
           <div class="relative h-[120px] md:h-[192px] w-full">
-            <img alt="A stressed woman pressing her fingers to the bridge of her nose" src="https://sohlararetreats.com/static/site/img/v2/sales-science-stress-800.webp" srcset="https://sohlararetreats.com/static/site/img/v2/sales-science-stress-480.webp 480w, https://sohlararetreats.com/static/site/img/v2/sales-science-stress-800.webp 800w" sizes="(min-width: 1024px) 368px, (min-width: 640px) 50vw, 100vw" width="5257" height="3505" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-[center_22%]">
+            <img src="/sohlarasample/retreats/5-day-reset/photos/science-coast.webp" alt="A woman walking by the water beside volcanic rock" width="700" height="1050" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-[center_22%]">
           </div>
           <div class="p-3 md:p-6 text-center">
             <p class="text-white text-[16px] md:text-[32px] font-bold mb-1 md:mb-2">Stress</p>
@@ -1643,7 +1477,7 @@
       
         <div class="bg-[#193935] border border-neutral-700 rounded-lg overflow-hidden shadow-[0px_1px_3px_0px_rgba(13,47,43,0.1)] sm:last:odd:col-span-2 sm:last:odd:w-[calc(50%-8px)] md:last:odd:w-[calc(50%-12px)] sm:last:odd:justify-self-center lg:last:odd:col-span-1 lg:last:odd:w-auto" data-reveal>
           <div class="relative h-[120px] md:h-[192px] w-full">
-            <img alt="Abstract violet and gold waves of light" src="https://sohlararetreats.com/static/site/img/v2/sales-science-nervous-800.webp" srcset="https://sohlararetreats.com/static/site/img/v2/sales-science-nervous-480.webp 480w, https://sohlararetreats.com/static/site/img/v2/sales-science-nervous-800.webp 800w" sizes="(min-width: 1024px) 368px, (min-width: 640px) 50vw, 100vw" width="6000" height="4000" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover">
+            <img src="/sohlarasample/retreats/5-day-reset/photos/science-rest.webp" alt="A guest resting in a hammock outdoors" width="1050" height="541" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover">
           </div>
           <div class="p-3 md:p-6 text-center">
             <p class="text-white text-[16px] md:text-[32px] font-bold mb-1 md:mb-2">Nervous System</p>
@@ -1654,7 +1488,7 @@
       
         <div class="bg-[#193935] border border-neutral-700 rounded-lg overflow-hidden shadow-[0px_1px_3px_0px_rgba(13,47,43,0.1)] sm:last:odd:col-span-2 sm:last:odd:w-[calc(50%-8px)] md:last:odd:w-[calc(50%-12px)] sm:last:odd:justify-self-center lg:last:odd:col-span-1 lg:last:odd:w-auto" data-reveal>
           <div class="relative h-[120px] md:h-[192px] w-full">
-            <img alt="Brain scans on a tablet screen" src="https://sohlararetreats.com/static/site/img/v2/sales-science-neuro-800.webp" srcset="https://sohlararetreats.com/static/site/img/v2/sales-science-neuro-480.webp 480w, https://sohlararetreats.com/static/site/img/v2/sales-science-neuro-800.webp 800w" sizes="(min-width: 1024px) 368px, (min-width: 640px) 50vw, 100vw" width="6000" height="4000" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover">
+            <img src="/sohlarasample/retreats/5-day-reset/photos/journaling.webp" alt="A guest writing in a journal in a hanging chair" width="733" height="1100" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover">
           </div>
           <div class="p-3 md:p-6 text-center">
             <p class="text-white text-[16px] md:text-[32px] font-bold mb-1 md:mb-2">Neuroplasticity</p>
