@@ -34,7 +34,6 @@ body,.radix-themes.dark{background:#eff8fb;color:#143e5c}
 .breath-icon svg{stroke-width:1.35}
 #nervous-system::before{background:#102d46c4}
 #retreat::before{background:linear-gradient(90deg,#132e359e,#122d34d9 68%,#132d34ec)}
-#book::before{background:#10263ba3}
 [data-section="home-highlights"],[data-section="home-marquee"]{background:#d8efe8}
 [data-section="home-highlights"] li span,[data-section="home-highlights"] p{color:#174d62}
 @media(max-width:767px){
@@ -46,8 +45,7 @@ body,.radix-themes.dark{background:#eff8fb;color:#143e5c}
 
 /* Keep the moving backgrounds visible through the content panels. */
 #nervous-system .group,
-#retreat .rounded-lg:not(.retreat-clip),
-#book [data-checkout] > div {
+#retreat .rounded-lg:not(.retreat-clip) {
   background: rgb(7 32 46 / 26%);
   border-color: rgb(224 250 249 / 35%);
 }
@@ -55,12 +53,7 @@ body,.radix-themes.dark{background:#eff8fb;color:#143e5c}
 #retreat .rounded-lg:not(.retreat-clip):hover {
   background: rgb(7 32 46 / 35%);
 }
-#book :is(select, input:not([type="checkbox"])) {
-  background: rgb(7 28 40 / 40%);
-  border-color: rgb(224 250 249 / 45%);
-}
-#book option, #book optgroup { background: #143751; color: white; }
-:is(#nervous-system, #retreat, #book) p { color: #f3fbfc; }
+:is(#nervous-system, #retreat) p { color: #f3fbfc; }
 
 #main-content :is([class~="text-[10px]"], [class~="text-[11px]"]) { font-size: 0.875rem; }
 #main-content :is([class~="text-xs"], [class~="text-[12px]"]) { font-size: 0.9375rem; }
@@ -96,17 +89,17 @@ body,.radix-themes.dark{background:#eff8fb;color:#143e5c}
 
 @media (max-width: 767px) {
   /* Frame landscape footage independently of the height of the text. */
-  #problem, #nervous-system, #book { --mobile-video-height: clamp(175px, 56.25vw, 432px); }
-  #problem, #book { padding-top: calc(var(--mobile-video-height) + 1.5rem); }
+  #problem, #nervous-system { --mobile-video-height: clamp(175px, 56.25vw, 432px); }
+  #problem { padding-top: calc(var(--mobile-video-height) + 1.5rem); }
   #nervous-system > div:first-of-type { padding-top: calc(var(--mobile-video-height) + 2rem); }
-  :is(#problem, #nervous-system, #book) > video {
+  :is(#problem, #nervous-system) > video {
     height: var(--mobile-video-height);
     object-position: center;
   }
-  :is(#problem, #nervous-system, #book)::before {
+  :is(#problem, #nervous-system)::before {
     background: linear-gradient(to bottom, transparent, #102d36 var(--mobile-video-height));
   }
-  :is(#problem, #nervous-system, #book) > .background-video-play {
+  :is(#problem, #nervous-system) > .background-video-play {
     top: calc(var(--mobile-video-height) - 3.5rem);
     bottom: auto;
   }
