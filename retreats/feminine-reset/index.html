@@ -950,18 +950,222 @@ html.js .fr-page{scroll-behavior:auto}
         <div class="retreat-payment-option">
           <div class="retreat-payment-name">Full payment</div>
           <div class="retreat-amount">5,997 <span>RON</span></div>
-          <a class="btn btn-magenta" href="/sohlarasample/retreats/feminine-reset/book/?payment=full">Pay in full</a>
+          <a class="btn btn-magenta" href="#feminine-inline-booking" data-feminine-payment="full">Pay in full</a>
         </div>
         <div class="retreat-payment-option">
           <div class="retreat-payment-name">Deposit</div>
           <div class="retreat-amount">2,497 <span>RON</span></div>
           <p>The remaining 3,500 RON is due by 1 February 2027. The deposit is non-refundable.</p>
-          <a class="btn btn-gold" href="/sohlarasample/retreats/feminine-reset/book/?payment=deposit">Reserve with a deposit</a>
+          <a class="btn btn-gold" href="#feminine-inline-booking" data-feminine-payment="deposit">Reserve with a deposit</a>
         </div>
       </div>
     </div>
     <p class="pay-note">Payments are processed securely by Stripe.</p>
-  </div>
+  
+  <section class="mt-12 border-t border-white/10 pt-10" id="feminine-inline-booking" data-section="retreat-book-form" aria-labelledby="feminine-inline-booking-title">
+    <div class="mb-8 text-center">
+      <h2 class="text-3xl font-bold text-white" id="feminine-inline-booking-title">Complete your Feminine Reset booking</h2>
+      <p class="mx-auto mt-3 max-w-2xl text-neutral-300">Enter your details, choose whether to pay in full or reserve with a deposit, and pay securely with Stripe without leaving this page.</p>
+    </div>
+    <form class="grid lg:grid-cols-[minmax(0,2fr)_minmax(20rem,1fr)] gap-8 md:gap-12 items-start" method="post" novalidate>
+        
+        <input type="text" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+        <input type="hidden" name="retreat" value="feminine-reset">
+        <input type="hidden" name="lang" value="en">
+        <div class="min-w-0 space-y-6">
+          <!-- Step 1 -->
+          <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] font-display text-[13px] font-bold text-gold-300" aria-hidden="true">1</span>
+              <h2 class="text-xl font-semibold text-white">Your place</h2>
+            </div>
+            <fieldset>
+              <legend class="sr-only">Place</legend>
+              <div class="grid  gap-3">
+                
+                  <label class="group rounded-xl border text-left transition-all cursor-pointer border-neutral-700 hover:border-neutral-600 bg-neutral-900 has-checked:border-gold-300 has-checked:bg-neutral-800 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300 flex flex-col gap-1 p-4">
+                    <input class="sr-only" type="radio" name="package" value="place" data-guests="1" required checked>
+                    <span class="text-[11px] font-bold uppercase tracking-normal text-gold-300">Villa Sohlara</span>
+                    <span class="text-base font-semibold text-white group-has-checked:text-gold-300">Your place at Feminine Reset</span>
+<s class="bf-reference" data-bf-original hidden>8,567.14 RON</s><span class="text-lg font-semibold text-white bf-payable">5,997 RON</span>
+                    <span class="text-xs text-neutral-400">Total for 1 person · Six days, five nights at Villa Sohlara.</span>
+                  </label>
+                
+              </div>
+            </fieldset>
+            <p class="mt-4 text-xs text-neutral-400">Includes 5 nights' accommodation, a detox breakfast with tropical fruit, the welcome dinner, the courses and activities in the programme, Floating Therapy, sauna, aromatherapy and the pool. Not included: flights, meals not listed in the programme and the optional excursions.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] font-display text-[13px] font-bold text-gold-300" aria-hidden="true">2</span>
+              <h2 class="text-xl font-semibold text-white">Your details</h2>
+            </div>
+            <div class="space-y-6">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-white mb-2" for="firstName">First Name *</label>
+                  <input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors" id="firstName" name="firstName" type="text" autocomplete="given-name" required data-wallet-fills>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-white mb-2" for="lastName">Last Name *</label>
+                  <input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors" id="lastName" name="lastName" type="text" autocomplete="family-name" required data-wallet-fills>
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-white mb-2" for="email">Email *</label>
+                  <input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors" id="email" name="email" placeholder="name@example.com" type="email" autocomplete="email" required data-wallet-fills>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-white mb-2" for="phone">Phone *</label>
+                  <input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors" id="phone" name="phone" type="tel" autocomplete="tel" required data-wallet-fills>
+                </div>
+              </div>
+              
+              
+              
+              
+              <div class=""><label for="preview-referral-source" class="block text-sm font-medium text-white mb-2">Where did you first hear about us? *</label><input id="preview-referral-source" name="referral_source" class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors " type="text" maxlength="255" required="required"></div><div>
+                <label class="block text-sm font-medium text-white mb-2" for="dietary">Dietary needs or allergies</label>
+                <textarea class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors resize-none" id="dietary" name="dietary" rows="3" aria-describedby="dietary-hint" maxlength="1000"></textarea>
+                <p class="mt-2 text-xs text-neutral-400" id="dietary-hint">Please tell us before the retreat.</p>
+              </div>
+              <fieldset class=""><legend class="block text-sm font-medium text-white mb-2">Would you like us to arrange an airport transfer for you?</legend><label class="inline-flex min-h-11 items-center gap-2 mr-4"><input type="radio" name="airportTransfer" value="yes"> Yes</label><label class="inline-flex min-h-11 items-center gap-2 mr-4"><input type="radio" name="airportTransfer" value="no"> No</label></fieldset><div>
+                <label class="block text-sm font-medium text-white mb-2" for="notes">Anything else we should know?</label>
+                <textarea class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors resize-none" id="notes" name="notes" rows="3"></textarea>
+              </div>
+              <div class="border-y border-x-0 bg-transparent px-0 py-3 sm:py-4 border-neutral-800">
+                <label class="flex items-start gap-3 cursor-pointer group">
+                  <span class="relative mt-0.5">
+                    <input class="sr-only" type="checkbox" name="consent" value="yes" required>
+                    <span class="w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all border-neutral-600 group-hover:border-neutral-500 group-has-checked:border-gold-300 group-has-checked:bg-gold-300 group-has-focus-visible:outline-2 group-has-focus-visible:outline-offset-2 group-has-focus-visible:outline-gold-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-black opacity-0 group-has-checked:opacity-100" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+                    </span>
+                  </span>
+                  <span class="flex-1">
+                    <span class="block text-sm font-medium leading-6 text-white">I agree to the <a class="text-gold-300 hover:text-gold-200 underline" href="/sohlarasample/terms-conditions/" target="_blank">Terms &amp; Conditions</a> and <a class="text-gold-300 hover:text-gold-200 underline" href="/sohlarasample/privacy-policy/" target="_blank">Privacy Policy</a>. *</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- Step 3: online payment (shown by retreat-checkout.js once Stripe has loaded) -->
+          <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8" data-pay-only hidden>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] font-display text-[13px] font-bold text-gold-300" aria-hidden="true">3</span>
+              <h2 class="text-xl font-semibold text-white">Payment</h2>
+            </div>
+            <div class="space-y-6">
+              <fieldset>
+                <legend class="block text-sm font-medium text-white mb-3">How much would you like to pay now?</legend>
+                <div class="grid sm:grid-cols-2 gap-3">
+                  <label class="group rounded-xl border text-left transition-all cursor-pointer border-neutral-700 hover:border-neutral-600 bg-neutral-900 has-checked:border-gold-300 has-checked:bg-neutral-800 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300 flex flex-col gap-1 p-4">
+                    <input class="sr-only" type="radio" name="payment" value="deposit" checked>
+                    <span class="text-sm font-medium text-white group-has-checked:text-gold-300">Deposit only</span>
+                    <span class="text-lg font-semibold text-white" data-co="deposit">2,497.00 RON</span>
+                    <span class="text-xs text-neutral-400">Pay the rest by 1 February 2027. The deposit is non-refundable.</span>
+                  </label>
+                  <label class="group rounded-xl border text-left transition-all cursor-pointer border-neutral-700 hover:border-neutral-600 bg-neutral-900 has-checked:border-gold-300 has-checked:bg-neutral-800 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300 flex flex-col gap-1 p-4">
+                    <input class="sr-only" type="radio" name="payment" value="full">
+                    <span class="text-sm font-medium text-white group-has-checked:text-gold-300">Pay in full</span>
+                    <span class="text-lg font-semibold text-white" data-co="full">5,997.00 RON</span>
+                    <span class="text-xs text-neutral-400">Nothing left to pay.</span>
+                  </label>
+                </div>
+              </fieldset>
+              <div data-express-wrap hidden>
+                <div data-express-checkout></div>
+                <div class="mt-5 flex items-center gap-3 text-xs uppercase text-neutral-400">
+                  <span class="h-px flex-1 bg-neutral-700"></span>or pay by card<span class="h-px flex-1 bg-neutral-700"></span>
+                </div>
+              </div>
+              <div class="min-h-[12rem]" data-payment-element></div>
+              <p class="flex items-start gap-2 text-xs text-neutral-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock mt-px w-4 h-4 shrink-0" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                Payments are processed securely by Stripe. We never see or store your card details.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- Summary -->
+        <aside class="lg:sticky lg:top-[calc(var(--header-height)+1.5rem)]" aria-labelledby="summary-title">
+          <div class="bg-neutral-800 rounded-2xl p-6">
+            <h2 class="text-xl font-semibold text-white mb-2" id="summary-title">Your Booking</h2>
+            <p class="text-neutral-400 text-sm mb-6">Feminine Reset, a retreat for the modern woman at Villa Sohlara, Tenerife.</p>
+            <dl class="space-y-3 text-sm mb-6">
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-neutral-400">Place</dt>
+                <dd class="text-right font-medium text-white" data-summary="room">Villa Sohlara · Your place at Feminine Reset</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-neutral-400">Guests</dt>
+                <dd class="text-right font-medium text-white" data-summary="guests">1</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-neutral-400">Dates</dt>
+                <dd class="text-right font-medium text-white">26 Feb – 3 Mar 2027</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-neutral-400">Stay</dt>
+                <dd class="text-right font-medium text-white">5 nights</dd>
+              </div>
+            </dl>
+            <p class="text-sm mt-6 mb-2 text-neutral-400 text-center border-t border-neutral-700 pt-4">Total</p>
+            <div class="text-center mb-6">
+              <s class="bf-reference" data-bf-original hidden>8,567.14 RON</s><span class="text-4xl font-bold text-white bf-payable" data-summary="total">5,997.00 RON</span>
+            </div>
+            
+            <dl class="space-y-2 text-sm border-t border-neutral-700 pt-4 mb-6" data-pay-only hidden>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-neutral-400">Due now</dt>
+                <dd class="text-right font-semibold text-gold-300" data-co="due">2,497.00 RON</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4" data-co-balance-row>
+                <dt class="text-neutral-400">Balance by 1 Feb 2027</dt>
+                <dd class="text-right text-white" data-co="balance">3,500.00 RON</dd>
+              </div>
+            </dl>
+            
+            <button class="hg-btn hg-btn--primary hg-btn--lg hg-btn--glow w-full" type="submit" data-pay-button disabled>Request My Booking</button>
+            <p class="text-neutral-400 text-xs text-center mt-4" data-request-only>No payment is taken now. We'll confirm your booking and send you the payment details.</p>
+            
+            <p class="text-neutral-400 text-xs text-center mt-4" data-pay-only hidden>Secure payment by Stripe. Your place is confirmed as soon as the payment goes through.</p>
+            
+            <p data-form-status role="status" aria-live="polite" class="mt-4 text-sm text-center data-[tone=info]:text-neutral-400 empty:hidden"></p>
+          </div>
+          <p class="text-sm text-neutral-400 mt-6 text-center">
+            Questions?
+            <a class="text-gold-300 hover:text-gold-200 underline" href="https://wa.me/34690227210?text=Hi%21%20I%20came%20across%20Sohlara%20Retreats%20and%20would%20love%20to%20find%20out%20more%20%F0%9F%8C%BF%20Could%20you%20tell%20me%20a%20little%20about%20what%20it%E2%80%99s%20like%20to%20stay%20with%20you%3F" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+          </p>
+        </aside>
+      </form>
+    <script type="application/json" id="retreat-checkout-data">{"packages": {"place": {"label": "Villa Sohlara \u00b7 Your place at Feminine Reset", "guests": 1, "total": "5,997.00\u00a0RON", "options": {"deposit": {"due": "2,497.00\u00a0RON", "balance": "3,500.00\u00a0RON", "cents": 249700}, "full": {"due": "5,997.00\u00a0RON", "balance": "0.00\u00a0RON", "cents": 599700}}}}, "currency": "ron", "locale": "en", "texts": {"pay_button": "Pay {amount} now", "processing": "Processing your payment\u2026", "sending": "Sending\u2026", "complete_first": "Please complete your booking details first.", "error": "Something went wrong. Please try again.", "payment_error": "Your payment could not be completed. Please try again."}}</script>
+    <script type="application/json" id="checkout-config">{"publishableKey": "pk_live_51TnhHwLeQrnFj0z2DVtoTXiC78IW1Z1FAuXf8iWc8u8ncX7bviyEy70pVEo4gs0Uy4WDizOn1ShgiytkZCNbsC3B007yRYPFLi"}</script>
+    <script>
+      (() => {
+        const form = document.querySelector('#feminine-inline-booking form');
+        if (!form) return;
+        const choosePayment = value => {
+          const option = form.querySelector('input[name="payment"][value="' + value + '"]');
+          if (!option) return;
+          option.checked = true;
+          option.dispatchEvent(new Event('change', { bubbles: true }));
+        };
+        document.querySelectorAll('#rezerva [data-feminine-payment]').forEach(link => {
+          link.addEventListener('click', () => choosePayment(link.dataset.femininePayment));
+        });
+        const requested = new URLSearchParams(location.search).get('payment');
+        if (requested === 'full' || requested === 'deposit') choosePayment(requested);
+      })();
+    </script>
+  </section>
+</div>
 </section>
 <!-- ================= CINE TE GHIDEAZA ================= -->
 <section class="sec" id="ghid" aria-labelledby="guide-name">
