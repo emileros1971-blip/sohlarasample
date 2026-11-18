@@ -235,3 +235,70 @@ html {
 @media (max-width: 767px) {
   .video-transition-detail { display: none; }
 }
+
+/* Anchor the home shortcuts to the viewport and isolate them from page CTA styles. */
+.sohlara-contact-stack.home-contact-stack {
+  right: max(12px, env(safe-area-inset-right));
+  background: transparent;
+}
+.home-contact-stack > :is(.wa-link, #sohlara-google-reviews),
+.home-contact-stack > .sohlara-floating-social {
+  background: transparent;
+}
+.home-contact-stack #sohlara-app-floating {
+  position: relative !important;
+  display: block;
+  border-radius: 50%;
+  background: #153e60;
+}
+.home-contact-stack #sohlara-app-floating img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  padding: 3px;
+  object-fit: contain;
+}
+.home-contact-stack #sohlara-app-floating span {
+  bottom: 2px;
+  min-width: 0;
+  padding: 2px 4px;
+  font-size: 8px;
+}
+@media (min-width: 768px) {
+  .sohlara-contact-stack.home-contact-stack {
+    right: max(24px, env(safe-area-inset-right));
+  }
+}
+body:has(#mobile-menu-toggle[aria-expanded="true"]) .home-contact-stack {
+  visibility: hidden;
+}
+
+.newsletter-email {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 28rem;
+  margin-top: 1rem;
+}
+.newsletter-email input {
+  flex: 1 1 11rem;
+  min-width: 0;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #799eac;
+  border-radius: 0.4rem;
+  background: #183f4b;
+  color: #fff;
+}
+.newsletter-email input::placeholder { color: #d4e7ec; }
+.newsletter-email button {
+  min-height: 44px;
+  padding: 0.65rem 0.8rem;
+  border-radius: 0.4rem;
+  background: #d8efe8;
+  color: #153e60;
+  font-weight: 700;
+}
+.newsletter-email :focus-visible {
+  outline: 2px solid #d8efe8;
+  outline-offset: 2px;
+}

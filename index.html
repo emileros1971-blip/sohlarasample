@@ -47,7 +47,7 @@
   
   
   
-<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="preview.css?v=8"><style>
+<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="preview.css?v=sanctuary"><style>
   #book :is(#hb-referral-source, #hb-dietary) {
     background: rgb(7 28 40 / 40%);
     border: 1px solid rgb(224 250 249 / 45%);
@@ -337,7 +337,7 @@
   
   
   <div class="hero-film">
-    <video muted loop playsinline preload="auto" poster="media/coast.jpg" src="media/coast.mp4" aria-hidden="true"></video>
+    <video muted loop playsinline preload="auto" poster="media/sanctuary-tenerife.webp" src="media/sanctuary-tenerife.mp4" aria-hidden="true"></video>
     <button type="button" class="background-video-play" hidden>Play background video</button>
     <div class="hero-film-copy">
       <h1>A sanctuary<br>in Tenerife</h1>
@@ -1201,7 +1201,19 @@
       <div>
         <h3 class="text-lg font-semibold">Sign up for our newsletter</h3>
         <p class="mt-2 max-w-md text-sm leading-6 text-white/60">Stay up to date on retreats, tips &amp; announcements</p>
-        <a href="/sohlarasample/" class="text-gold-300 underline">Sign up on the Sohlara website</a></div>
+        <form class="newsletter-email" aria-label="Newsletter signup">
+          <label for="footer-newsletter-email" class="sr-only">Email address</label>
+          <input id="footer-newsletter-email" name="email" type="email" placeholder="Email address" autocomplete="email" required>
+          <button type="submit">Open email to sign up</button>
+        </form>
+        <script>
+          document.currentScript.previousElementSibling.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const email = event.currentTarget.elements.email.value.trim();
+            window.location.href = 'mailto:contact@sohlararetreats.com?subject=Newsletter%20signup&body=' + encodeURIComponent(email);
+          });
+        </script>
+      </div>
     </div>
     <div class="mt-10 flex flex-col gap-4 border-t border-white/[0.08] pt-6 text-xs text-white/55 md:flex-row md:items-center md:justify-between">
       <p>© 2026 Sohlara Retreats. All rights reserved.</p>
@@ -1227,7 +1239,7 @@
     
     
 <style>.wa-label{display:none}@media (min-width:1024px) and (hover:hover){.wa-link:hover .wa-label,.wa-link:focus-visible .wa-label{display:block}}</style>
-<div class="sohlara-contact-stack sohlara-contact-recaptcha">
+<div class="sohlara-contact-stack sohlara-contact-recaptcha home-contact-stack">
 <a href="https://wa.me/34690227210?text=Hi%21%20I%20came%20across%20Sohlara%20Retreats%20and%20would%20love%20to%20find%20out%20more%20%F0%9F%8C%BF%20Could%20you%20tell%20me%20a%20little%20about%20what%20it%E2%80%99s%20like%20to%20stay%20with%20you%3F" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" class="wa-link group fixed right-3 z-50 flex items-center gap-3 rounded-full md:right-6" style="bottom:calc(env(safe-area-inset-bottom) + 6rem)">
   <span class="wa-label rounded-full bg-white px-4 py-2 text-[13px] font-medium text-[#0c2f2b] shadow-lg shadow-black/25">Chat with us on <strong class="font-bold">WhatsApp</strong></span>
   <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/30 transition-[background-color,box-shadow] group-hover:bg-[#1ebe5b] group-hover:shadow-[#25D366]/40 md:h-14 md:w-14">

@@ -1,7 +1,11 @@
 /* Shared public-page palette from the approved homepage. */
 .sohlara-redesign, .sohlara-redesign .radix-themes.dark { background:#102d36; color:#f3fbfc; }
 .sohlara-redesign #site-header { background:#e1f0f8; border-color:#bedbe7; }
-.sohlara-redesign #site-header :is(nav a,nav button,nav p) { color:#153e60; }
+.sohlara-redesign #site-header :is(nav a, nav button, nav p, #mobile-menu a, #mobile-menu p) { color:#153e60; }
+.sohlara-redesign #site-header :is([data-dropdown-panel], #mobile-menu) a:is(:hover, :focus-visible, [aria-current="page"]) {
+  background:#d8efe8;
+  color:#123e50;
+}
 .sohlara-redesign #site-header nav > a:first-child { background:#153e60; border-radius:4px; padding:4px 8px; }
 .sohlara-redesign #site-header a[href$="/book-your-reset/"].inline-flex { background:#174d76; color:white; }
 .sohlara-redesign #site-header :is([data-dropdown-panel],#mobile-menu) { background:#eff8fc; border-color:#bedbe7; }
