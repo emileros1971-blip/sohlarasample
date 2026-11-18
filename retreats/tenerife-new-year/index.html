@@ -277,7 +277,10 @@
 .back-to-stone .payment-actions .payment-full { background: transparent; color: var(--stone-gold); }
 .back-to-stone .payment-options :focus-visible { outline: 2px solid white; outline-offset: 3px; }
 </style>
-<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="/sohlarasample/review-theme.css?v=readable-navigation"></head>
+<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="/sohlarasample/review-theme.css?v=readable-navigation"><style>
+  .back-to-stone .room button.btn[aria-pressed="true"] { background: #f1cc79; color: #112b3b; }
+</style>
+</head>
 <body class="font-montserrat antialiased sohlara-redesign">
   
 
@@ -665,7 +668,7 @@
         <p class="room-price bf-payable">€1,500</p>
         <p>Total for 1 person</p>
         
-          <a class="btn" href="/sohlarasample/retreats/tenerife-new-year/book/?package=cave-solo" data-inline-package="cave-solo">Select this room<span class="sr-only">: Cave · Single</span></a>
+          <button class="btn" type="button" data-inline-package="cave-solo" aria-pressed="false">Select this room<span class="sr-only">: Cave · Single</span></button>
         
       </div>
     </article>
@@ -680,7 +683,7 @@
         <p class="room-price bf-payable">€2,400</p>
         <p>€1,200 per person · 2 guests</p>
         
-          <a class="btn" href="/sohlarasample/retreats/tenerife-new-year/book/?package=cave-double" data-inline-package="cave-double">Select this room<span class="sr-only">: Cave · Shared</span></a>
+          <button class="btn" type="button" data-inline-package="cave-double" aria-pressed="false">Select this room<span class="sr-only">: Cave · Shared</span></button>
         
       </div>
     </article>
@@ -695,7 +698,7 @@
         <p class="room-price bf-payable">€2,600</p>
         <p>€1,300 per person · 2 guests</p>
         
-          <a class="btn" href="/sohlarasample/retreats/tenerife-new-year/book/?package=stone-double" data-inline-package="stone-double">Select this room<span class="sr-only">: Stone House · Double occupancy</span></a>
+          <button class="btn" type="button" data-inline-package="stone-double" aria-pressed="false">Select this room<span class="sr-only">: Stone House · Double occupancy</span></button>
         
       </div>
     </article>
@@ -710,7 +713,7 @@
         <p class="room-price bf-payable">€1,800</p>
         <p>Total for 1 person</p>
         
-          <a class="btn" href="/sohlarasample/retreats/tenerife-new-year/book/?package=stone-solo" data-inline-package="stone-solo">Select this room<span class="sr-only">: Stone House · Private single</span></a>
+          <button class="btn" type="button" data-inline-package="stone-solo" aria-pressed="false">Select this room<span class="sr-only">: Stone House · Private single</span></button>
         
       </div>
     </article>
@@ -721,7 +724,7 @@
 <section class="pb-16 md:pb-20 px-4 md:px-6 lg:px-8" data-section="retreat-book-form">
     <div class="max-w-6xl mx-auto">
       
-      <form class="grid lg:grid-cols-[minmax(0,2fr)_minmax(20rem,1fr)] gap-8 md:gap-12 items-start" method="post" novalidate>
+      <form class="grid lg:grid-cols-[minmax(0,2fr)_minmax(20rem,1fr)] gap-8 md:gap-12 items-start" method="post" data-new-year-inline-form novalidate>
         
         <input type="text" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
         <input type="hidden" name="retreat" value="tenerife-new-year">
@@ -833,8 +836,8 @@
           </div>
 
           
-          <!-- Step 3: online payment (shown by retreat-checkout.js once Stripe has loaded) -->
-          <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8" data-pay-only hidden>
+          <!-- Step 3: inline Stripe preview -->
+          <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8" data-pay-only>
             <div class="flex items-center gap-3 mb-6">
               <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] font-display text-[13px] font-bold text-gold-300" aria-hidden="true">3</span>
               <h2 class="text-xl font-semibold text-white">Payment</h2>
@@ -878,7 +881,7 @@
           <div class="bg-neutral-800 rounded-2xl p-6">
             <h2 class="text-xl font-semibold text-white mb-2" id="summary-title">Your Booking</h2>
             <p class="text-neutral-400 text-sm mb-6">Back to Stone — More of Less, the New Year retreat at Sohlara, south Tenerife.</p>
-            <dl class="space-y-3 text-sm mb-6">
+            <dl class="space-y-3 text-sm mb-6" aria-live="polite">
               <div class="flex items-start justify-between gap-4">
                 <dt class="text-neutral-400">Room</dt>
                 <dd class="text-right font-medium text-white" data-summary="room">Cave accommodation · Solo guest</dd>
@@ -917,7 +920,7 @@
 <span class="text-4xl font-bold text-white bf-payable" data-summary="total">€1,500.00</span>
             </div>
             
-            <dl class="space-y-2 text-sm border-t border-neutral-700 pt-4 mb-6" data-pay-only hidden>
+            <dl class="space-y-2 text-sm border-t border-neutral-700 pt-4 mb-6" data-pay-only>
               <div class="flex items-start justify-between gap-4">
                 <dt class="text-neutral-400">Due now</dt>
                 <dd class="text-right font-semibold text-gold-300" data-co="due">€300.00</dd>
@@ -928,10 +931,9 @@
               </div>
             </dl>
             
-            <button class="hg-btn hg-btn--primary hg-btn--lg hg-btn--glow w-full" type="submit" data-pay-button disabled>Request My Booking</button>
-            <p class="text-neutral-400 text-xs text-center mt-4" data-request-only>No payment is taken now. We'll confirm your booking and send you the payment details.</p>
+            <button class="hg-btn hg-btn--primary hg-btn--lg hg-btn--glow w-full" type="button" data-pay-button disabled>Pay €300.00 now</button>
             
-            <p class="text-neutral-400 text-xs text-center mt-4" data-pay-only hidden>Secure payment by Stripe. Your place is confirmed as soon as the payment goes through.</p>
+            <p class="text-neutral-400 text-xs text-center mt-4" data-pay-only>Checkout preview. Payments are processed on the live Sohlara site.</p>
             
             <p data-form-status role="status" aria-live="polite" class="mt-4 text-sm text-center data-[tone=info]:text-neutral-400 empty:hidden"></p>
           </div>
@@ -946,10 +948,6 @@
   </section>
 </div>
 
-<details class="faq">
-  <summary>Do I need any prior experience?</summary>
-  <p>No, you don’t. Just come as you are.</p>
-</details>
 </div>
 </section>
 
@@ -1658,37 +1656,8 @@
 
 <script type="application/json" id="checkout-config">{"publishableKey": "pk_live_51TnhHwLeQrnFj0z2DVtoTXiC78IW1Z1FAuXf8iWc8u8ncX7bviyEy70pVEo4gs0Uy4WDizOn1ShgiytkZCNbsC3B007yRYPFLi"}</script>
 
-<script>
-(() => {
-  const panel = document.getElementById('instant-checkout');
-  if (!panel) return;
-  const form = panel.querySelector('[data-new-year-inline-form]');
-  if (!form) return;
-  const links = [...document.querySelectorAll('[data-inline-package]')];
-  const choices = [...form.querySelectorAll('input[name="package"]')];
-  const updateSelection = () => {
-    const current = choices.find(choice => choice.checked)?.value;
-    for (const link of links) {
-      if (link.dataset.inlinePackage === current) link.setAttribute('aria-current', 'true');
-      else link.removeAttribute('aria-current');
-    }
-  };
-  form.addEventListener('change', updateSelection);
-  updateSelection();
-  for (const link of links) {
-    link.addEventListener('click', event => {
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      const choice = choices.find(input => input.value === link.dataset.inlinePackage && !input.disabled);
-      if (!choice) return;
-      event.preventDefault();
-      choice.checked = true;
-      choice.dispatchEvent(new Event('change', { bubbles: true }));
-      panel.focus({ preventScroll: true });
-      panel.scrollIntoView({ block: 'start' });
-    });
-  }
-})();
-</script>
+<script src="https://js.stripe.com/v3/" defer></script>
+<script src="/sohlarasample/retreats/tenerife-new-year/inline-preview.js?v=1" defer></script>
 
 
   
