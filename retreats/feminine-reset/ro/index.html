@@ -1200,6 +1200,24 @@ html.js .fr-page{scroll-behavior:auto}
     </ul>
   </div>
 </details>
+<style>
+  #sohlara-app-floating {
+    display: flex; align-items: center; justify-content: center;
+    width: 164px; min-height: 52px; padding: 8px 12px;
+    border: 1px solid #d9e9e8; border-radius: 999px;
+    background-image: linear-gradient(rgb(250 253 251 / 82%), rgb(250 253 251 / 82%)), url("https://sohlararetreats.com/static/site/img/brand/sohlara-logo-2026-480.webp");
+    background-position: center; background-size: cover;
+    color: #071b22 !important; text-align: center; text-decoration: none;
+    font: 700 12px/1.15 system-ui, sans-serif;
+    box-shadow: 0 4px 14px #0005; transition: transform .2s, box-shadow .2s;
+  }
+  #sohlara-app-floating:hover { transform: translateY(-2px); box-shadow: 0 6px 18px #0006; }
+  #sohlara-app-floating:focus-visible { outline: 3px solid #4285f4; outline-offset: 3px; }
+  @media (max-width: 480px) {
+    #sohlara-app-floating { width: 146px; min-height: 48px; font-size: 11px; }
+  }
+</style>
+<a id="sohlara-app-floating" href="https://sohlara.com/" target="_blank" rel="noopener noreferrer" aria-label="Get the Sohlara app">Get the Sohlara app</a>
 <script>
   (() => {
     const social = document.getElementById('sohlara-floating-social');
