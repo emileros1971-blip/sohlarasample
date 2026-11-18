@@ -56,20 +56,6 @@
   .sohlara-redesign #main-content .reset-preview-button:hover { background:#0d2d47; color:#fff; }
   .reset-preview-button:focus-visible { outline:2px solid #153e60; outline-offset:3px; }
   .reset-hero-shade { background:linear-gradient(180deg, rgba(8,23,30,.25), rgba(8,23,30,.68) 52%, rgba(8,23,30,.35)); }
-  .reset-video-sound {
-    display: block;
-    min-height: 44px;
-    margin: 0.65rem auto 0;
-    padding: 0.45rem 0.85rem;
-    border: 1px solid #9cbec8;
-    border-radius: 0.4rem;
-    background: #eff8fc;
-    color: #153e60;
-    font-size: 0.875rem;
-    font-weight: 650;
-  }
-  .reset-video-sound[hidden] { display: none; }
-  .reset-video-sound[aria-pressed="true"] { background: #153e60; color: #fff; }
   .reset-photo-pair { display:grid; grid-template-columns:1fr 1fr; gap:0.9rem; margin-top:1.5rem; }
   .reset-photo-pair img { display:block; width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; border-radius:0.55rem; }
   .reset-photo-pair .reset-chef-photo { object-position:center 64%; }
@@ -385,9 +371,8 @@
       <video class="absolute inset-0 h-full w-full object-cover" data-daniela-video
         data-src="https://sohlararetreats.com/static/site/video/sohlara-5-day-reset.mp4"
         poster="/sohlarasample/retreats/5-day-reset/photos/retreat-hero.webp" preload="none"
-        muted playsinline aria-label="Daniela introduces the 5-Day Reset Retreat in Tenerife"></video>
+        playsinline aria-label="Daniela introduces the 5-Day Reset Retreat in Tenerife"></video>
     </div>
-    <button type="button" class="reset-video-sound" data-video-sound aria-pressed="false" hidden>Video sound</button>
 </section>
 
 <section data-section="reset-hero" class="hidden md:block bg-black px-5 py-6">
@@ -416,9 +401,8 @@
       <video class="absolute inset-0 h-full w-full object-cover" data-daniela-video
         data-src="https://sohlararetreats.com/static/site/video/sohlara-5-day-reset.mp4"
         poster="https://sohlararetreats.com/static/site/video/sohlara-5-day-reset-poster.jpg" preload="none"
-        muted playsinline aria-label="Daniela introduces the 5-Day Reset Retreat in Tenerife"></video>
+        playsinline aria-label="Daniela introduces the 5-Day Reset Retreat in Tenerife"></video>
     </div>
-    <button type="button" class="reset-video-sound" data-video-sound aria-pressed="false" hidden>Video sound</button>
     
     <div class="text-center mt-10">
       <a href="/sohlarasample/book-your-reset/" class="inline-flex items-center justify-center bg-[#e9b74f] hover:bg-[#f3cb77] rounded-full py-5 px-16 transition-colors shadow-[0px_25px_50px_0px_rgba(13,47,43,0.25)]">
@@ -2525,26 +2509,31 @@
 </script>
 <script>
   (() => {
+    const visibleVideos = new Set();
+
+    function play(video) {
+      if (video.ended || !video.paused) return;
+      if (!video.src) video.src = video.dataset.src;
+      // Keep the poster in place when the browser blocks audible autoplay.
+      video.play().catch(() => {});
+    }
+
     const observer = new IntersectionObserver((entries) => {
-      for (const {target: video, isIntersecting} of entries) {
-        if (isIntersecting && !video.ended) {
-          if (!video.src) video.src = video.dataset.src;
-          video.play().catch(() => {});
+      for (const {target: video, isIntersecting, intersectionRatio} of entries) {
+        if (isIntersecting && intersectionRatio >= 0.25) {
+          visibleVideos.add(video);
+          play(video);
         } else {
+          visibleVideos.delete(video);
           video.pause();
         }
       }
     }, {threshold: 0.25});
 
-    document.querySelectorAll('[data-daniela-video]').forEach((video) => {
-      const sound = video.parentElement.nextElementSibling;
-      video.addEventListener('playing', () => { sound.hidden = false; });
-      sound.addEventListener('click', () => {
-        video.muted = !video.muted;
-        sound.setAttribute('aria-pressed', String(!video.muted));
-      });
-      observer.observe(video);
-    });
+    document.querySelectorAll('[data-daniela-video]').forEach((video) => observer.observe(video));
+
+    // A click or tap may unlock audible playback without a separate video control.
+    document.addEventListener('click', () => visibleVideos.forEach(play));
   })();
 </script>
 </body>
