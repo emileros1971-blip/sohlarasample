@@ -2266,22 +2266,31 @@
 </details>
 <style>
   #sohlara-app-floating {
-    display: flex; align-items: center; justify-content: center;
-    width: 164px; min-height: 52px; padding: 8px 12px;
-    border: 1px solid #d9e9e8; border-radius: 999px;
-    background-image: linear-gradient(rgb(250 253 251 / 82%), rgb(250 253 251 / 82%)), url("https://sohlararetreats.com/static/site/img/brand/sohlara-logo-2026-480.webp");
+    display: grid; place-items: end center;
+    width: var(--sohlara-button-size, 48px);
+    height: var(--sohlara-button-size, 48px);
+    padding: 0 0 6px; box-sizing: border-box;
+    border: 1px solid rgb(255 255 255 / 85%); border-radius: 50%;
+    background-color: #f2c94c;
+    background-image: url("https://sohlararetreats.com/static/site/brand/sohlara-icon-512.png");
     background-position: center; background-size: cover;
     color: #071b22 !important; text-align: center; text-decoration: none;
-    font: 700 12px/1.15 system-ui, sans-serif;
+    font: 800 10px/1 system-ui, sans-serif;
     box-shadow: 0 4px 14px #0005; transition: transform .2s, box-shadow .2s;
+    overflow: hidden;
   }
   #sohlara-app-floating:hover { transform: translateY(-2px); box-shadow: 0 6px 18px #0006; }
   #sohlara-app-floating:focus-visible { outline: 3px solid #4285f4; outline-offset: 3px; }
-  @media (max-width: 480px) {
-    #sohlara-app-floating { width: 146px; min-height: 48px; font-size: 11px; }
+  #sohlara-app-floating span {
+    display: block; min-width: 28px; padding: 3px 5px;
+    border-radius: 999px; background: rgb(255 255 255 / 94%);
+    color: #071b22;
+  }
+  @media (min-width: 768px) {
+    #sohlara-app-floating { width: var(--sohlara-button-size, 56px); height: var(--sohlara-button-size, 56px); }
   }
 </style>
-<a id="sohlara-app-floating" href="https://sohlara.com/" target="_blank" rel="noopener noreferrer" aria-label="Get the Sohlara app">Get the Sohlara app</a>
+<a id="sohlara-app-floating" href="https://sohlara.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the Sohlara app" title="Sohlara app"><span aria-hidden="true">APP</span></a>
 <script>
   (() => {
     const social = document.getElementById('sohlara-floating-social');
