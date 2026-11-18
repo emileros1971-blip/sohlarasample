@@ -872,274 +872,168 @@ html.js .fr-page{scroll-behavior:auto}
 </div>
 </section>
 <!-- ================= REZERVA ================= -->
-<section class="sec sec-alt" id="rezerva">
-<div class="wrap">
-<div class="sec-head center reveal">
-<span class="eyebrow">Rezervă acum</span>
-<h2>Rezervă-ți <em class="ac">locul.</em></h2>
-</div>
-<div class="price-grid">
-<div class="price-card reveal">
-  <span class="bf-badge" hidden>Black Friday · 30% off</span>
-<div class="price-tag">Plată integrală</div>
-<p class="price-sub">Plătește suma integrală</p>
-<div class="price-row">
-</div>
-<s class="bf-reference" data-bf-original hidden>8.567,14 lei</s><div class="price-val bf-payable">5.997 lei</div>
-<div class="price-list-label">Ce include</div>
-<ul>
-<li><span class="pi pi-yes">✓</span>Cazare 5 nopți</li>
-<li><span class="pi pi-yes">✓</span>Mic dejun detox cu fructe tropicale</li>
-<li><span class="pi pi-yes">✓</span>Cină de bun-venit</li>
-<li><span class="pi pi-yes">✓</span>Cursurile și activitățile specificate</li>
-<li><span class="pi pi-yes">✓</span>Floating Therapy</li>
-<li><span class="pi pi-yes">✓</span>Saună</li>
-<li><span class="pi pi-yes">✓</span>Aromaterapie</li>
-<li><span class="pi pi-yes">✓</span>Piscină</li>
-</ul>
-<div class="price-list-label">Ce nu include</div>
-<ul>
-<li><span class="pi pi-no">✕</span>Biletele de avion</li>
-<li><span class="pi pi-no">✕</span>Mesele care nu au fost precizate în program</li>
-<li><span class="pi pi-no">✕</span>Excursiile opționale</li>
-</ul>
-<a class="btn btn-gold" href="#feminine-inline-booking" data-feminine-payment="full">Rezervă-ți locul!</a>
-</div>
-<div class="price-card reveal">
-  <span class="bf-badge" hidden>Black Friday Special</span>
-<div class="price-tag">Plătește doar avans*</div>
-<p class="price-sub">Asigură-ți locul acum</p>
-<div class="price-val bf-payable">2497 <span>LEI</span></div>
-<p class="price-note">*Asigură-ți locul ACUM și plătește diferența până pe 01.02.2027. Avansul plătit este nereturnabil.</p>
-<div class="price-list-label">Ce include</div>
-<ul>
-<li><span class="pi pi-yes">✓</span>Cazare 5 nopți</li>
-<li><span class="pi pi-yes">✓</span>Mic dejun detox cu fructe tropicale</li>
-<li><span class="pi pi-yes">✓</span>Cină de bun-venit</li>
-<li><span class="pi pi-yes">✓</span>Cursurile și activitățile specificate</li>
-<li><span class="pi pi-yes">✓</span>Floating Therapy</li>
-<li><span class="pi pi-yes">✓</span>Saună</li>
-<li><span class="pi pi-yes">✓</span>Aromaterapie</li>
-<li><span class="pi pi-yes">✓</span>Piscină</li>
-</ul>
-<div class="price-list-label">Ce nu include</div>
-<ul>
-<li><span class="pi pi-no">✕</span>Biletele de avion</li>
-<li><span class="pi pi-no">✕</span>Mesele care nu au fost precizate în program</li>
-<li><span class="pi pi-no">✕</span>Excursiile opționale</li>
-</ul>
-<a class="btn btn-gold" href="#feminine-inline-booking" data-feminine-payment="deposit">Rezervă-ți locul!</a>
-</div>
-</div>
-<p class="pay-note">Plata se procesează securizat prin Stripe.</p>
 
-  <section class="mt-12 border-t border-white/10 pt-10" id="feminine-inline-booking" data-section="retreat-book-form" aria-labelledby="feminine-inline-booking-title">
-    <div class="mb-8 text-center">
-      <h2 class="text-3xl font-bold text-white" id="feminine-inline-booking-title">Finalizează rezervarea Feminine Reset</h2>
-      <p class="mx-auto mt-3 max-w-2xl text-neutral-300">Completează datele, alege plata integrală sau avansul și plătește în siguranță prin Stripe, fără să părăsești această pagină.</p>
+<section class="sec sec-alt" id="rezerva" aria-labelledby="retreat-booking-title">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 id="retreat-booking-title">Rezervă-ți locul la Feminine Reset</h2>
+      <p>26 februarie – 3 martie 2027 · La Orotava, Tenerife</p>
+      <p class="mx-auto mt-3 max-w-2xl text-neutral-300">Alege plata integrală sau avansul. Completează datele și plătește în siguranță cu Stripe, pe această pagină.</p>
     </div>
-    <form class="grid lg:grid-cols-[minmax(0,2fr)_minmax(20rem,1fr)] gap-8 md:gap-12 items-start" method="post" novalidate>
-        
-        <input type="text" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
-        <input type="hidden" name="retreat" value="feminine-reset">
-        <input type="hidden" name="lang" value="ro">
-        <div class="min-w-0 space-y-6">
-          <!-- Step 1 -->
-          <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] font-display text-[13px] font-bold text-gold-300" aria-hidden="true">1</span>
-              <h2 class="text-xl font-semibold text-white">Locul tău</h2>
-            </div>
-            <fieldset>
-              <legend class="sr-only">Loc</legend>
-              <div class="grid  gap-3">
-                
-                  <label class="group rounded-xl border text-left transition-all cursor-pointer border-neutral-700 hover:border-neutral-600 bg-neutral-900 has-checked:border-gold-300 has-checked:bg-neutral-800 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300 flex flex-col gap-1 p-4">
-                    <input class="sr-only" type="radio" name="package" value="place" data-guests="1" required checked>
-                    <span class="text-[11px] font-bold uppercase tracking-normal text-gold-300">Villa Sohlara</span>
-                    <span class="text-base font-semibold text-white group-has-checked:text-gold-300">Locul tău la Feminine Reset</span>
-<s class="bf-reference" data-bf-original hidden>8.567,14 lei</s><span class="text-lg font-semibold text-white bf-payable">5.997 lei</span>
-                    <span class="text-xs text-neutral-400">Total pentru 1 persoană · Șase zile, cinci nopți la Villa Sohlara.</span>
-                  </label>
-                
-              </div>
-            </fieldset>
-            <p class="mt-4 text-xs text-neutral-400">Include: cazare 5 nopți, mic dejun detox cu fructe tropicale, cina de bun-venit, cursurile și activitățile din program, Floating Therapy, saună, aromaterapie și piscină. Nu include: biletele de avion, mesele care nu au fost precizate în program și excursiile opționale.</p>
+    <form class="grid lg:grid-cols-[minmax(0,2fr)_minmax(20rem,1fr)] gap-8 md:gap-12 items-start" method="post" novalidate data-form="booking" data-feminine-reset-checkout>
+      <input type="text" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+      <input type="hidden" name="retreat" value="feminine-reset">
+      <input type="hidden" name="lang" value="ro">
+      <div class="min-w-0 space-y-6">
+        <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] font-display text-[13px] font-bold text-gold-300" aria-hidden="true">1</span>
+            <h2 class="text-xl font-semibold text-white">Alege cum plătești</h2>
           </div>
-
-          <!-- Step 2 -->
-          <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] font-display text-[13px] font-bold text-gold-300" aria-hidden="true">2</span>
-              <h2 class="text-xl font-semibold text-white">Datele tale</h2>
-            </div>
-            <div class="space-y-6">
-              <div class="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-sm font-medium text-white mb-2" for="firstName">Prenume *</label>
-                  <input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors" id="firstName" name="firstName" type="text" autocomplete="given-name" required data-wallet-fills>
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-white mb-2" for="lastName">Nume *</label>
-                  <input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors" id="lastName" name="lastName" type="text" autocomplete="family-name" required data-wallet-fills>
-                </div>
-              </div>
-              <div class="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-sm font-medium text-white mb-2" for="email">Email *</label>
-                  <input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors" id="email" name="email" placeholder="name@example.com" type="email" autocomplete="email" required data-wallet-fills>
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-white mb-2" for="phone">Telefon *</label>
-                  <input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors" id="phone" name="phone" type="tel" autocomplete="tel" required data-wallet-fills>
-                </div>
-              </div>
-              
-              
-              
-              
-              <div class=""><label for="preview-referral-source" class="block text-sm font-medium text-white mb-2">Where did you first hear about us? *</label><input id="preview-referral-source" name="referral_source" class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors " type="text" maxlength="255" required="required"></div><div>
-                <label class="block text-sm font-medium text-white mb-2" for="dietary">Restricții alimentare sau alergii</label>
-                <textarea class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors resize-none" id="dietary" name="dietary" rows="3" aria-describedby="dietary-hint" maxlength="1000"></textarea>
-                <p class="mt-2 text-xs text-neutral-400" id="dietary-hint">Spune-ne înainte de retreat.</p>
-              </div>
-              <fieldset class=""><legend class="block text-sm font-medium text-white mb-2">Would you like us to arrange an airport transfer for you?</legend><label class="inline-flex min-h-11 items-center gap-2 mr-4"><input type="radio" name="airportTransfer" value="yes"> Yes</label><label class="inline-flex min-h-11 items-center gap-2 mr-4"><input type="radio" name="airportTransfer" value="no"> No</label></fieldset><div>
-                <label class="block text-sm font-medium text-white mb-2" for="notes">Mai e ceva ce ar trebui să știm?</label>
-                <textarea class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors resize-none" id="notes" name="notes" rows="3"></textarea>
-              </div>
-              <div class="border-y border-x-0 bg-transparent px-0 py-3 sm:py-4 border-neutral-800">
-                <label class="flex items-start gap-3 cursor-pointer group">
-                  <span class="relative mt-0.5">
-                    <input class="sr-only" type="checkbox" name="consent" value="yes" required>
-                    <span class="w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all border-neutral-600 group-hover:border-neutral-500 group-has-checked:border-gold-300 group-has-checked:bg-gold-300 group-has-focus-visible:outline-2 group-has-focus-visible:outline-offset-2 group-has-focus-visible:outline-gold-300">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-black opacity-0 group-has-checked:opacity-100" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-                    </span>
-                  </span>
-                  <span class="flex-1">
-                    <span class="block text-sm font-medium leading-6 text-white">Sunt de acord cu <a class="text-gold-300 hover:text-gold-200 underline" href="/sohlarasample/terms-conditions/" target="_blank">Termenii și condițiile</a> și <a class="text-gold-300 hover:text-gold-200 underline" href="/sohlarasample/privacy-policy/" target="_blank">Politica de confidențialitate</a>. *</span>
-                  </span>
-                </label>
-              </div>
-            </div>
-          </div>
-
-          
-          <!-- Step 3: online payment (shown by retreat-checkout.js once Stripe has loaded) -->
-          <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8" data-pay-only hidden>
-            <div class="flex items-center gap-3 mb-6">
-              <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] font-display text-[13px] font-bold text-gold-300" aria-hidden="true">3</span>
-              <h2 class="text-xl font-semibold text-white">Plata</h2>
-            </div>
-            <div class="space-y-6">
-              <fieldset>
-                <legend class="block text-sm font-medium text-white mb-3">Cât vrei să plătești acum?</legend>
-                <div class="grid sm:grid-cols-2 gap-3">
-                  <label class="group rounded-xl border text-left transition-all cursor-pointer border-neutral-700 hover:border-neutral-600 bg-neutral-900 has-checked:border-gold-300 has-checked:bg-neutral-800 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300 flex flex-col gap-1 p-4">
-                    <input class="sr-only" type="radio" name="payment" value="deposit" checked>
-                    <span class="text-sm font-medium text-white group-has-checked:text-gold-300">Doar avans</span>
-                    <span class="text-lg font-semibold text-white" data-co="deposit">2.497,00 lei</span>
-                    <span class="text-xs text-neutral-400">Diferența se plătește până pe 1 februarie 2027. Avansul este nereturnabil.</span>
-                  </label>
-                  <label class="group rounded-xl border text-left transition-all cursor-pointer border-neutral-700 hover:border-neutral-600 bg-neutral-900 has-checked:border-gold-300 has-checked:bg-neutral-800 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300 flex flex-col gap-1 p-4">
-                    <input class="sr-only" type="radio" name="payment" value="full">
-                    <span class="text-sm font-medium text-white group-has-checked:text-gold-300">Plată integrală</span>
-                    <span class="text-lg font-semibold text-white" data-co="full">5.997,00 lei</span>
-                    <span class="text-xs text-neutral-400">Nu mai ai nimic de plătit.</span>
-                  </label>
-                </div>
-              </fieldset>
-              <div data-express-wrap hidden>
-                <div data-express-checkout></div>
-                <div class="mt-5 flex items-center gap-3 text-xs uppercase text-neutral-400">
-                  <span class="h-px flex-1 bg-neutral-700"></span>sau plătește cu cardul<span class="h-px flex-1 bg-neutral-700"></span>
-                </div>
-              </div>
-              <div class="min-h-[12rem]" data-payment-element></div>
-              <p class="flex items-start gap-2 text-xs text-neutral-400">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock mt-px w-4 h-4 shrink-0" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                Plățile sunt procesate securizat de Stripe. Nu vedem și nu păstrăm datele cardului tău.
-              </p>
-            </div>
-          </div>
-          
+          <fieldset>
+            <legend class="sr-only">Alege cum plătești</legend>
+            <div class="grid sm:grid-cols-2 gap-3">
+    <label class="group rounded-xl border text-left transition-all cursor-pointer border-neutral-700 hover:border-neutral-600 bg-neutral-900 has-checked:border-gold-300 has-checked:bg-neutral-800 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300 flex flex-col gap-1 p-4">
+      <input class="sr-only" type="radio" name="payment" value="deposit" required checked>
+      <span class="text-sm font-medium text-white group-has-checked:text-gold-300">Avans</span>
+      <span class="text-xl font-semibold text-white">2,497 RON</span>
+      <span class="text-xs text-neutral-400">Avansul nu este rambursabil. Soldul de 3.500 RON trebuie achitat până la 1 februarie 2027.</span>
+    </label>
+    <label class="group rounded-xl border text-left transition-all cursor-pointer border-neutral-700 hover:border-neutral-600 bg-neutral-900 has-checked:border-gold-300 has-checked:bg-neutral-800 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gold-300 flex flex-col gap-1 p-4">
+      <input class="sr-only" type="radio" name="payment" value="full">
+      <span class="text-sm font-medium text-white group-has-checked:text-gold-300">Plată integrală</span>
+      <span class="text-xl font-semibold text-white">5,997 RON</span>
+      <span class="text-xs text-neutral-400">Plătești acum întregul preț de 5.997 RON.</span>
+    </label></div>
+          </fieldset>
         </div>
-
-        <!-- Summary -->
-        <aside class="lg:sticky lg:top-[calc(var(--header-height)+1.5rem)]" aria-labelledby="summary-title">
-          <div class="bg-neutral-800 rounded-2xl p-6">
-            <h2 class="text-xl font-semibold text-white mb-2" id="summary-title">Rezervarea ta</h2>
-            <p class="text-neutral-400 text-sm mb-6">Feminine Reset, retreat pentru femeia modernă la Villa Sohlara, Tenerife.</p>
-            <dl class="space-y-3 text-sm mb-6">
-              <div class="flex items-start justify-between gap-4">
-                <dt class="text-neutral-400">Loc</dt>
-                <dd class="text-right font-medium text-white" data-summary="room">Villa Sohlara · Locul tău la Feminine Reset</dd>
-              </div>
-              <div class="flex items-start justify-between gap-4">
-                <dt class="text-neutral-400">Persoane</dt>
-                <dd class="text-right font-medium text-white" data-summary="guests">1</dd>
-              </div>
-              <div class="flex items-start justify-between gap-4">
-                <dt class="text-neutral-400">Perioada</dt>
-                <dd class="text-right font-medium text-white">26 feb – 3 mar 2027</dd>
-              </div>
-              <div class="flex items-start justify-between gap-4">
-                <dt class="text-neutral-400">Șederea</dt>
-                <dd class="text-right font-medium text-white">5 nopți</dd>
-              </div>
-            </dl>
-            <p class="text-sm mt-6 mb-2 text-neutral-400 text-center border-t border-neutral-700 pt-4">Total</p>
-            <div class="text-center mb-6">
-              <s class="bf-reference" data-bf-original hidden>8.567,14 lei</s><span class="text-4xl font-bold text-white bf-payable" data-summary="total">5.997,00 lei</span>
-            </div>
-            
-            <dl class="space-y-2 text-sm border-t border-neutral-700 pt-4 mb-6" data-pay-only hidden>
-              <div class="flex items-start justify-between gap-4">
-                <dt class="text-neutral-400">De plată acum</dt>
-                <dd class="text-right font-semibold text-gold-300" data-co="due">2.497,00 lei</dd>
-              </div>
-              <div class="flex items-start justify-between gap-4" data-co-balance-row>
-                <dt class="text-neutral-400">Rest de plată până la 1.02.2027</dt>
-                <dd class="text-right text-white" data-co="balance">3.500,00 lei</dd>
-              </div>
-            </dl>
-            
-            <button class="hg-btn hg-btn--primary hg-btn--lg hg-btn--glow w-full" type="submit" data-pay-button disabled>Trimite cererea de rezervare</button>
-            <p class="text-neutral-400 text-xs text-center mt-4" data-request-only>Acum nu se face nicio plată. Îți confirmăm rezervarea și îți trimitem detaliile de plată.</p>
-            
-            <p class="text-neutral-400 text-xs text-center mt-4" data-pay-only hidden>Plată securizată prin Stripe. Locul tău este confirmat imediat ce plata este procesată.</p>
-            
-            <p data-form-status role="status" aria-live="polite" class="mt-4 text-sm text-center data-[tone=info]:text-neutral-400 empty:hidden"></p>
+        <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] font-display text-[13px] font-bold text-gold-300" aria-hidden="true">2</span>
+            <h2 class="text-xl font-semibold text-white">Datele tale</h2>
           </div>
-          <p class="text-sm text-neutral-400 mt-6 text-center">
-            Întrebări?
-            <a class="text-gold-300 hover:text-gold-200 underline" href="https://wa.me/34690227210?text=Hi%21%20I%20came%20across%20Sohlara%20Retreats%20and%20would%20love%20to%20find%20out%20more%20%F0%9F%8C%BF%20Could%20you%20tell%20me%20a%20little%20about%20what%20it%E2%80%99s%20like%20to%20stay%20with%20you%3F" target="_blank" rel="noopener noreferrer">Scrie-ne pe WhatsApp</a>
-          </p>
-        </aside>
-      </form>
-    <script type="application/json" id="retreat-checkout-data">{"packages": {"place": {"label": "Villa Sohlara \u00b7 Locul t\u0103u la Feminine Reset", "guests": 1, "total": "5.997,00\u00a0lei", "options": {"deposit": {"due": "2.497,00\u00a0lei", "balance": "3.500,00\u00a0lei", "cents": 249700}, "full": {"due": "5.997,00\u00a0lei", "balance": "0,00\u00a0lei", "cents": 599700}}}}, "currency": "ron", "locale": "ro", "texts": {"pay_button": "Pl\u0103te\u0219te {amount} acum", "processing": "Plata se proceseaz\u0103\u2026", "sending": "Se trimite\u2026", "complete_first": "Completeaz\u0103 mai \u00eent\u00e2i datele rezerv\u0103rii.", "error": "Ceva nu a mers. Te rug\u0103m s\u0103 \u00eencerci din nou.", "payment_error": "Plata nu a putut fi finalizat\u0103. Te rug\u0103m s\u0103 \u00eencerci din nou."}}</script>
-    <script type="application/json" id="checkout-config">{"publishableKey": "pk_live_51TnhHwLeQrnFj0z2DVtoTXiC78IW1Z1FAuXf8iWc8u8ncX7bviyEy70pVEo4gs0Uy4WDizOn1ShgiytkZCNbsC3B007yRYPFLi"}</script>
-    <script>
-      (() => {
-        const form = document.querySelector('#feminine-inline-booking form');
-        if (!form) return;
-        const choosePayment = value => {
-          const option = form.querySelector('input[name="payment"][value="' + value + '"]');
-          if (!option) return;
-          option.checked = true;
-          option.dispatchEvent(new Event('change', { bubbles: true }));
-        };
-        document.querySelectorAll('#rezerva [data-feminine-payment]').forEach(link => {
-          link.addEventListener('click', () => choosePayment(link.dataset.femininePayment));
-        });
-        const requested = new URLSearchParams(location.search).get('payment');
-        if (requested === 'full' || requested === 'deposit') choosePayment(requested);
-      })();
-    </script>
-  </section>
-</div>
+          <div class="space-y-6">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div><label class="block text-sm font-medium text-white mb-2" for="firstName">Prenume *</label><input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors" id="firstName" name="firstName" type="text" autocomplete="given-name" required data-wallet-fills></div>
+              <div><label class="block text-sm font-medium text-white mb-2" for="lastName">Nume *</label><input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors" id="lastName" name="lastName" type="text" autocomplete="family-name" required data-wallet-fills></div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div><label class="block text-sm font-medium text-white mb-2" for="email">Email *</label><input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors" id="email" name="email" placeholder="name@example.com" type="email" autocomplete="email" required data-wallet-fills></div>
+              <div><label class="block text-sm font-medium text-white mb-2" for="phone">Telefon *</label><input class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors" id="phone" name="phone" type="tel" autocomplete="tel" required data-wallet-fills></div>
+            </div>
+            <div><label class="block text-sm font-medium text-white mb-2" for="preview-referral-source">Cum ai aflat prima dată despre noi? *</label><input id="preview-referral-source" name="referral_source" class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors" type="text" maxlength="255" required></div>
+            <div><label class="block text-sm font-medium text-white mb-2" for="dietary">Alergii sau nevoi alimentare</label><textarea class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors resize-none" id="dietary" name="dietary" rows="3" maxlength="1000"></textarea><p class="mt-2 text-xs text-neutral-400">Te rugăm să ne anunți înainte de retreat.</p></div>
+            <fieldset><legend class="block text-sm font-medium text-white mb-2">Dorești să organizăm transferul de la aeroport?</legend><label class="inline-flex min-h-11 items-center gap-2 mr-4"><input type="radio" name="airportTransfer" value="yes"> Da</label><label class="inline-flex min-h-11 items-center gap-2 mr-4"><input type="radio" name="airportTransfer" value="no"> Nu</label></fieldset>
+            <div><label class="block text-sm font-medium text-white mb-2" for="notes">Mai este ceva ce ar trebui să știm?</label><textarea class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-white/55 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20 transition-colors resize-none" id="notes" name="notes" rows="3"></textarea></div>
+            <div class="border-y bg-transparent px-0 py-3 sm:py-4 border-neutral-800"><label class="flex items-start gap-3 cursor-pointer group"><input class="mt-1 size-4 accent-yellow-400" type="checkbox" name="consent" value="yes" required><span class="text-sm leading-6 text-white">Sunt de acord cu <a class="text-gold-300 hover:text-gold-200 underline" href="/sohlarasample/terms-conditions/" target="_blank">Termenii și condițiile</a> și <a class="text-gold-300 hover:text-gold-200 underline" href="/sohlarasample/privacy-policy/" target="_blank">Politica de confidențialitate</a>. *</span></label></div>
+          </div>
+        </div>
+        <div class="rounded-lg border border-white/10 bg-[#163733] p-5 md:p-8" data-pay-only hidden>
+          <div class="flex items-center gap-3 mb-6"><span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] font-display text-[13px] font-bold text-gold-300" aria-hidden="true">3</span><h2 class="text-xl font-semibold text-white">Plată cu cardul</h2></div>
+          <div class="space-y-6">
+            <div data-express-wrap hidden><div data-express-checkout></div><div class="mt-5 flex items-center gap-3 text-xs uppercase text-neutral-400"><span class="h-px flex-1 bg-neutral-700"></span>or pay by card<span class="h-px flex-1 bg-neutral-700"></span></div></div>
+            <div class="min-h-[12rem]" data-payment-element></div>
+            <p class="flex items-start gap-2 text-xs text-neutral-400">Plățile sunt procesate în siguranță de Stripe. Datele cardului nu sunt stocate de noi.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="lg:sticky lg:top-[calc(var(--header-height)+1.5rem)]" aria-labelledby="summary-title">
+        <div class="bg-neutral-800 rounded-2xl p-6">
+          <h2 class="text-xl font-semibold text-white mb-2" id="summary-title">Rezumatul rezervării</h2>
+          <p class="text-neutral-400 text-sm mb-6">Feminine Reset · Villa Sohlara, Tenerife.</p>
+          <dl class="space-y-3 text-sm mb-6">
+            <div class="flex items-start justify-between gap-4"><dt class="text-neutral-400">Retreat</dt><dd class="text-right font-medium text-white">Feminine Reset at Villa Sohlara</dd></div>
+            <div class="flex items-start justify-between gap-4"><dt class="text-neutral-400">Participante</dt><dd class="text-right font-medium text-white">1</dd></div>
+            <div class="flex items-start justify-between gap-4"><dt class="text-neutral-400">Date</dt><dd class="text-right font-medium text-white">26 Feb – 3 Mar 2027</dd></div>
+            <div class="flex items-start justify-between gap-4"><dt class="text-neutral-400">Durată</dt><dd class="text-right font-medium text-white">5 nights</dd></div>
+          </dl>
+          <p class="text-sm mt-6 mb-2 text-neutral-400 text-center border-t border-neutral-700 pt-4">Prețul total</p>
+          <div class="text-center mb-6"><span class="text-4xl font-bold text-white" data-summary="total">5,997.00 RON</span><p class="text-xs text-neutral-400 mt-2" data-summary="payment">Avans</p></div>
+          <dl class="space-y-2 text-sm border-t border-neutral-700 pt-4 mb-6" data-pay-only hidden>
+            <div class="flex items-start justify-between gap-4"><dt class="text-neutral-400">De achitat acum</dt><dd class="text-right font-semibold text-gold-300" data-co="due">2,497.00 RON</dd></div>
+            <div class="flex items-start justify-between gap-4" data-co-balance-row><dt class="text-neutral-400">Sold până la 1 feb. 2027</dt><dd class="text-right text-white" data-co="balance">3,500.00 RON</dd></div>
+          </dl>
+          <button class="hg-btn hg-btn--primary hg-btn--lg hg-btn--glow w-full" type="submit" data-pay-button disabled>Pay 2,497.00 RON now</button>
+          <p class="text-neutral-400 text-xs text-center mt-4" data-request-only hidden>Payment is not taken now. We’ll confirm your booking and send payment details.</p>
+          <p class="text-neutral-400 text-xs text-center mt-4" data-pay-only hidden>Secure payment by Stripe. Your place is confirmed as soon as the payment goes through.</p>
+          <div class="mt-6 border-t border-neutral-700 pt-5">
+            <h3 class="text-sm font-semibold text-white mb-3">Ce este inclus</h3>
+            <ul class="space-y-2 text-xs text-neutral-300"><li>Cinci nopți de cazare</li><li>Mic dejun detox cu fructe tropicale</li><li>Cină de bun venit</li><li>Toate cursurile și activitățile programate</li><li>Floating Therapy, saună, aromaterapie și acces la piscină</li></ul>
+            <p class="mt-3 text-xs text-neutral-400">Biletele de avion, mesele din afara programului și excursiile opționale se plătesc separat.</p>
+          </div>
+        </div>
+      </aside>
+    </form>
+    <script type="application/json" id="retreat-checkout-data">{"packages":{"place":{"label":"Villa Sohlara · Feminine Reset","guests":1,"total":"5,997.00 RON","options":{"deposit":{"due":"2,497.00 RON","balance":"3,500.00 RON","cents":249700},"full":{"due":"5,997.00 RON","balance":"0.00 RON","cents":599700}}}},"currency":"ron","locale":"ro"}</script>
+    <script type="application/json" id="checkout-config">{"publishableKey":"pk_live_51TnhHwLeQrnFj0z2DVtoTXiC78IW1Z1FAuXf8iWc8u8ncX7bviyEy70pVEo4gs0Uy4WDizOn1ShgiytkZCNbsC3B007yRYPFLi"}</script>
+    <script src="https://js.stripe.com/v3/" defer></script>
+    
+<script>
+(function () {
+  var form = document.querySelector('#rezerva form[data-feminine-reset-checkout]');
+  if (!form) return;
+  function choose(value) {
+    var input = form.querySelector('input[name="payment"][value="' + value + '"]');
+    if (!input) return;
+    input.checked = true;
+    input.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+  document.querySelectorAll('#rezerva [data-feminine-payment]').forEach(function (link) {
+    link.href = '#rezerva';
+    link.addEventListener('click', function () { choose(link.dataset.femininePayment); });
+  });
+  var requested = new URLSearchParams(location.search).get('payment');
+  if (requested === 'full' || requested === 'deposit') choose(requested);
+  form.querySelectorAll('input[name="payment"]').forEach(function (input) {
+    input.addEventListener('change', update);
+  });
+  var preview = location.hostname.endsWith('github.io');
+  if (!preview) return;
+  form.querySelectorAll('[data-pay-only]').forEach(function (el) { el.hidden = false; });
+  var payButton = form.querySelector('[data-pay-button]');
+  var container = form.querySelector('[data-payment-element]');
+  var elements;
+  function update() {
+    var full = form.querySelector('input[name="payment"]:checked')?.value === 'full';
+    var due = full ? 599700 : 249700;
+    var balance = full ? 0 : 350000;
+    var format = function (cents) { return (cents / 100).toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' RON'; };
+    form.querySelectorAll('[data-co="due"]').forEach(function (el) { el.textContent = format(due); });
+    form.querySelectorAll('[data-co="balance"]').forEach(function (el) { el.textContent = format(balance); });
+    form.querySelectorAll('[data-co-balance-row]').forEach(function (el) { el.hidden = full; });
+    var label = full ? 'Full payment' : 'Deposit';
+    form.querySelectorAll('[data-summary="payment"]').forEach(function (el) { el.textContent = label; });
+    form.querySelectorAll('[data-summary="due"]').forEach(function (el) { el.textContent = format(due); });
+    if (payButton) {
+      payButton.textContent = 'Pay ' + format(due) + ' now';
+      payButton.disabled = true;
+      payButton.title = 'Payment processing is available on the live site.';
+    }
+    if (elements) elements.update({ amount: due });
+  }
+  form.addEventListener('change', update);
+  update();
+  function mountStripe() {
+    if (!window.Stripe || !container || elements) return;
+    try {
+      var config = JSON.parse(document.getElementById('checkout-config').textContent);
+      var stripe = window.Stripe(config.publishableKey);
+      elements = stripe.elements({ mode: 'payment', amount: 249700, currency: 'ron', appearance: { theme: 'night' } });
+      elements.create('payment', { layout: { type: 'tabs', defaultCollapsed: false } }).mount(container);
+      update();
+    } catch (error) {
+      container.textContent = 'Secure payment fields appear here on the live site.';
+    }
+  }
+  if (document.readyState === 'complete') mountStripe();
+  else window.addEventListener('load', mountStripe, { once: true });
+})();
+</script>
+
+  </div>
 </section>
-<!-- ================= CINE TE GHIDEAZA ================= -->
-<section class="sec" id="ghid">
+
+  <section class="sec" id="ghid">
 <div class="wrap ghid-wrap reveal">
 <h2 class="ghid-title">Cine te ghidează</h2>
 <img alt="Dr. Cristina Obreja" src="https://sohlararetreats.com/static/site/img/retreats/feminine/dr-cristina-obreja-500.webp" srcset="https://sohlararetreats.com/static/site/img/retreats/feminine/dr-cristina-obreja-480.webp 480w, https://sohlararetreats.com/static/site/img/retreats/feminine/dr-cristina-obreja-500.webp 500w" sizes="(max-width: 640px) 72vw, 320px" width="500" height="500" loading="lazy" decoding="async" class="ghid-photo">
