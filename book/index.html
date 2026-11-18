@@ -47,7 +47,7 @@
   
   
   
-<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="/sohlarasample/review-theme.css?v=readable-navigation"><link rel="stylesheet" href="/sohlarasample/book/villa-booking.css">
+<meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="/sohlarasample/review-theme.css?v=readable-navigation"><link rel="stylesheet" href="/sohlarasample/book/villa-booking.css?v=availability-flow">
 </head>
 <body class="font-montserrat antialiased sohlara-redesign">
   
@@ -324,7 +324,7 @@
             <div class="villa-booking-intro">
               <h1>Book your stay at Sohlara Villa</h1>
               <p>Choose your dates and guest count, enter your details, and pay securely on this page.</p>
-              <p class="mt-3 text-lg font-semibold">From €1,097 per night</p>
+              <p class="mt-3 text-lg font-semibold">From <span id="villa-nightly-rate" data-eur="1097">€1,097</span> per night</p>
             </div>
             <div class="villa-booking-preview-grid">
               <div>
@@ -336,20 +336,10 @@
                     <label>Adults<input type="number" min="1" value="2" id="villa-adults"></label>
                     <label>Children<input type="number" min="0" value="0" id="villa-children"></label>
                   </div>
-                  <p class="payment-note mt-3" id="villa-date-status" role="status"></p>
-                </section>
-                <section class="villa-booking-card" aria-labelledby="villa-details">
-                  <h2 id="villa-details">Your details</h2>
-                  <div class="villa-booking-fields">
-                    <label>Full name<input type="text" autocomplete="name"></label>
-                    <label>Phone<input type="tel" autocomplete="tel"></label>
-                    <label>Email<input type="email" autocomplete="email"></label>
-                  </div>
                 </section>
                 <section class="villa-booking-card" aria-labelledby="villa-payment">
-                  <h2 id="villa-payment">Payment</h2>
-                  <p class="payment-note mt-2">Stripe payment becomes available after the live site confirms your dates and price.</p>
-                  <button class="mt-4 rounded-full px-6 py-3 font-semibold" type="button" disabled>Pay securely</button>
+                  <h2 id="villa-payment">Guest details and payment</h2>
+                  <p class="payment-note mt-2">These steps open on this page after the booking system confirms availability and the total.</p>
                 </section>
               </div>
               <aside class="villa-booking-card" aria-labelledby="villa-summary">
@@ -360,8 +350,11 @@
                   <div><dt>Check-out</dt><dd id="villa-summary-departure">—</dd></div>
                   <div><dt>Guests</dt><dd id="villa-summary-guests">2</dd></div>
                   <div><dt>Stay</dt><dd id="villa-summary-stay">—</dd></div>
+                  <div class="border-t border-white/20 mt-2 pt-2 font-semibold"><dt>Estimated total</dt><dd id="villa-summary-estimate">—</dd></div>
                 </dl>
-                <p class="payment-note mt-3">Preview only. Availability and payments are handled by the live booking system.</p>
+                <button id="checkBtn" class="w-full mt-4 rounded-full px-6 py-3" type="button" disabled>Check availability</button>
+                <p class="payment-note mt-3" id="villa-date-status" role="status">Choose dates to see the estimate.</p>
+                <p class="payment-note mt-3">Preview only. The estimate uses the base nightly rate. The live booking system confirms availability and the final price.</p>
               </aside>
             </div>
           </div>
@@ -964,6 +957,6 @@
 
 
   
-<script src="/sohlarasample/book/preview.js" defer></script>
+<script src="/sohlarasample/book/preview.js?v=availability-flow" defer></script>
 </body>
 </html>
