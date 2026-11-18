@@ -1230,31 +1230,30 @@ html.js .fr-page{scroll-behavior:auto}
 </details>
 <style>
   #sohlara-app-floating {
-    display: grid; place-items: end center;
+    position: relative; display: grid; place-items: center;
     width: var(--sohlara-button-size, 48px);
     height: var(--sohlara-button-size, 48px);
-    padding: 0 0 6px; box-sizing: border-box;
     border: 1px solid rgb(255 255 255 / 85%); border-radius: 50%;
-    background-color: #f2c94c;
-    background-image: url("https://sohlararetreats.com/static/site/brand/sohlara-icon-512.png");
-    background-position: center; background-size: cover;
-    color: #071b22 !important; text-align: center; text-decoration: none;
-    font: 800 10px/1 system-ui, sans-serif;
-    box-shadow: 0 4px 14px #0005; transition: transform .2s, box-shadow .2s;
-    overflow: hidden;
+    background: #f2c94c; box-shadow: 0 4px 14px #0005;
+    overflow: hidden; transition: transform .2s, box-shadow .2s;
   }
   #sohlara-app-floating:hover { transform: translateY(-2px); box-shadow: 0 6px 18px #0006; }
   #sohlara-app-floating:focus-visible { outline: 3px solid #4285f4; outline-offset: 3px; }
+  #sohlara-app-floating img {
+    position: absolute; inset: 0; display: block;
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+  }
   #sohlara-app-floating span {
+    position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%);
     display: block; min-width: 28px; padding: 3px 5px;
-    border-radius: 999px; background: rgb(255 255 255 / 94%);
-    color: #071b22;
+    border-radius: 999px; background: #fff; color: #071b22;
+    font: 800 10px/1 system-ui, sans-serif; text-align: center;
   }
   @media (min-width: 768px) {
     #sohlara-app-floating { width: var(--sohlara-button-size, 56px); height: var(--sohlara-button-size, 56px); }
   }
 </style>
-<a id="sohlara-app-floating" href="https://sohlara.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the Sohlara app" title="Sohlara app"><span aria-hidden="true">APP</span></a>
+<a id="sohlara-app-floating" href="https://sohlara.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the Sohlara app" title="Sohlara app"><img src="https://sohlararetreats.com/static/site/brand/sohlara-icon-512.png" alt="" width="512" height="512" decoding="async"><span aria-hidden="true">APP</span></a>
 <script>
   (() => {
     const social = document.getElementById('sohlara-floating-social');
