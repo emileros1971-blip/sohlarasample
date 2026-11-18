@@ -477,3 +477,35 @@ html {
   [data-bf-panel] .bf-clock, [data-bf-panel] .bf-stock { font-size: 0.75rem; }
   [data-bf-panel] a { display: none; }
 }
+
+
+/* Keep the floating Sohlara app shortcut circular and its mark correctly scaled. */
+#sohlara-app-floating {
+  position: relative !important;
+  width: var(--sohlara-button-size, 48px) !important;
+  height: var(--sohlara-button-size, 48px) !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+}
+#sohlara-app-floating img {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+#sohlara-app-floating span {
+  position: absolute !important;
+  bottom: 4px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+@media (min-width: 768px) {
+  #sohlara-app-floating {
+    width: var(--sohlara-button-size, 56px) !important;
+    height: var(--sohlara-button-size, 56px) !important;
+  }
+}
